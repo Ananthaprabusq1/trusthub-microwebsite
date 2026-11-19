@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "badge": "WHY TRUST HUB",
+    "headline": {
+      "lineOne": "Trust Should Be",
+      "highlightLineOne": "Easy to",
+      "highlightLineTwo": "Demonstrate."
+    },
+    "description": "Trust Hub helps organizations present their security posture, share compliance information and give customers a clear way to access the evidence they need.",
+    "primaryCta": {
+      "label": "Explore Features",
+      "href": "/features",
+      "showArrow": true
+    },
+    "secondaryCta": {
+      "label": "Get Started",
+      "href": "#get-started",
+      "showArrow": false
+    },
+    "backgroundImage": {
+      "src": "/images/heroback.png",
+      "alt": "Soft pastel green abstract flowing background"
+    },
+    "accentBackgroundImage": {
+      "src": "/images/green-bg-1.png",
+      "alt": "Vibrant emerald green wave accent"
+    },
+    "showcaseImage": {
+      "src": "/images/hero-isometric-card.png",
+      "alt": "Isometric Trust Hub compliance report and verification architecture"
+    },
+    "floatingBadges": [
+      {
+        "id": "credentials-verified",
+        "title": "Credentials verified",
+        "subtitle": "Status and validity shown",
+        "icon": "credentials",
+        "position": "bottom-left"
+      },
+      {
+        "id": "controlled-sharing",
+        "title": "Controlled sharing",
+        "subtitle": "Request access to evidence",
+        "icon": "sharing",
+        "position": "bottom-right"
+      }
+    ]
+  }
+}

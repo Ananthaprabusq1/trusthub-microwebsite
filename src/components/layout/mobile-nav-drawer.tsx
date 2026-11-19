@@ -104,6 +104,7 @@ export function MobileNavDrawer({
         <motion.div
           ref={drawerRef}
           id="mobile-navigation-drawer"
+          data-lenis-prevent
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation"

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useState } from "react";
-import { LuArrowRight } from "react-icons/lu";
+import { Button } from "@/components/ui/button";
 import { isNavItemActive } from "@/lib/navigation";
 import type { HeaderActionItem, NavItem } from "@/types/navigation";
 import { DesktopDropdown } from "./desktop-dropdown";
@@ -78,17 +78,14 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
         {actions.map((action) => {
           if (action.variant === "primary") {
             return (
-              <Link
+              <Button
                 key={action.id}
                 href={action.href}
-                className="group inline-flex items-center gap-2 rounded-xl bg-[#28B446] px-5 py-2.5 text-[15px] font-semibold text-white shadow-xs transition-all duration-200 hover:bg-[#229A3C] active:scale-[0.99] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446]"
+                size="sm"
+                showArrow={action.showArrow ?? true}
               >
-                <span>{action.label}</span>
-                <LuArrowRight
-                  aria-hidden="true"
-                  className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
-                />
-              </Link>
+                {action.label}
+              </Button>
             );
           }
 

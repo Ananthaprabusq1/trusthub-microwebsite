@@ -22,6 +22,7 @@ export interface HeaderActionItem {
   label: string;
   href: string;
   variant: "ghost" | "primary";
+  showArrow?: boolean;
   order: number;
   visible: boolean;
 }
