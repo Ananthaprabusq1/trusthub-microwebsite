@@ -1,0 +1,94 @@
+{
+  "previewPublishing": {
+    "sectionId": "capability-preview-publishing",
+    "number": "07",
+    "eyebrow": "PREVIEW & PUBLISHING",
+    "headline": {
+      "lineOne": "Review Your Trust Center",
+      "lineTwo": "Before It Goes Live."
+    },
+    "description": "Use the Trust Preview Editor to review your customer-facing Trust Center, validate its presentation and manage what gets published.",
+    "checklistHeading": "What you can do",
+    "checklistItems": [
+      "Preview your Trust Center before publishing.",
+      "Review the presentation of customer-facing information.",
+      "Validate the content and appearance before going live.",
+      "Publish or unpublish your Trust Center.",
+      "Update and maintain published information."
+    ],
+    "businessValue": {
+      "label": "BUSINESS VALUE",
+      "description": "Maintain control over your public-facing trust information, review changes before publishing and deliver a consistent customer experience."
+    },
+    "previewWindow": {
+      "windowTitle": "Trust Preview Editor",
+      "editLabel": "Edit",
+      "previewLabel": "Preview",
+      "draftStatusLabel": "Draft",
+      "publishedStatusLabel": "Published",
+      "unpublishLabel": "Unpublish",
+      "publishLabel": "Publish",
+      "canvasBadgeLabel": "Customer-facing preview",
+      "editBannerLabel": "Editing draft sections"
+    }
+  },
+  "faqsDisclosures": {
+    "sectionId": "capability-faqs-disclosures",
+    "number": "08",
+    "eyebrow": "FAQS & ORGANIZATIONAL DISCLOSURES",
+    "headline": {
+      "lineOne": "Give Customers More of the",
+      "lineTwo": "Information They Need."
+    },
+    "description": "Make frequently requested organizational and security information accessible alongside your compliance credentials and supporting documentation.",
+    "checklistHeading": "What you can do",
+    "checklistItems": [
+      "Create and manage public-facing FAQs.",
+      "Share subprocessor information.",
+      "Present security leadership details.",
+      "Maintain relevant organizational disclosures."
+    ],
+    "businessValue": {
+      "label": "BUSINESS VALUE",
+      "description": "Help customers find answers independently, improve transparency and reduce repetitive information requests to internal teams."
+    },
+    "previewWindow": {
+      "windowTitle": "FAQs & Organizational Disclosures",
+      "panelHeading": "Public FAQs",
+      "addFaqLabel": "Add FAQ",
+      "faqs": [
+        {
+          "id": "faq-item-1",
+          "question": "Frequently asked question",
+          "answerWidths": ["w-full", "w-2/5"]
+        },
+        {
+          "id": "faq-item-2",
+          "question": "Frequently asked question",
+          "answerWidths": ["w-11/12", "w-1/2"]
+        },
+        {
+          "id": "faq-item-3",
+          "question": "Frequently asked question",
+          "answerWidths": ["w-5/6", "w-1/3"]
+        }
+      ],
+      "disclosures": [
+        {
+          "id": "disc-subprocessors",
+          "title": "Subprocessor information",
+          "subtitle": "Organizational disclosure",
+          "statusLabel": "Published",
+          "icon": "subprocessors"
+        },
+        {
+          "id": "disc-security-leadership",
+          "title": "Security leadership",
+          "subtitle": "Organizational disclosure",
+          "statusLabel": "Published",
+          "icon": "leadership"
+        }
+      ]
+    }
+  }
+}

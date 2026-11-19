@@ -1,0 +1,199 @@
+{
+  "hero": {
+    "badge": "FEATURES",
+    "headline": {
+      "lineOne": "Everything You Need to",
+      "lineTwoPrefix": "Run a ",
+      "lineTwoHighlight": "Modern Trust Center."
+    },
+    "description": "Manage your organization's security information, compliance credentials, supporting documents and customer access through one centralized platform.",
+    "primaryCta": {
+      "label": "Get Started",
+      "href": "#get-started",
+      "showArrow": true
+    },
+    "secondaryCta": {
+      "label": "See How It Works",
+      "href": "/#how-it-works",
+      "showArrow": false
+    },
+    "backgroundImage": {
+      "src": "/images/heroback.png",
+      "alt": "Soft pastel green abstract flowing background"
+    },
+    "accentBackgroundImage": {
+      "src": "/images/green-bg-1.png",
+      "alt": "Vibrant emerald green wave accent"
+    },
+    "accessGovernance": {
+      "windowTitle": "Access Governance",
+      "accessSectionTitle": "Document Access",
+      "accessRows": [
+        {
+          "id": "hero-doc-policies",
+          "title": "Security Policies",
+          "subtitle": "Published documentation",
+          "icon": "policy",
+          "defaultMode": "public"
+        },
+        {
+          "id": "hero-doc-audits",
+          "title": "Audit Reports",
+          "subtitle": "Approval required",
+          "icon": "folder",
+          "defaultMode": "restricted"
+        },
+        {
+          "id": "hero-doc-certs",
+          "title": "Certifications",
+          "subtitle": "Published credentials",
+          "icon": "certification",
+          "defaultMode": "public"
+        }
+      ],
+      "requestsSectionTitle": "Access Requests",
+      "requestCard": {
+        "title": "SOC 2 Type II Report",
+        "subtitle": "Customer request · NDA required",
+        "rejectLabel": "Reject",
+        "approveLabel": "Approve"
+      },
+      "trustedDomainsLabel": "Trusted Domains",
+      "trustedDomainTags": [
+        { "id": "domain-acme", "label": "acme.io", "highlighted": true },
+        { "id": "domain-enterprise", "label": "enterprise.com" },
+        { "id": "domain-auto", "label": "Auto-approved" }
+      ]
+    },
+    "documentsPanel": {
+      "windowTitle": "Documents",
+      "panelHeading": "Documents",
+      "uploadLabel": "Upload",
+      "rows": [
+        {
+          "id": "hero-reg-policy",
+          "title": "Security Policy",
+          "subtitle": "Version history",
+          "icon": "policy",
+          "statusLabel": "Valid",
+          "statusTone": "valid",
+          "version": "v2"
+        },
+        {
+          "id": "hero-reg-audit",
+          "title": "Audit Report",
+          "subtitle": "Replace outdated file",
+          "icon": "folder",
+          "statusLabel": "Expiring",
+          "statusTone": "expiring",
+          "version": "v3"
+        },
+        {
+          "id": "hero-reg-cert",
+          "title": "Certification",
+          "subtitle": "Validity & expiry dates",
+          "icon": "certification",
+          "statusLabel": "Valid",
+          "statusTone": "valid",
+          "version": "v1"
+        },
+        {
+          "id": "hero-reg-support",
+          "title": "Supporting Document",
+          "subtitle": "Access activity tracked",
+          "icon": "policy",
+          "statusLabel": "Valid",
+          "statusTone": "valid",
+          "version": "v1"
+        }
+      ]
+    }
+  },
+  "capabilitiesHeader": {
+    "headline": "Explore Trust Hub Capabilities",
+    "description": "Discover the tools that help your organization organize, manage and share trust information with customers.",
+    "items": [
+      {
+        "id": "nav-security-controls",
+        "number": "01",
+        "label": "Security Controls",
+        "targetId": "capability-security-controls"
+      },
+      {
+        "id": "nav-document-management",
+        "number": "02",
+        "label": "Document Management",
+        "targetId": "capability-document-management"
+      },
+      {
+        "id": "nav-pre-mapped-templates",
+        "number": "03",
+        "label": "Pre-Mapped Templates",
+        "targetId": "capability-pre-mapped-templates"
+      },
+      {
+        "id": "nav-access-governance",
+        "number": "04",
+        "label": "Access Governance",
+        "targetId": "capability-access-governance"
+      },
+      {
+        "id": "nav-compliance-credentials",
+        "number": "05",
+        "label": "Compliance Credentials",
+        "targetId": "capability-compliance-credentials"
+      },
+      {
+        "id": "nav-branding-customization",
+        "number": "06",
+        "label": "Branding & Customization",
+        "targetId": "capability-branding-customization"
+      },
+      {
+        "id": "nav-preview-publishing",
+        "number": "07",
+        "label": "Preview & Publishing",
+        "targetId": "capability-preview-publishing"
+      },
+      {
+        "id": "nav-faqs-disclosures",
+        "number": "08",
+        "label": "FAQs & Disclosures",
+        "targetId": "capability-faqs-disclosures"
+      },
+      {
+        "id": "nav-analytics-insights",
+        "number": "09",
+        "label": "Analytics & Insights",
+        "targetId": "capability-analytics-insights"
+      },
+      {
+        "id": "nav-workspace-administration",
+        "number": "10",
+        "label": "Workspace Administration",
+        "targetId": "capability-workspace-administration"
+      }
+    ]
+  },
+  "ctaBanner": {
+    "headline": {
+      "lineOne": "Give Customers a Better",
+      "lineTwo": "Way to Verify Trust."
+    },
+    "description": "Bring your security information, compliance credentials and customer-facing trust experience together with Trust Hub.",
+    "primaryCta": {
+      "label": "Get Started",
+      "href": "#get-started",
+      "showArrow": true
+    },
+    "secondaryCta": {
+      "label": "Explore How It Works",
+      "href": "/#how-it-works",
+      "showArrow": false
+    },
+    "image": {
+      "src": "/images/cta-security-posture.png",
+      "alt": "3D verified security documents and compliance audit logs connected to a green shield"
+    }
+  }
+}

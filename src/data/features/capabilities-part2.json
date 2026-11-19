@@ -1,0 +1,107 @@
+{
+  "preMappedTemplates": {
+    "sectionId": "capability-pre-mapped-templates",
+    "number": "03",
+    "eyebrow": "PRE-MAPPED TEMPLATES",
+    "headline": {
+      "lineOne": "Get a Head Start on Your",
+      "lineTwo": "Trust Center."
+    },
+    "description": "Set up your Trust Center using pre-mapped templates that provide a structured starting point for organizing your organization's trust information.",
+    "checklistHeading": "What you can do",
+    "checklistItems": [
+      "Choose from available pre-mapped templates.",
+      "Start with a predefined Trust Center structure.",
+      "Customize the template to suit your organization's requirements.",
+      "Organize the information you want to showcase."
+    ],
+    "businessValue": {
+      "label": "BUSINESS VALUE",
+      "description": "Reduce initial setup effort, simplify configuration and establish a more organized foundation for presenting trust information."
+    },
+    "previewWindow": {
+      "windowTitle": "Pre-Mapped Templates",
+      "chooseHeading": "Choose a template",
+      "structureHeading": "Template structure",
+      "templates": [
+        {
+          "id": "tpl-standard-saas",
+          "label": "Standard SaaS Trust Center",
+          "barWidths": ["w-4/5", "w-1/2"],
+          "structureWidths": ["w-full", "w-full", "w-full", "w-full"]
+        },
+        {
+          "id": "tpl-enterprise-security",
+          "label": "Enterprise Security Posture",
+          "barWidths": ["w-3/4", "w-3/5"],
+          "structureWidths": ["w-11/12", "w-full", "w-5/6", "w-11/12"]
+        },
+        {
+          "id": "tpl-compliance-ready",
+          "label": "Compliance & Audit Pack",
+          "barWidths": ["w-5/6", "w-2/5"],
+          "structureWidths": ["w-full", "w-5/6", "w-full", "w-4/5"]
+        }
+      ]
+    }
+  },
+  "accessGovernance": {
+    "sectionId": "capability-access-governance",
+    "number": "04",
+    "eyebrow": "ACCESS GOVERNANCE",
+    "headline": {
+      "lineOne": "Decide Who Can Access",
+      "lineTwo": "What."
+    },
+    "description": "Choose which documents are publicly available and which require approval. Manage customer access requests while maintaining control over sensitive information.",
+    "checklistHeading": "What you can do",
+    "checklistItems": [
+      "Set documents as public or restricted.",
+      "Review, approve or reject access requests.",
+      "Verify business email addresses as part of access workflows, where supported.",
+      "Whitelist trusted business domains.",
+      "Allow eligible domains to bypass manual approval.",
+      "Share time-limited document access links.",
+      "Manage multiple access requests through bulk operations, where supported."
+    ],
+    "businessValue": {
+      "label": "BUSINESS VALUE",
+      "description": "Simplify document sharing, reduce repetitive approval work and maintain control over access to sensitive information."
+    },
+    "previewWindow": {
+      "windowTitle": "Access Governance",
+      "accessHeading": "Document access",
+      "accessRows": [
+        {
+          "id": "ag-sec-policies",
+          "title": "Security Policies",
+          "publicSubtitle": "Visible to everyone",
+          "restrictedSubtitle": "Approval required",
+          "icon": "policy",
+          "defaultMode": "public"
+        },
+        {
+          "id": "ag-audit-reports",
+          "title": "Audit Reports",
+          "publicSubtitle": "Visible to everyone",
+          "restrictedSubtitle": "Approval required",
+          "icon": "folder",
+          "defaultMode": "restricted"
+        }
+      ],
+      "requestsHeading": "Access requests",
+      "requestCard": {
+        "title": "Request for Audit Reports",
+        "subtitle": "Business email verified",
+        "rejectLabel": "Reject",
+        "approveLabel": "Approve"
+      },
+      "trustedDomainsLabel": "Trusted domains",
+      "trustedDomains": [
+        { "id": "td-example", "label": "example.com", "highlighted": true },
+        { "id": "td-bypass", "label": "Bypass approval" },
+        { "id": "td-timelimited", "label": "Time-limited link" }
+      ]
+    }
+  }
+}

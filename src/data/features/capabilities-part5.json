@@ -1,0 +1,162 @@
+{
+  "analyticsInsights": {
+    "sectionId": "capability-analytics-insights",
+    "number": "09",
+    "eyebrow": "ANALYTICS & INSIGHTS",
+    "headline": {
+      "lineOne": "Understand How Customers",
+      "lineTwo": "Engage with Your Trust",
+      "lineThree": "Center."
+    },
+    "description": "Gain visibility into how customers interact with your published information, shared documents and access request workflows.",
+    "checklistHeading": "What you can do",
+    "checklistItems": [
+      "Track document views.",
+      "Monitor access request statuses.",
+      "Review customer engagement.",
+      "View security control coverage.",
+      "Monitor document expiry information where supported."
+    ],
+    "businessValue": {
+      "label": "BUSINESS VALUE",
+      "description": "Understand which resources customers access, identify engagement patterns and gain better visibility into your Trust Center's usage."
+    },
+    "previewWindow": {
+      "windowTitle": "Analytics & Insights",
+      "panelHeading": "Engagement overview",
+      "headerPillLabel": "Where supported",
+      "metrics": [
+        {
+          "id": "metric-doc-views",
+          "title": "Document views",
+          "bars": [
+            { "id": "dv-1", "heightPercent": 24 },
+            { "id": "dv-2", "heightPercent": 46 },
+            { "id": "dv-3", "heightPercent": 36 },
+            { "id": "dv-4", "heightPercent": 68, "highlighted": true },
+            { "id": "dv-5", "heightPercent": 56 },
+            { "id": "dv-6", "heightPercent": 84, "highlighted": true }
+          ]
+        },
+        {
+          "id": "metric-access-requests",
+          "title": "Access requests",
+          "bars": [
+            { "id": "ar-1", "heightPercent": 24 },
+            { "id": "ar-2", "heightPercent": 46 },
+            { "id": "ar-3", "heightPercent": 36 },
+            { "id": "ar-4", "heightPercent": 68, "highlighted": true },
+            { "id": "ar-5", "heightPercent": 56 },
+            { "id": "ar-6", "heightPercent": 84, "highlighted": true }
+          ]
+        },
+        {
+          "id": "metric-control-coverage",
+          "title": "Control coverage",
+          "bars": [
+            { "id": "cc-1", "heightPercent": 24 },
+            { "id": "cc-2", "heightPercent": 46 },
+            { "id": "cc-3", "heightPercent": 36 },
+            { "id": "cc-4", "heightPercent": 68, "highlighted": true },
+            { "id": "cc-5", "heightPercent": 56 },
+            { "id": "cc-6", "heightPercent": 84, "highlighted": true }
+          ]
+        },
+        {
+          "id": "metric-doc-expiry",
+          "title": "Document expiry",
+          "bars": [
+            { "id": "de-1", "heightPercent": 24 },
+            { "id": "de-2", "heightPercent": 46 },
+            { "id": "de-3", "heightPercent": 36 },
+            { "id": "de-4", "heightPercent": 68, "highlighted": true },
+            { "id": "de-5", "heightPercent": 56 },
+            { "id": "de-6", "heightPercent": 84, "highlighted": true }
+          ]
+        }
+      ],
+      "statusHeading": "Access request status",
+      "segments": [
+        {
+          "id": "approved",
+          "label": "Approved",
+          "percent": 54,
+          "showDot": true
+        },
+        {
+          "id": "pending",
+          "label": "Pending",
+          "percent": 29,
+          "showDot": true
+        },
+        {
+          "id": "rejected",
+          "label": "Rejected",
+          "percent": 17,
+          "showDot": false
+        }
+      ]
+    }
+  },
+  "workspaceAdministration": {
+    "sectionId": "capability-workspace-administration",
+    "number": "10",
+    "eyebrow": "WORKSPACE ADMINISTRATION",
+    "headline": {
+      "lineOne": "Keep Your Team and",
+      "lineTwo": "Workspace in Sync."
+    },
+    "description": "Manage the people and settings responsible for maintaining your Trust Center.",
+    "checklistHeading": "What you can do",
+    "checklistItems": [
+      "Add and manage team members.",
+      "Configure roles and permissions.",
+      "Manage workspace settings.",
+      "Maintain support contact information."
+    ],
+    "businessValue": {
+      "label": "BUSINESS VALUE",
+      "description": "Organize responsibilities and maintain controlled access to Trust Center administration."
+    },
+    "previewWindow": {
+      "windowTitle": "Workspace Administration",
+      "panelHeading": "Team members",
+      "addMemberLabel": "Add member",
+      "roles": ["Admin", "Editor", "Viewer"],
+      "members": [
+        {
+          "id": "member-admin",
+          "title": "Admin member",
+          "subtitle": "Roles & permissions",
+          "defaultRole": "Admin"
+        },
+        {
+          "id": "member-editor",
+          "title": "Editor member",
+          "subtitle": "Roles & permissions",
+          "defaultRole": "Editor"
+        },
+        {
+          "id": "member-viewer",
+          "title": "Viewer member",
+          "subtitle": "Roles & permissions",
+          "defaultRole": "Viewer"
+        }
+      ],
+      "settingsRows": [
+        {
+          "id": "ws-settings",
+          "title": "Workspace settings",
+          "subtitle": "Manage workspace settings",
+          "icon": "settings"
+        },
+        {
+          "id": "ws-support",
+          "title": "Support contact information",
+          "subtitle": "Maintain support contacts",
+          "icon": "support"
+        }
+      ]
+    }
+  }
+}

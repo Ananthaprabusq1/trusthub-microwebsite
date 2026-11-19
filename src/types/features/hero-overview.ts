@@ -74,6 +74,47 @@ export interface FeaturesHeroContent {
   };
 }
 
-export interface FeaturesPageContent {
-  hero: FeaturesHeroContent;
+export interface FeatureCapabilityNavItem {
+  id: string;
+  number: string;
+  label: string;
+  targetId: string;
+}
+
+export interface FeaturesCapabilitiesHeaderContent {
+  headline: string;
+  description: string;
+  items: FeatureCapabilityNavItem[];
+}
+
+export interface CapabilityDetailBase {
+  sectionId: string;
+  number: string;
+  eyebrow: string;
+  headline: {
+    lineOne: string;
+    lineTwo: string;
+    lineThree?: string;
+  };
+  description: string;
+  checklistHeading: string;
+  checklistItems: string[];
+  businessValue: {
+    label: string;
+    description: string;
+  };
+}
+
+export interface FeaturesCtaBannerContent {
+  headline: {
+    lineOne: string;
+    lineTwo: string;
+  };
+  description: string;
+  primaryCta: FeaturesHeroCta;
+  secondaryCta: FeaturesHeroCta;
+  image: {
+    src: string;
+    alt: string;
+  };
 }

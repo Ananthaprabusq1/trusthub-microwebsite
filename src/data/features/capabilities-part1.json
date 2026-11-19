@@ -1,0 +1,133 @@
+{
+  "securityControls": {
+    "sectionId": "capability-security-controls",
+    "number": "01",
+    "eyebrow": "SECURITY CONTROLS",
+    "headline": {
+      "lineOne": "Manage and Showcase Your",
+      "lineTwo": "Security Practices."
+    },
+    "description": "Organize the security controls that reflect your organization's practices and decide which information customers can view through your Trust Center.",
+    "checklistHeading": "What you can do",
+    "checklistItems": [
+      "Browse and search categorized security controls.",
+      "Select relevant controls for your Trust Center.",
+      "Edit control descriptions to reflect your organization's practices.",
+      "Manage the public visibility of selected controls.",
+      "Add custom controls where supported."
+    ],
+    "businessValue": {
+      "label": "BUSINESS VALUE",
+      "description": "Present your security practices consistently, improve transparency and reduce the effort involved in answering recurring customer security questions."
+    },
+    "previewWindow": {
+      "windowTitle": "Security Controls",
+      "searchPlaceholder": "Search security controls",
+      "categories": ["All", "Access", "Data", "Operations"],
+      "controls": [
+        {
+          "id": "ctrl-access-control",
+          "title": "Access Control",
+          "activeSubtitle": "Public · Selected",
+          "inactiveSubtitle": "Hidden",
+          "category": "Access",
+          "icon": "lock",
+          "defaultEnabled": true
+        },
+        {
+          "id": "ctrl-data-protection",
+          "title": "Data Protection",
+          "activeSubtitle": "Public · Selected",
+          "inactiveSubtitle": "Hidden",
+          "category": "Data",
+          "icon": "shield",
+          "defaultEnabled": true
+        },
+        {
+          "id": "ctrl-incident-response",
+          "title": "Incident Response",
+          "activeSubtitle": "Public · Selected",
+          "inactiveSubtitle": "Hidden",
+          "category": "Operations",
+          "icon": "activity",
+          "defaultEnabled": false
+        },
+        {
+          "id": "ctrl-custom-control",
+          "title": "Custom control",
+          "activeSubtitle": "Added by your team",
+          "inactiveSubtitle": "Added by your team · Hidden",
+          "category": "Operations",
+          "icon": "sliders",
+          "badgeLabel": "Custom",
+          "defaultEnabled": true
+        }
+      ]
+    }
+  },
+  "documentManagement": {
+    "sectionId": "capability-document-management",
+    "number": "02",
+    "eyebrow": "DOCUMENT MANAGEMENT",
+    "headline": {
+      "lineOne": "Keep Security Documentation",
+      "lineTwo": "Organized and Current."
+    },
+    "description": "Bring the documents customers need to review into one place. Manage their validity, maintain updated versions and keep track of document activity.",
+    "checklistHeading": "What you can do",
+    "checklistItems": [
+      "Upload and organize security policies, certifications, audit reports and supporting documents.",
+      "Manage document validity and expiry dates.",
+      "Replace outdated files and maintain version history.",
+      "Track document access and activity.",
+      "Manage documents in bulk where supported."
+    ],
+    "businessValue": {
+      "label": "BUSINESS VALUE",
+      "description": "Maintain up-to-date documentation, reduce manual document handling and improve visibility into the information shared with customers."
+    },
+    "previewWindow": {
+      "windowTitle": "Documents",
+      "panelHeading": "Documents",
+      "uploadLabel": "Upload",
+      "rows": [
+        {
+          "id": "dm-security-policy",
+          "title": "Security Policy",
+          "subtitle": "Version history",
+          "icon": "policy",
+          "statusLabel": "Valid",
+          "statusTone": "valid",
+          "version": "v2"
+        },
+        {
+          "id": "dm-audit-report",
+          "title": "Audit Report",
+          "subtitle": "Replace outdated file",
+          "icon": "folder",
+          "statusLabel": "Expiring",
+          "statusTone": "expiring",
+          "version": "v3"
+        },
+        {
+          "id": "dm-certification",
+          "title": "Certification",
+          "subtitle": "Validity & expiry dates",
+          "icon": "certification",
+          "statusLabel": "Valid",
+          "statusTone": "valid",
+          "version": "v1"
+        },
+        {
+          "id": "dm-supporting",
+          "title": "Supporting Document",
+          "subtitle": "Access activity tracked",
+          "icon": "policy",
+          "statusLabel": "Valid",
+          "statusTone": "valid",
+          "version": "v1"
+        }
+      ]
+    }
+  }
+}

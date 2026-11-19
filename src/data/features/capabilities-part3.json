@@ -1,0 +1,111 @@
+{
+  "complianceCredentials": {
+    "sectionId": "capability-compliance-credentials",
+    "number": "05",
+    "eyebrow": "COMPLIANCE CREDENTIALS",
+    "headline": {
+      "lineOne": "Make Your Compliance",
+      "lineTwo": "Credentials Easy to Verify."
+    },
+    "description": "Give customers a structured view of your organization's certifications, supported compliance frameworks and assurance information.",
+    "checklistHeading": "What you can do",
+    "checklistItems": [
+      "Showcase supported compliance frameworks.",
+      "Present relevant certifications and assurance documents.",
+      "Display certification status and validity.",
+      "Include issue and expiry dates.",
+      "Keep compliance credentials organized in one destination."
+    ],
+    "businessValue": {
+      "label": "BUSINESS VALUE",
+      "description": "Make compliance information easier to find and review during vendor assessments, security evaluations and customer due diligence."
+    },
+    "previewWindow": {
+      "windowTitle": "Compliance Credentials",
+      "panelHeading": "Compliance credentials",
+      "headerPillLabel": "Organized in one place",
+      "cards": [
+        {
+          "id": "cred-certification",
+          "title": "Certification",
+          "subtitle": "Status & validity",
+          "statusLabel": "Valid",
+          "issuedLabel": "Issued",
+          "expiresLabel": "Expires"
+        },
+        {
+          "id": "cred-framework-1",
+          "title": "Framework",
+          "subtitle": "Status & validity",
+          "statusLabel": "Valid",
+          "issuedLabel": "Issued",
+          "expiresLabel": "Expires"
+        },
+        {
+          "id": "cred-framework-2",
+          "title": "Framework",
+          "subtitle": "Status & validity",
+          "statusLabel": "Valid",
+          "issuedLabel": "Issued",
+          "expiresLabel": "Expires"
+        },
+        {
+          "id": "cred-framework-3",
+          "title": "Framework",
+          "subtitle": "Status & validity",
+          "statusLabel": "Valid",
+          "issuedLabel": "Issued",
+          "expiresLabel": "Expires"
+        }
+      ]
+    }
+  },
+  "brandingCustomization": {
+    "sectionId": "capability-branding-customization",
+    "number": "06",
+    "eyebrow": "BRANDING & CUSTOMIZATION",
+    "headline": {
+      "lineOne": "Create a Trust Center That",
+      "lineTwo": "Reflects Your Organization."
+    },
+    "description": "Build a customer-facing experience that aligns with your organization's visual identity and provides a consistent destination for trust-related information.",
+    "checklistHeading": "What you can do",
+    "checklistItems": [
+      "Configure your organization's logo, colours and typography.",
+      "Customize the Trust Center's appearance.",
+      "Set up a custom domain.",
+      "Complete domain and DNS validation.",
+      "Maintain a consistent branded experience."
+    ],
+    "businessValue": {
+      "label": "BUSINESS VALUE",
+      "description": "Give customers a familiar, professional destination for reviewing your organization's security and compliance information."
+    },
+    "previewWindow": {
+      "windowTitle": "Branding & Customization",
+      "panelHeading": "Brand settings",
+      "logoCard": {
+        "title": "Organization logo",
+        "subtitle": "Configure your logo",
+        "uploadedSubtitle": "acme-trust-logo.svg · Ready"
+      },
+      "coloursLabel": "Colours",
+      "swatches": [
+        { "id": "swatch-emerald", "label": "Emerald Green", "hex": "#28B446" },
+        { "id": "swatch-forest", "label": "Forest Green", "hex": "#134E2B" },
+        { "id": "swatch-charcoal", "label": "Charcoal Black", "hex": "#18181B" },
+        {
+          "id": "swatch-surface",
+          "label": "Soft Surface",
+          "hex": "#F8FAFC",
+          "hasBorder": true
+        }
+      ],
+      "typographyLabel": "Typography",
+      "fonts": ["Inter", "Plus Jakarta Sans", "DM Sans"],
+      "customDomainLabel": "Custom domain",
+      "domainValue": "trust.yourcompany.com",
+      "dnsStatusLabel": "DNS validated"
+    }
+  }
+}
