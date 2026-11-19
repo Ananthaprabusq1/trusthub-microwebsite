@@ -1,0 +1,4 @@
+pnpm test
+pnpm exec lint-staged
+pnpm exec tsc --noEmit
+node scripts/audit-metrics.mjs --quick

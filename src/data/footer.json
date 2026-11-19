@@ -1,0 +1,179 @@
+{
+ "brand": {
+    "name": "Stakflo",
+    "product": "Trust Hub",
+    "href": "/",
+    "logoSrc": "/images/stakflo-logo.png",
+    "logoAlt": "Stakflo Trust Hub logo",
+    "description": "Trust Hub is a customer-facing Trust Center platform that brings your organization's security information, compliance credentials, policies and supporting documentation together."
+  },
+  "columns": [
+    {
+      "id": "product",
+      "heading": "PRODUCT",
+      "order": 1,
+      "visible": true,
+      "links": [
+        {
+          "id": "footer-home",
+          "label": "Home",
+          "href": "/",
+          "order": 1,
+          "visible": true
+        },
+        {
+          "id": "footer-features",
+          "label": "Features",
+          "href": "/features",
+          "order": 2,
+          "visible": true
+        },
+        {
+          "id": "footer-how-it-works",
+          "label": "How It Works",
+          "href": "/#how-it-works",
+          "order": 3,
+          "visible": true
+        },
+        {
+          "id": "footer-why-trust-hub",
+          "label": "Why Trust Hub",
+          "href": "/why-trust-hub",
+          "order": 4,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "features",
+      "heading": "FEATURES",
+      "order": 2,
+      "visible": true,
+      "links": [
+        {
+          "id": "footer-security-controls",
+          "label": "Security Controls",
+          "href": "/features#security-controls",
+          "order": 1,
+          "visible": true
+        },
+        {
+          "id": "footer-document-management",
+          "label": "Document Management",
+          "href": "/features#document-management",
+          "order": 2,
+          "visible": true
+        },
+        {
+          "id": "footer-pre-mapped-templates",
+          "label": "Pre-Mapped Templates",
+          "href": "/features#pre-mapped-templates",
+          "order": 3,
+          "visible": true
+        },
+        {
+          "id": "footer-access-governance",
+          "label": "Access Governance",
+          "href": "/features#access-governance",
+          "order": 4,
+          "visible": true
+        },
+        {
+          "id": "footer-compliance-credentials",
+          "label": "Compliance Credentials",
+          "href": "/features#compliance-credentials",
+          "order": 5,
+          "visible": true
+        },
+        {
+          "id": "footer-branding-customization",
+          "label": "Branding & Customization",
+          "href": "/features#branding-customization",
+          "order": 6,
+          "visible": true
+        },
+        {
+          "id": "footer-preview-publishing",
+          "label": "Preview & Publishing",
+          "href": "/features#preview-publishing",
+          "order": 7,
+          "visible": true
+        },
+        {
+          "id": "footer-faqs-disclosures",
+          "label": "FAQs & Organizational Disclosures",
+          "href": "/features#faqs-organizational-disclosures",
+          "order": 8,
+          "visible": true
+        },
+        {
+          "id": "footer-analytics-insights",
+          "label": "Analytics & Insights",
+          "href": "/features#analytics-insights",
+          "order": 9,
+          "visible": true
+        },
+        {
+          "id": "footer-workspace-administration",
+          "label": "Workspace Administration",
+          "href": "/features#workspace-administration",
+          "order": 10,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "heading": "RESOURCES",
+      "order": 3,
+      "visible": true,
+      "links": [
+        {
+          "id": "footer-documentation",
+          "label": "Documentation",
+          "href": "#documentation",
+          "order": 1,
+          "visible": true
+        },
+        {
+          "id": "footer-contact-support",
+          "label": "Contact Support",
+          "href": "#contact-support",
+          "order": 2,
+          "visible": true
+        },
+        {
+          "id": "footer-get-in-touch",
+          "label": "Get in Touch",
+          "href": "#get-in-touch",
+          "order": 3,
+          "visible": true
+        }
+      ]
+    }
+  ],
+  "copyright": "© 2026 SQ1 Security Technology Pvt Ltd. All Rights Reserved.",
+  "legalLinks": [
+    {
+      "id": "legal-privacy-policy",
+      "label": "Privacy Policy",
+      "href": "/privacy-policy",
+      "order": 1,
+      "visible": true
+    },
+    {
+      "id": "legal-terms-of-use",
+      "label": "Terms of Use",
+      "href": "/terms-of-use",
+      "order": 2,
+      "visible": true
+    },
+    {
+      "id": "legal-cookie-policy",
+      "label": "Cookie Policy",
+      "href": "/cookie-policy",
+      "order": 3,
+      "visible": true
+    }
+  ]
+}
