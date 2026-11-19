@@ -4,10 +4,7 @@ import { HomeHeroSection } from "@/components/sections/home/home-hero-section";
 import { PlatformOverviewSection } from "@/components/sections/home/platform-overview-section";
 import { ShowcaseSection } from "@/components/sections/home/showcase-section";
 import { TrustHubGlanceSection } from "@/components/sections/home/trust-hub-glance-section";
-import rawHomeContent from "@/data/home.json";
-import type { HomePageContent } from "@/types/home";
-
-const homeContent = rawHomeContent as HomePageContent;
+import { homeContent } from "@/data/home/index";
 
 export default function HomePage() {
   return (

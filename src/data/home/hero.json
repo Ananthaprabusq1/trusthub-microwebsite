@@ -1,0 +1,92 @@
+{
+  "badge": "CUSTOMER TRUST CENTER",
+  "headline": {
+    "prefix": "A Better Way to Manage Your",
+    "highlight": "Customer Trust Center",
+    "suffix": "."
+  },
+  "description": "Showcase your security posture, manage document access, and maintain your organization's trust information through one centralized platform.",
+  "primaryCta": {
+    "label": "Get Started",
+    "href": "#get-started",
+    "showArrow": true
+  },
+  "secondaryCta": {
+    "label": "See How It Works",
+    "href": "/#how-it-works",
+    "showArrow": false
+  },
+  "backgroundImage": {
+    "src": "/images/heroback.png",
+    "alt": "Soft pastel green abstract flowing background"
+  },
+  "accentBackgroundImage": {
+    "src": "/images/green-bg-1.png",
+    "alt": "Vibrant emerald green wave accent"
+  },
+  "isometricCard": {
+    "src": "/images/hero-isometric-card.png",
+    "alt": "Isometric security compliance document workflow illustration"
+  },
+  "dashboard": {
+    "windowTitle": "Management Dashboard",
+    "sidebarHeading": "MANAGE",
+    "sidebarItems": [
+      { "id": "security-controls", "label": "Security Controls" },
+      { "id": "documents", "label": "Documents" },
+      { "id": "access-requests", "label": "Access Requests", "active": true },
+      { "id": "compliance", "label": "Compliance" },
+      { "id": "branding", "label": "Branding" },
+      { "id": "analytics", "label": "Analytics" }
+    ],
+    "panelHeading": "Access Requests",
+    "rows": [
+      {
+        "id": "security-policies",
+        "title": "Security Policies",
+        "subtitle": "Restricted document",
+        "icon": "policy"
+      },
+      {
+        "id": "audit-reports",
+        "title": "Audit Reports",
+        "subtitle": "Restricted document",
+        "icon": "folder",
+        "statusLabel": "Approved"
+      },
+      {
+        "id": "certifications",
+        "title": "Certifications",
+        "subtitle": "Public credential",
+        "icon": "certification",
+        "statusLabel": "Public"
+      }
+    ],
+    "chartHeading": "Document views",
+    "chartBars": [
+      { "id": "bar-1", "label": "Mon", "heightPercent": 36 },
+      { "id": "bar-2", "label": "Tue", "heightPercent": 56 },
+      { "id": "bar-3", "label": "Wed", "heightPercent": 42 },
+      { "id": "bar-4", "label": "Thu", "heightPercent": 78, "highlighted": true },
+      { "id": "bar-5", "label": "Fri", "heightPercent": 58 },
+      { "id": "bar-6", "label": "Sat", "heightPercent": 92, "highlighted": true },
+      { "id": "bar-7", "label": "Sun", "heightPercent": 68 }
+    ]
+  },
+  "floatingBadges": [
+    {
+      "id": "certification-valid",
+      "title": "Certification valid",
+      "subtitle": "Status and validity at a glance",
+      "icon": "certification",
+      "position": "bottom-left"
+    },
+    {
+      "id": "access-approved",
+      "title": "Access approved",
+      "subtitle": "Restricted document shared",
+      "icon": "access",
+      "position": "bottom-right"
+    }
+  ]
+}

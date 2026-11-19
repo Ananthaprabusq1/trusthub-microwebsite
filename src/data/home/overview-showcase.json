@@ -1,0 +1,113 @@
+{
+  "platformOverview": {
+    "sectionId": "how-it-works",
+    "badge": "PLATFORM OVERVIEW",
+    "headline": "From Security Requests to Customer Confidence.",
+    "description": "Everything you need to manage and share your organization's trust information, in one place.",
+    "steps": [
+      {
+        "id": "step-organize",
+        "stepNumber": 1,
+        "title": "01. Organize",
+        "description": "Centralize security documents and compliance evidence.",
+        "icon": "organize"
+      },
+      {
+        "id": "step-publish",
+        "stepNumber": 2,
+        "title": "02. Publish",
+        "description": "Showcase your security posture through a branded trust center.",
+        "icon": "publish"
+      },
+      {
+        "id": "step-share",
+        "stepNumber": 3,
+        "title": "03. Share",
+        "description": "Manage document access with secure approval workflows.",
+        "icon": "share"
+      },
+      {
+        "id": "step-track",
+        "stepNumber": 4,
+        "title": "04. Track",
+        "description": "Monitor document engagement and access activity.",
+        "icon": "track"
+      }
+    ]
+  },
+  "showcase": {
+    "badge": "WHAT YOU CAN SHOWCASE",
+    "headline": "Give Customers a Clear View of Your Trust Posture.",
+    "description": "Make essential security and compliance information accessible through one customer-facing Trust Center.",
+    "items": [
+      {
+        "id": "showcase-certifications",
+        "title": "Certifications & Frameworks",
+        "description": "Showcase certifications and applicable compliance frameworks.",
+        "icon": "certifications"
+      },
+      {
+        "id": "showcase-policies",
+        "title": "Security Policies",
+        "description": "Share approved policies and security documentation.",
+        "icon": "policies"
+      },
+      {
+        "id": "showcase-audits",
+        "title": "Audit Reports",
+        "description": "Provide access to relevant audit reports and assurance documents.",
+        "icon": "audits"
+      },
+      {
+        "id": "showcase-controls",
+        "title": "Security Controls",
+        "description": "Display selected controls that reflect your organization's security practices.",
+        "icon": "controls"
+      },
+      {
+        "id": "showcase-disclosures",
+        "title": "Organizational Disclosures",
+        "description": "Share subprocessor details and security leadership information.",
+        "icon": "disclosures"
+      }
+    ],
+    "previewWindow": {
+      "windowTitle": "Customer Trust Center",
+      "organizationName": "Your Organization",
+      "ctaLabel": "Request access",
+      "verifiedBadgeLabel": "Verified information",
+      "bannerHeading": "Security & Compliance",
+      "bannerSubtitle": "Find security and compliance information in one place.",
+      "rows": [
+        {
+          "id": "preview-certifications",
+          "title": "Certifications & Frameworks",
+          "subtitle": "Published credentials",
+          "icon": "certification",
+          "accessLabel": "Public",
+          "accessTone": "public"
+        },
+        {
+          "id": "preview-policies",
+          "title": "Security Policies",
+          "subtitle": "Security documentation",
+          "icon": "policy",
+          "accessLabel": "Public",
+          "accessTone": "public"
+        },
+        {
+          "id": "preview-audits",
+          "title": "Audit Reports",
+          "subtitle": "Request access to view",
+          "icon": "folder",
+          "accessLabel": "Restricted",
+          "accessTone": "restricted"
+        }
+      ]
+    },
+    "floatingBadge": {
+      "title": "Credentials verified",
+      "subtitle": "Issue and expiry dates shown"
+    }
+  }
+}
