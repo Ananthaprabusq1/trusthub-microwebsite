@@ -45,5 +45,177 @@
         "position": "bottom-right"
       }
     ]
+  },
+  "about": {
+    "badge": "ABOUT TRUST HUB",
+    "headline": {
+      "lineOne": "A Central Place to Showcase",
+      "lineTwo": "Organizational Trust."
+    },
+    "paragraphs": [
+      "Trust Hub is a customer-facing Trust Center platform that brings your organization's security information, compliance credentials, policies and supporting documentation together.",
+      "It gives customers a dedicated destination to review relevant information while giving internal teams control over what they publish and how sensitive documents are shared."
+    ],
+    "image": {
+      "src": "/images/cta-security-posture.png",
+      "alt": "3D verified security documents, compliance reports, and audit logs connected to a green shield"
+    }
+  },
+  "organizationsNeed": {
+    "badge": "WHY ORGANIZATIONS NEED TRUST HUB",
+    "headline": "Trust Requires More Than a Security Checklist.",
+    "description": "Customers increasingly need visibility into how organizations manage security, compliance and sensitive information. Scattered documents, repeated requests and manual sharing can make that process difficult.",
+    "cards": [
+      {
+        "id": "need-scattered-info",
+        "number": "01",
+        "title": "Scattered Trust Information",
+        "description": "Security policies, certifications and audit reports are often maintained across different locations, making information difficult to find and review.",
+        "icon": "scattered"
+      },
+      {
+        "id": "need-repetitive-requests",
+        "number": "02",
+        "title": "Repetitive Customer Requests",
+        "description": "Teams spend time responding to recurring security questions and sharing the same supporting documents with multiple customers.",
+        "icon": "requests"
+      },
+      {
+        "id": "need-limited-control",
+        "number": "03",
+        "title": "Limited Control Over Information Sharing",
+        "description": "Without a centralized process, managing document visibility, access requests and updates can become difficult.",
+        "icon": "control"
+      }
+    ]
+  },
+  "valuableElements": {
+    "badge": "WHAT MAKES TRUST HUB VALUABLE",
+    "headline": "A Better Way to Manage and Share Trust.",
+    "description": "Trust Hub brings together the essential elements of a customer-facing trust experience.",
+    "cards": [
+      {
+        "id": "val-centralized",
+        "title": "Centralized Information",
+        "description": "Bring security documents, certifications, policies and disclosures into one destination.",
+        "icon": "centralized",
+        "span": "third"
+      },
+      {
+        "id": "val-sharing",
+        "title": "Controlled Information Sharing",
+        "description": "Decide what customers can access and manage requests for restricted documents.",
+        "icon": "sharing",
+        "span": "third"
+      },
+      {
+        "id": "val-self-service",
+        "title": "Customer Self-Service",
+        "description": "Give customers a dedicated place to find published trust information and request supporting evidence.",
+        "icon": "self-service",
+        "span": "third"
+      },
+      {
+        "id": "val-branding",
+        "title": "Branded Customer Experience",
+        "description": "Present your organization's trust information through a Trust Center aligned with your brand.",
+        "icon": "branding",
+        "span": "half"
+      },
+      {
+        "id": "val-visibility",
+        "title": "Engagement Visibility",
+        "description": "Understand document views, access requests and customer interactions.",
+        "icon": "visibility",
+        "span": "half"
+      }
+    ]
+  },
+  "businessValue": {
+    "badge": "THE BUSINESS VALUE",
+    "headline": "Make Trust Easier Across the Customer Journey.",
+    "description": "From initial evaluations to ongoing customer relationships, Trust Hub helps organizations make security information easier to access and manage.",
+    "columns": {
+      "valueHeader": "Business value",
+      "meaningHeader": "What it means"
+    },
+    "rows": [
+      {
+        "id": "bv-less-work",
+        "value": "Less Repetitive Work",
+        "meaning": "Reduce repeated document-sharing and information requests."
+      },
+      {
+        "id": "bv-faster-access",
+        "value": "Faster Information Access",
+        "meaning": "Help customers find relevant security and compliance information independently."
+      },
+      {
+        "id": "bv-greater-control",
+        "value": "Greater Information Control",
+        "meaning": "Manage document visibility and access permissions."
+      },
+      {
+        "id": "bv-consistent-comms",
+        "value": "Consistent Communication",
+        "meaning": "Maintain a centralized destination for published trust information."
+      },
+      {
+        "id": "bv-better-visibility",
+        "value": "Better Visibility",
+        "meaning": "Understand how customers engage with shared resources."
+      }
+    ]
+  },
+  "whoBenefits": {
+    "badge": "WHO BENEFITS FROM TRUST HUB?",
+    "headline": "Supporting the Teams Behind Customer Trust.",
+    "cards": [
+      {
+        "id": "audience-security",
+        "title": "Security Teams",
+        "description": "Manage security documentation, control disclosures and oversee information sharing.",
+        "icon": "security"
+      },
+      {
+        "id": "audience-compliance",
+        "title": "Compliance Teams",
+        "description": "Keep certifications, policies and audit evidence organized for customer review.",
+        "icon": "compliance"
+      },
+      {
+        "id": "audience-sales",
+        "title": "Sales Teams",
+        "description": "Make security information easier to share during customer evaluations.",
+        "icon": "sales"
+      },
+      {
+        "id": "audience-prospects",
+        "title": "Prospects & Customers",
+        "description": "Access relevant security information and request supporting evidence through self-service.",
+        "icon": "prospects"
+      }
+    ]
+  },
+  "ctaBanner": {
+    "headline": {
+      "lineOne": "Make Your Trust Posture",
+      "lineTwo": "Easier to Demonstrate."
+    },
+    "description": "Bring your security information and customer-facing trust experience together with Trust Hub.",
+    "primaryCta": {
+      "label": "Get Started",
+      "href": "#get-started",
+      "showArrow": true
+    },
+    "secondaryCta": {
+      "label": "Explore Features",
+      "href": "/features",
+      "showArrow": false
+    },
+    "image": {
+      "src": "/images/cta-security-posture.png",
+      "alt": "3D verified security documents and compliance audit logs connected to a green shield"
+    }
   }
 }
