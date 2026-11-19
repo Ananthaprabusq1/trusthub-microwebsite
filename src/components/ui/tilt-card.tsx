@@ -72,7 +72,7 @@ export function TiltCard({
           damping: 24,
           mass: 0.8,
         }}
-        className="relative will-change-transform"
+        className="relative h-full will-change-transform"
       >
         {children}
 
