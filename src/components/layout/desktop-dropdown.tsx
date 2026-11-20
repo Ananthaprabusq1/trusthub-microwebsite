@@ -150,7 +150,7 @@ export function DesktopDropdown({
         aria-controls={`desktop-submenu-${item.id}`}
         onClick={() => onToggle(item.id)}
         onKeyDown={handleTriggerKeyDown}
-        className={`inline-flex items-center gap-1.5 rounded-full px-5 py-2 text-[15px] font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446] ${
+        className={`inline-flex items-center gap-1.5 rounded-full px-5 py-2 text-[15px] font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650] ${
           isActive || isOpen
             ? "bg-[#E8F5EC] text-[#111827]"
             : "text-[#4B5563] hover:bg-slate-50 hover:text-[#111827]"
@@ -202,7 +202,7 @@ export function DesktopDropdown({
                       aria-current={subActive ? "location" : undefined}
                       onClick={handleSubItemClick}
                       onKeyDown={(e) => handleSubmenuKeyDown(e, index)}
-                      className={`flex flex-col rounded-xl px-3.5 py-2.5 text-sm transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446] ${
+                      className={`flex flex-col rounded-xl px-3.5 py-2.5 text-sm transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650] ${
                         subActive
                           ? "bg-[#E8F5EC] font-medium text-[#111827]"
                           : "text-[#4B5563] hover:bg-[#F3FAF5] hover:text-[#111827]"

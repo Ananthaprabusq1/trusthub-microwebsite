@@ -1,6 +1,6 @@
 {
   "previewPublishing": {
-    "sectionId": "capability-preview-publishing",
+    "sectionId": "preview-publishing",
     "number": "07",
     "eyebrow": "PREVIEW & PUBLISHING",
     "headline": {
@@ -33,7 +33,7 @@
     }
   },
   "faqsDisclosures": {
-    "sectionId": "capability-faqs-disclosures",
+    "sectionId": "faqs-organizational-disclosures",
     "number": "08",
     "eyebrow": "FAQS & ORGANIZATIONAL DISCLOSURES",
     "headline": {

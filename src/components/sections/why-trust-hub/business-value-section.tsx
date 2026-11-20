@@ -64,7 +64,7 @@ export function BusinessValueSection({ content }: BusinessValueSectionProps) {
                     whileInView={
                       prefersReducedMotion ? undefined : { opacity: 1, y: 0 }
                     }
-                    viewport={{ once: true, amount: "some" }}
+                    viewport={{ once: false, amount: 0.2 }}
                     transition={{
                       duration: 0.5,
                       delay: 0.08 + index * 0.06,
@@ -78,7 +78,7 @@ export function BusinessValueSection({ content }: BusinessValueSectionProps) {
                     <div className="flex items-center gap-3.5">
                       <span
                         aria-hidden="true"
-                        className="flex h-5 w-5 shrink-0 items-center justify-center rounded-[5px] bg-[#28B446] text-white shadow-2xs transition-transform duration-300 group-hover:scale-105"
+                        className="flex h-5 w-5 shrink-0 items-center justify-center rounded-[5px] bg-[#37C650] text-white shadow-2xs transition-transform duration-300 group-hover:scale-105"
                       >
                         <LuCheck className="h-3.5 w-3.5 stroke-[3]" />
                       </span>

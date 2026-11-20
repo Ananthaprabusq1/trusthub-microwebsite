@@ -100,8 +100,8 @@ export function WhyTrustHubShowcase({
                 duration={isLeft ? 4.7 : 5.3}
                 delay={1.35 + index * 0.2}
               >
-                <div className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-[0_14px_34px_-10px_rgba(15,23,42,0.14)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#28B446]/40 hover:shadow-[0_22px_44px_-10px_rgba(40,180,70,0.22)]">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#28B446]">
+                <div className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-[0_14px_34px_-10px_rgba(15,23,42,0.14)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/40 hover:shadow-[0_22px_44px_-10px_rgba(55,198,80,0.22)]">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#37C650]">
                     <ToastIcon type={badge.icon} />
                   </div>
                   <div>

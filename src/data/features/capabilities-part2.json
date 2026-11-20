@@ -1,6 +1,6 @@
 {
   "preMappedTemplates": {
-    "sectionId": "capability-pre-mapped-templates",
+    "sectionId": "pre-mapped-templates",
     "number": "03",
     "eyebrow": "PRE-MAPPED TEMPLATES",
     "headline": {
@@ -46,7 +46,7 @@
     }
   },
   "accessGovernance": {
-    "sectionId": "capability-access-governance",
+    "sectionId": "access-governance",
     "number": "04",
     "eyebrow": "ACCESS GOVERNANCE",
     "headline": {

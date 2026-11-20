@@ -1,0 +1,95 @@
+{
+  "connectedCapabilities": {
+    "badge": "CONNECTED CAPABILITIES",
+    "headline": "From Security Requests to Customer Confidence.",
+    "description": "Everything you need to manage and share your organization's trust information, in one place.",
+    "steps": [
+      {
+        "id": "step-organize",
+        "stepNumber": "1",
+        "icon": "organize",
+        "title": "Organize",
+        "description": "Centralize security documents and compliance evidence.",
+        "pills": [
+          {
+            "id": "pill-security-controls",
+            "label": "Security Controls",
+            "targetId": "security-controls"
+          },
+          {
+            "id": "pill-document-management",
+            "label": "Document Management",
+            "targetId": "document-management"
+          },
+          {
+            "id": "pill-pre-mapped-templates",
+            "label": "Pre-Mapped Templates",
+            "targetId": "pre-mapped-templates"
+          }
+        ]
+      },
+      {
+        "id": "step-publish",
+        "stepNumber": "2",
+        "icon": "publish",
+        "title": "Publish",
+        "description": "Showcase your security posture through a branded trust center.",
+        "pills": [
+          {
+            "id": "pill-compliance-credentials",
+            "label": "Compliance Credentials",
+            "targetId": "compliance-credentials"
+          },
+          {
+            "id": "pill-branding-customization",
+            "label": "Branding & Customization",
+            "targetId": "branding-customization"
+          },
+          {
+            "id": "pill-preview-publishing",
+            "label": "Preview & Publishing",
+            "targetId": "preview-publishing"
+          },
+          {
+            "id": "pill-faqs-disclosures",
+            "label": "FAQs & Organizational Disclosures",
+            "targetId": "faqs-organizational-disclosures"
+          }
+        ]
+      },
+      {
+        "id": "step-share",
+        "stepNumber": "3",
+        "icon": "share",
+        "title": "Share",
+        "description": "Manage document access with secure approval workflows.",
+        "pills": [
+          {
+            "id": "pill-access-governance",
+            "label": "Access Governance",
+            "targetId": "access-governance"
+          }
+        ]
+      },
+      {
+        "id": "step-track",
+        "stepNumber": "4",
+        "icon": "track",
+        "title": "Track",
+        "description": "Monitor document engagement and access activity.",
+        "pills": [
+          {
+            "id": "pill-analytics-insights",
+            "label": "Analytics & Insights",
+            "targetId": "analytics-insights"
+          }
+        ]
+      }
+    ],
+    "foundationBar": {
+      "title": "Workspace Administration",
+      "description": "Manage the people and settings responsible for maintaining your Trust Center.",
+      "targetId": "workspace-administration"
+    }
+  }
+}

@@ -15,7 +15,7 @@ interface WhyNeedTrustHubSectionProps {
 const SILKY_EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 function NeedCardIcon({ type }: { type: WhyNeedCardIcon }) {
-  const iconClass = "h-5 w-5 text-[#28B446]";
+  const iconClass = "h-5 w-5 text-[#37C650]";
   if (type === "requests") {
     return <LuSend aria-hidden="true" className={iconClass} />;
   }
@@ -64,7 +64,7 @@ export function WhyNeedTrustHubSection({
               <motion.article
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.32, ease: SILKY_EASE }}
-                className="group flex h-full flex-col rounded-2xl border border-slate-200/85 bg-white p-6 shadow-[0_6px_24px_-10px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow] duration-300 ease-out hover:border-[#28B446]/45 hover:shadow-[0_20px_42px_-14px_rgba(40,180,70,0.16)] sm:rounded-3xl sm:p-7"
+                className="group flex h-full flex-col rounded-2xl border border-slate-200/85 bg-white p-6 shadow-[0_6px_24px_-10px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow] duration-300 ease-out hover:border-[#37C650]/45 hover:shadow-[0_20px_42px_-14px_rgba(55,198,80,0.16)] sm:rounded-3xl sm:p-7"
               >
                 {/* Top Row: Soft Mint Icon Box + Watermark Number */}
                 <div className="flex items-start justify-between gap-4">

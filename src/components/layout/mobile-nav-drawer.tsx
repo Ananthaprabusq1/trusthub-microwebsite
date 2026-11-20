@@ -1,27 +1,29 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { LuArrowRight, LuX } from "react-icons/lu";
-import { StakfloBrandMark } from "@/components/ui/stakflo-brand-mark";
-import { notifyHashChange, useActiveHash } from "@/hooks/use-active-hash";
+import { useState } from "react";
+import {
+  LuArrowRight,
+  LuChevronDown,
+  LuShieldCheck,
+  LuX,
+} from "react-icons/lu";
 import type { HeaderActionItem, NavItem } from "@/types/navigation";
-import { MobileNavItem } from "./mobile-nav-item";
 
 interface MobileNavDrawerProps {
   isOpen: boolean;
-  onClose: (restoreFocus?: boolean) => void;
+  onClose: () => void;
   pathname: string;
   items: NavItem[];
   actions: HeaderActionItem[];
-  brandName: string;
-  brandProduct: string;
-  logoSrc: string;
-  logoAlt: string;
+  brandName?: string;
+  brandProduct?: string;
+  logoSrc?: string;
+  logoAlt?: string;
+  onNavigateHref?: (href: string) => void;
 }
-
-const smoothEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 export function MobileNavDrawer({
   isOpen,
@@ -29,185 +31,208 @@ export function MobileNavDrawer({
   pathname,
   items,
   actions,
-  brandName,
-  brandProduct,
-  logoSrc,
-  logoAlt,
+  brandName = "Stakflo",
+  brandProduct = "Trust Hub",
+  logoSrc = "/images/stakflo-logo.png",
+  logoAlt = "Stakflo Trust Hub logo",
+  onNavigateHref,
 }: MobileNavDrawerProps) {
-  const activeHash = useActiveHash();
-  const [expandedId, setExpandedId] = useState<string | null>(
-    pathname.startsWith("/features") ? "features" : null
-  );
+  const [expandedId, setExpandedId] = useState<string | null>("features");
+  const [logoError, setLogoError] = useState(false);
 
-  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
-  const drawerRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    if (!isOpen) {
-      return;
-    }
-
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    closeButtonRef.current?.focus();
-
-    function handleKeyDown(event: globalThis.KeyboardEvent) {
-      if (event.key === "Escape") {
-        event.preventDefault();
-        onClose(true);
-        return;
-      }
-
-      if (event.key === "Tab" && drawerRef.current) {
-        const focusable = drawerRef.current.querySelectorAll<HTMLElement>(
-          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
-        );
-        if (focusable.length === 0) return;
-
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
-
-        if (event.shiftKey && document.activeElement === first) {
-          event.preventDefault();
-          last.focus();
-        } else if (!event.shiftKey && document.activeElement === last) {
-          event.preventDefault();
-          first.focus();
-        }
+  const handleLinkClick = (href: string) => {
+    onNavigateHref?.(href);
+    const [targetPath, hash] = href.split("#");
+    if (hash && (targetPath || pathname) === pathname) {
+      const targetEl = document.getElementById(hash);
+      if (targetEl) {
+        window.history.pushState(null, "", href);
+        targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
-
-    document.addEventListener("keydown", handleKeyDown);
-    return () => {
-      document.body.style.overflow = previousOverflow;
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [isOpen, onClose]);
-
-  const handleToggleExpand = useCallback((id: string) => {
-    setExpandedId((prev) => (prev === id ? null : id));
-  }, []);
-
-  const handleLinkSelect = useCallback(
-    (isHashLink = false) => {
-      onClose(false);
-      if (isHashLink) {
-        notifyHashChange();
-      }
-    },
-    [onClose]
-  );
+    onClose();
+  };
 
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
-          ref={drawerRef}
-          id="mobile-navigation-drawer"
-          data-lenis-prevent
+        <div
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation"
-          initial={{ opacity: 0, y: -14 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.26, ease: smoothEase }}
-          className="fixed inset-0 z-50 flex h-dvh w-full flex-col overflow-y-auto bg-white lg:hidden"
+          className="fixed inset-0 z-50 lg:hidden"
         >
-          {/* Top Brand + Rounded Square Close Button */}
-          <div className="flex h-20 shrink-0 items-center justify-between px-5 sm:px-6">
-            <Link
-              href="/"
-              onClick={() => handleLinkSelect(false)}
-              className="inline-flex items-center gap-3 rounded-xl focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:outline-none"
-            >
-              <StakfloBrandMark
-                src={logoSrc}
-                alt={logoAlt}
-                width={34}
-                height={34}
-                className="h-8.5 w-8.5 shrink-0 object-contain"
-              />
-              <span className="flex items-center gap-2 text-[17px] font-semibold tracking-tight text-[#111827]">
-                <span>{brandName}</span>
-                <span aria-hidden="true" className="font-normal text-slate-300">
-                  |
-                </span>
-                <span>{brandProduct}</span>
-              </span>
-            </Link>
-
-            <motion.button
-              ref={closeButtonRef}
-              type="button"
-              whileTap={{ scale: 0.94 }}
-              aria-label="Close navigation menu"
-              onClick={() => onClose(true)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200/90 bg-white text-[#111827] transition-colors duration-200 hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:outline-none"
-            >
-              <LuX aria-hidden="true" className="h-5 w-5" />
-            </motion.button>
-          </div>
-
-          {/* Primary Navigation List */}
-          <nav
-            aria-label="Mobile Primary Navigation"
-            className="flex-1 px-5 pt-2 pb-6"
-          >
-            <ul className="space-y-1.5">
-              {items.map((item, index) => (
-                <MobileNavItem
-                  key={item.id}
-                  item={item}
-                  index={index}
-                  pathname={pathname}
-                  activeHash={activeHash}
-                  isExpanded={expandedId === item.id}
-                  onToggleExpand={handleToggleExpand}
-                  onSelectLink={handleLinkSelect}
-                />
-              ))}
-            </ul>
-          </nav>
-
-          {/* Bottom Full-Width CTA Area */}
+          {/* Backdrop */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.26, delay: 0.08, ease: smoothEase }}
-            className="mt-auto shrink-0 px-5 pt-4 pb-7"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={onClose}
+            className="fixed inset-0 bg-slate-950/35 backdrop-blur-xs"
+          />
+
+          {/* Slide-over Drawer */}
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", stiffness: 320, damping: 32 }}
+            className="fixed inset-y-0 right-0 z-10 flex w-full max-w-sm flex-col bg-white shadow-2xl"
           >
-            <div className="flex flex-col gap-3">
-              {actions.map((action) => {
-                if (action.variant === "primary") {
+            {/* Drawer Header */}
+            <div className="flex items-center justify-between border-b border-slate-200/80 px-5 py-4">
+              <Link
+                href="/"
+                onClick={onClose}
+                className="flex items-center gap-2"
+              >
+                {!logoError ? (
+                  <Image
+                    src={logoSrc}
+                    alt={logoAlt}
+                    width={126}
+                    height={30}
+                    onError={() => setLogoError(true)}
+                    className="h-7 w-auto object-contain"
+                  />
+                ) : (
+                  <span className="flex items-center gap-2">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#37C650] text-white">
+                      <LuShieldCheck className="h-4 w-4" />
+                    </span>
+                    <span className="text-sm font-extrabold text-[#111827]">
+                      {brandName}{" "}
+                      <span className="text-[#37C650]">{brandProduct}</span>
+                    </span>
+                  </span>
+                )}
+              </Link>
+
+              <button
+                type="button"
+                onClick={onClose}
+                aria-label="Close navigation menu"
+                className="inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-xl border border-slate-200 text-[#4B5563] hover:bg-slate-50 hover:text-[#111827]"
+              >
+                <LuX className="h-4.5 w-4.5" />
+              </button>
+            </div>
+
+            {/* Navigation Items */}
+            <div className="flex-1 space-y-2 overflow-y-auto px-4 py-5">
+              {items.map((item) => {
+                const subItems = item.children ?? [];
+                const hasChildren = subItems.length > 0;
+                const isExpanded = expandedId === item.id;
+                const isActive = pathname === item.href;
+
+                if (!hasChildren) {
                   return (
-                    <motion.div key={action.id} whileTap={{ scale: 0.985 }}>
-                      <Link
-                        href={action.href}
-                        onClick={() => handleLinkSelect(false)}
-                        className="inline-flex min-h-13.5 w-full items-center justify-center gap-2.5 rounded-2xl bg-[#28B446] px-6 py-4 text-[17px] font-semibold text-white shadow-md shadow-[#28B446]/20 transition-colors duration-200 hover:bg-[#229A3C] focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 focus-visible:outline-none"
-                      >
-                        <span>{action.label}</span>
-                        <LuArrowRight aria-hidden="true" className="h-5 w-5" />
-                      </Link>
-                    </motion.div>
+                    <Link
+                      key={item.id}
+                      href={item.href}
+                      onClick={() => handleLinkClick(item.href)}
+                      className={`block rounded-xl px-3.5 py-2.5 text-sm font-semibold transition-colors ${
+                        isActive
+                          ? "bg-[#E8F5EC] text-[#15803D]"
+                          : "text-[#111827] hover:bg-slate-50"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
                   );
                 }
 
                 return (
-                  <Link
-                    key={action.id}
-                    href={action.href}
-                    onClick={() => handleLinkSelect(false)}
-                    className="inline-flex min-h-11 w-full items-center justify-center rounded-2xl px-5 py-2.5 text-[16px] font-semibold text-[#4B5563] transition-colors duration-200 hover:bg-slate-50 hover:text-[#111827] focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:outline-none"
+                  <div
+                    key={item.id}
+                    className="rounded-xl border border-slate-100 bg-[#FAFBFD]"
                   >
-                    {action.label}
-                  </Link>
+                    <div className="flex items-center justify-between px-3.5 py-2.5">
+                      <Link
+                        href={item.href}
+                        onClick={() => handleLinkClick(item.href)}
+                        className={`text-sm font-semibold ${
+                          isActive ? "text-[#37C650]" : "text-[#111827]"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+
+                      <button
+                        type="button"
+                        aria-expanded={isExpanded}
+                        aria-label={`Toggle ${item.label} submenu`}
+                        onClick={() =>
+                          setExpandedId((prev) =>
+                            prev === item.id ? null : item.id
+                          )
+                        }
+                        className="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg text-[#4B5563] hover:bg-slate-200/60"
+                      >
+                        <LuChevronDown
+                          className={`h-4 w-4 transition-transform duration-200 ${
+                            isExpanded ? "rotate-180 text-[#37C650]" : ""
+                          }`}
+                        />
+                      </button>
+                    </div>
+
+                    {isExpanded && (
+                      <div className="space-y-1 border-t border-slate-200/70 px-2.5 py-2.5">
+                        {subItems.map((subItem, idx) => (
+                          <Link
+                            key={subItem.id}
+                            href={subItem.href}
+                            onClick={() => handleLinkClick(subItem.href)}
+                            className="flex items-start gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium text-[#334155] transition-colors hover:bg-[#E8F5EC] hover:text-[#15803D]"
+                          >
+                            <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-[#E8F5EC] text-[10px] font-bold text-[#15803D]">
+                              {String(idx + 1).padStart(2, "0")}
+                            </span>
+                            <span className="flex flex-col">
+                              <span className="font-semibold">
+                                {subItem.label}
+                              </span>
+                              {subItem.description && (
+                                <span className="mt-0.5 text-[11px] text-slate-500">
+                                  {subItem.description}
+                                </span>
+                              )}
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </div>
+
+            {/* Bottom Action Buttons */}
+            <div className="space-y-2.5 border-t border-slate-200/80 p-4">
+              {actions.map((action) => (
+                <Link
+                  key={action.id}
+                  href={action.href}
+                  onClick={() => handleLinkClick(action.href)}
+                  className={`inline-flex w-full items-center justify-center gap-1.5 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors ${
+                    action.variant === "primary"
+                      ? "bg-[#37C650] text-white shadow-[0_8px_20px_-6px_rgba(55,198,80,0.45)] hover:bg-[#2EB045]"
+                      : "border border-slate-200 bg-white text-[#111827] hover:bg-slate-50"
+                  }`}
+                >
+                  <span>{action.label}</span>
+                  {action.variant === "primary" &&
+                    (action.showArrow ?? true) && (
+                      <LuArrowRight className="h-4 w-4" />
+                    )}
+                </Link>
+              ))}
+            </div>
           </motion.div>
-        </motion.div>
+        </div>
       )}
     </AnimatePresence>
   );

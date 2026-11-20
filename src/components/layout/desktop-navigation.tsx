@@ -44,7 +44,7 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
                   <Link
                     href={item.href}
                     aria-current={isActive ? "page" : undefined}
-                    className={`inline-flex items-center rounded-full px-5 py-2 text-[15px] font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446] ${
+                    className={`inline-flex items-center rounded-full px-5 py-2 text-[15px] font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650] ${
                       isActive
                         ? "bg-[#E8F5EC] text-[#111827]"
                         : "text-[#4B5563] hover:bg-slate-50 hover:text-[#111827]"
@@ -74,6 +74,7 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
       </nav>
 
       {/* Right CTA Actions */}
+      
       <div className="flex items-center gap-6">
         {actions.map((action) => {
           if (action.variant === "primary") {
@@ -93,7 +94,7 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
             <Link
               key={action.id}
               href={action.href}
-              className="rounded-lg px-2 py-1.5 text-[15px] font-medium text-[#4B5563] transition-colors duration-200 hover:text-[#111827] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446]"
+              className="rounded-lg px-2 py-1.5 text-[15px] font-medium text-[#4B5563] transition-colors duration-200 hover:text-[#111827] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650]"
             >
               {action.label}
             </Link>

@@ -66,7 +66,7 @@ export function FeaturesHeroSection({ content }: FeaturesHeroSectionProps) {
           <div className="mx-auto max-w-3xl text-center">
             {/* Stage 2: FEATURES Badge + Two-Tone Main Headline */}
             <HeroStage stage={2} preset="rise">
-              <span className="inline-flex items-center rounded-full bg-[#28B446] px-4 py-1 text-[11px] font-bold tracking-wider text-white uppercase shadow-2xs">
+              <span className="inline-flex items-center rounded-full bg-[#37C650] px-4 py-1 text-[11px] font-bold tracking-wider text-white uppercase shadow-2xs">
                 {content.badge}
               </span>
 
@@ -77,7 +77,7 @@ export function FeaturesHeroSection({ content }: FeaturesHeroSectionProps) {
                 <span className="block">{content.headline.lineOne}</span>
                 <span className="block">
                   <span>{content.headline.lineTwoPrefix}</span>
-                  <span className="text-[#28B446]">
+                  <span className="text-[#37C650]">
                     {content.headline.lineTwoHighlight}
                   </span>
                 </span>

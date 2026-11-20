@@ -25,7 +25,7 @@ export function AboutTrustHubSection({ content }: AboutTrustHubSectionProps) {
           <div className="mx-auto w-full max-w-[520px] lg:col-span-6 lg:max-w-none">
             <ScrollReveal preset="scale">
               <TiltCard maxTilt={1.8}>
-                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-slate-200/80 bg-[linear-gradient(145deg,#FFFFFF_0%,#F1F7F4_100%)] shadow-[0_20px_50px_-15px_rgba(15,23,42,0.1)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#28B446]/35 hover:shadow-[0_28px_64px_-16px_rgba(40,180,70,0.16)] sm:rounded-3xl">
+                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-slate-200/80 bg-[linear-gradient(145deg,#FFFFFF_0%,#F1F7F4_100%)] shadow-[0_20px_50px_-15px_rgba(15,23,42,0.1)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/35 hover:shadow-[0_28px_64px_-16px_rgba(55,198,80,0.16)] sm:rounded-3xl">
                   {!imgError ? (
                     <Image
                       src={content.image.src}
@@ -40,7 +40,7 @@ export function AboutTrustHubSection({ content }: AboutTrustHubSectionProps) {
                       aria-hidden="true"
                       className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_50%_45%,#DCFCE7_0%,#F4F9F6_75%)]"
                     >
-                      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#28B446] text-white shadow-md">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#37C650] text-white shadow-md">
                         <LuShieldCheck className="h-8 w-8" />
                       </div>
                     </div>

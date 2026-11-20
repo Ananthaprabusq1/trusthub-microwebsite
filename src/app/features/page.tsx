@@ -4,6 +4,7 @@ import { AnalyticsInsightsSection } from "@/components/sections/features/analyti
 import { BrandingCustomizationSection } from "@/components/sections/features/branding-customization-section";
 import { CapabilitiesExploreSection } from "@/components/sections/features/capabilities-explore-section";
 import { ComplianceCredentialsSection } from "@/components/sections/features/compliance-credentials-section";
+import { ConnectedCapabilitiesSection } from "@/components/sections/features/connected-capabilities-section";
 import { DocumentManagementSection } from "@/components/sections/features/document-management-section";
 import { FaqsDisclosuresSection } from "@/components/sections/features/faqs-disclosures-section";
 import { FeaturesCtaBannerSection } from "@/components/sections/features/features-cta-banner-section";
@@ -40,6 +41,9 @@ export default function FeaturesPage() {
       <AnalyticsInsightsSection content={featuresContent.analyticsInsights} />
       <WorkspaceAdministrationSection
         content={featuresContent.workspaceAdministration}
+      />
+      <ConnectedCapabilitiesSection
+        content={featuresContent.connectedCapabilities}
       />
       <FeaturesCtaBannerSection content={featuresContent.ctaBanner} />
     </>

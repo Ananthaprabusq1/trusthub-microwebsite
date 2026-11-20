@@ -7,7 +7,7 @@ import type { ButtonProps, ButtonSize, ButtonVariant } from "@/types/ui";
 
 const VARIANT_CLASSES: Record<ButtonVariant, string> = {
   primary:
-    "bg-[#28B446] text-white shadow-sm shadow-[#28B446]/20 hover:bg-[#229A3C]",
+    "bg-[#37C650] text-white shadow-sm shadow-[#37C650]/20 hover:bg-[#2EB045]",
   secondary:
     "border border-slate-200 bg-white text-[#111827] shadow-2xs hover:bg-slate-50",
   dark: "bg-[#111827] text-white shadow-sm hover:bg-[#1F2937]",

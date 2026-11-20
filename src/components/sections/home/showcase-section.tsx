@@ -22,7 +22,7 @@ interface ShowcaseSectionProps {
 }
 
 function LeftFeatureIcon({ type }: { type: ShowcaseItemIcon }) {
-  const iconClass = "h-5 w-5 text-[#28B446]";
+  const iconClass = "h-5 w-5 text-[#37C650]";
   if (type === "policies") {
     return <LuFileText aria-hidden="true" className={iconClass} />;
   }
@@ -39,7 +39,7 @@ function LeftFeatureIcon({ type }: { type: ShowcaseItemIcon }) {
 }
 
 function PreviewRowIcon({ type }: { type: DashboardRowIcon }) {
-  const iconClass = "h-4.5 w-4.5 text-[#28B446]";
+  const iconClass = "h-4.5 w-4.5 text-[#37C650]";
   if (type === "folder") {
     return <LuFolder aria-hidden="true" className={iconClass} />;
   }
@@ -114,13 +114,13 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
           <div className="relative mx-auto w-full max-w-[540px] lg:col-span-6 lg:max-w-none">
             <ScrollReveal preset="scale" delay={0.12}>
               <TiltCard maxTilt={1.8}>
-                <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-white shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#28B446]/35 hover:shadow-[0_32px_72px_-16px_rgba(40,180,70,0.18)] sm:rounded-3xl">
+                <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-white shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/35 hover:shadow-[0_32px_72px_-16px_rgba(55,198,80,0.18)] sm:rounded-3xl">
                   {/* Top macOS Window Bar */}
                   <div className="flex items-center gap-3 border-b border-slate-100 bg-[#FAFBFB] px-4 py-3 sm:px-6">
                     <div className="flex items-center gap-1.5" aria-hidden="true">
-                      <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
                     </div>
                     <span className="text-xs font-medium text-[#64748B]">
                       {previewWindow.windowTitle}
@@ -133,7 +133,7 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
                       {previewWindow.organizationName}
                     </span>
 
-                    <span className="inline-flex items-center rounded-xl bg-[#28B446] px-4 py-2 text-xs font-semibold text-white shadow-2xs transition-colors duration-200 hover:bg-[#229A3C]">
+                    <span className="inline-flex items-center rounded-xl bg-[#37C650] px-4 py-2 text-xs font-semibold text-white shadow-2xs transition-colors duration-200 hover:bg-[#2EB045]">
                       {previewWindow.ctaLabel}
                     </span>
                   </div>
@@ -143,7 +143,7 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-[#D8F3E0] px-2.5 py-1 text-[11px] font-semibold text-[#15803D]">
                       <span
                         aria-hidden="true"
-                        className="h-1.5 w-1.5 rounded-full bg-[#28B446]"
+                        className="h-1.5 w-1.5 rounded-full bg-[#37C650]"
                       />
                       {previewWindow.verifiedBadgeLabel}
                     </span>
@@ -171,7 +171,7 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
                             stiffness: 260,
                             damping: 24,
                           }}
-                          className="flex items-center justify-between gap-3 rounded-xl border border-slate-100 bg-white px-3.5 py-3 shadow-2xs transition-[border-color,background-color] duration-300 hover:border-[#28B446]/35 hover:bg-[#F9FDFB] sm:px-4"
+                          className="flex items-center justify-between gap-3 rounded-xl border border-slate-100 bg-white px-3.5 py-3 shadow-2xs transition-[border-color,background-color] duration-300 hover:border-[#37C650]/35 hover:bg-[#F9FDFB] sm:px-4"
                         >
                           <div className="flex items-center gap-3">
                             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E8F5EC]">
@@ -197,7 +197,7 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
                             <span
                               aria-hidden="true"
                               className={`h-1.5 w-1.5 rounded-full ${
-                                isPublic ? "bg-[#28B446]" : "bg-slate-400"
+                                isPublic ? "bg-[#37C650]" : "bg-slate-400"
                               }`}
                             />
                             {row.accessLabel}
@@ -217,8 +217,8 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
               className="mt-4 sm:mt-0 sm:absolute sm:bottom-9 sm:-left-7 lg:-left-11 z-20"
             >
               <FloatingCard amplitude={5.5} duration={4.8} delay={0.4}>
-                <div className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-[0_16px_36px_-10px_rgba(15,23,42,0.16)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#28B446]/40 hover:shadow-[0_22px_44px_-10px_rgba(40,180,70,0.22)]">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#28B446]">
+                <div className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-[0_16px_36px_-10px_rgba(15,23,42,0.16)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/40 hover:shadow-[0_22px_44px_-10px_rgba(55,198,80,0.22)]">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#37C650]">
                     <LuBadgeCheck
                       aria-hidden="true"
                       className="h-5 w-5 text-white"

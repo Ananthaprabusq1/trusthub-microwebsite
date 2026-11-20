@@ -113,67 +113,17 @@
     "headline": "Explore Trust Hub Capabilities",
     "description": "Discover the tools that help your organization organize, manage and share trust information with customers.",
     "items": [
-      {
-        "id": "nav-security-controls",
-        "number": "01",
-        "label": "Security Controls",
-        "targetId": "capability-security-controls"
-      },
-      {
-        "id": "nav-document-management",
-        "number": "02",
-        "label": "Document Management",
-        "targetId": "capability-document-management"
-      },
-      {
-        "id": "nav-pre-mapped-templates",
-        "number": "03",
-        "label": "Pre-Mapped Templates",
-        "targetId": "capability-pre-mapped-templates"
-      },
-      {
-        "id": "nav-access-governance",
-        "number": "04",
-        "label": "Access Governance",
-        "targetId": "capability-access-governance"
-      },
-      {
-        "id": "nav-compliance-credentials",
-        "number": "05",
-        "label": "Compliance Credentials",
-        "targetId": "capability-compliance-credentials"
-      },
-      {
-        "id": "nav-branding-customization",
-        "number": "06",
-        "label": "Branding & Customization",
-        "targetId": "capability-branding-customization"
-      },
-      {
-        "id": "nav-preview-publishing",
-        "number": "07",
-        "label": "Preview & Publishing",
-        "targetId": "capability-preview-publishing"
-      },
-      {
-        "id": "nav-faqs-disclosures",
-        "number": "08",
-        "label": "FAQs & Disclosures",
-        "targetId": "capability-faqs-disclosures"
-      },
-      {
-        "id": "nav-analytics-insights",
-        "number": "09",
-        "label": "Analytics & Insights",
-        "targetId": "capability-analytics-insights"
-      },
-      {
-        "id": "nav-workspace-administration",
-        "number": "10",
-        "label": "Workspace Administration",
-        "targetId": "capability-workspace-administration"
-      }
-    ]
+        { "id": "nav-security-controls", "number": "01", "label": "Security Controls", "targetId": "security-controls" },
+        { "id": "nav-document-management", "number": "02", "label": "Document Management", "targetId": "document-management" },
+        { "id": "nav-pre-mapped-templates", "number": "03", "label": "Pre-Mapped Templates", "targetId": "pre-mapped-templates" },
+        { "id": "nav-access-governance", "number": "04", "label": "Access Governance", "targetId": "access-governance" },
+        { "id": "nav-compliance-credentials", "number": "05", "label": "Compliance Credentials", "targetId": "compliance-credentials" },
+        { "id": "nav-branding-customization", "number": "06", "label": "Branding & Customization", "targetId": "branding-customization" },
+        { "id": "nav-preview-publishing", "number": "07", "label": "Preview & Publishing", "targetId": "preview-publishing" },
+        { "id": "nav-faqs-disclosures", "number": "08", "label": "FAQs & Organizational Disclosures", "targetId": "faqs-organizational-disclosures" },
+        { "id": "nav-analytics-insights", "number": "09", "label": "Analytics & Insights", "targetId": "analytics-insights" },
+        { "id": "nav-workspace-administration", "number": "10", "label": "Workspace Administration", "targetId": "workspace-administration" }
+      ]
   },
   "ctaBanner": {
     "headline": {

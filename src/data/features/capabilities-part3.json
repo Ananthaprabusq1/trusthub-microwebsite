@@ -1,6 +1,6 @@
 {
   "complianceCredentials": {
-    "sectionId": "capability-compliance-credentials",
+    "sectionId": "compliance-credentials",
     "number": "05",
     "eyebrow": "COMPLIANCE CREDENTIALS",
     "headline": {
@@ -61,7 +61,7 @@
     }
   },
   "brandingCustomization": {
-    "sectionId": "capability-branding-customization",
+    "sectionId": "branding-customization",
     "number": "06",
     "eyebrow": "BRANDING & CUSTOMIZATION",
     "headline": {
@@ -91,7 +91,7 @@
       },
       "coloursLabel": "Colours",
       "swatches": [
-        { "id": "swatch-emerald", "label": "Emerald Green", "hex": "#28B446" },
+        { "id": "swatch-emerald", "label": "Emerald Green", "hex": "#37C650" },
         { "id": "swatch-forest", "label": "Forest Green", "hex": "#134E2B" },
         { "id": "swatch-charcoal", "label": "Charcoal Black", "hex": "#18181B" },
         {

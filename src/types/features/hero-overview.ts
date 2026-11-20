@@ -118,3 +118,35 @@ export interface FeaturesCtaBannerContent {
     alt: string;
   };
 }
+export type ConnectedCapabilityStepIcon =
+  | "organize"
+  | "publish"
+  | "share"
+  | "track";
+
+export interface ConnectedCapabilityPillLink {
+  id: string;
+  label: string;
+  targetId: string;
+}
+
+export interface ConnectedCapabilityStepItem {
+  id: string;
+  stepNumber: string;
+  icon: ConnectedCapabilityStepIcon;
+  title: string;
+  description: string;
+  pills: ConnectedCapabilityPillLink[];
+}
+
+export interface FeaturesConnectedCapabilitiesContent {
+  badge: string;
+  headline: string;
+  description: string;
+  steps: ConnectedCapabilityStepItem[];
+  foundationBar: {
+    title: string;
+    description: string;
+    targetId: string;
+  };
+}

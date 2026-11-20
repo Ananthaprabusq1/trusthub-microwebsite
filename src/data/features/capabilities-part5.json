@@ -1,6 +1,6 @@
 {
   "analyticsInsights": {
-    "sectionId": "capability-analytics-insights",
+    "sectionId": "analytics-insights",
     "number": "09",
     "eyebrow": "ANALYTICS & INSIGHTS",
     "headline": {
@@ -99,7 +99,7 @@
     }
   },
   "workspaceAdministration": {
-    "sectionId": "capability-workspace-administration",
+    "sectionId": "workspace-administration",
     "number": "10",
     "eyebrow": "WORKSPACE ADMINISTRATION",
     "headline": {

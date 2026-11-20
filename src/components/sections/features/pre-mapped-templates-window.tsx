@@ -31,13 +31,13 @@ export function PreMappedTemplatesWindow({
 
   return (
     <TiltCard maxTilt={1.6}>
-      <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-[#F8FAFC] shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#28B446]/35 hover:shadow-[0_32px_72px_-16px_rgba(40,180,70,0.18)] sm:rounded-3xl">
+      <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-[#F8FAFC] shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/35 hover:shadow-[0_32px_72px_-16px_rgba(55,198,80,0.18)] sm:rounded-3xl">
         {/* Top macOS Window Bar */}
         <div className="flex items-center gap-3 border-b border-slate-200/70 bg-[#F4F6F9] px-4 py-3 sm:px-6">
           <div className="flex items-center gap-1.5" aria-hidden="true">
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
           </div>
           <span className="text-xs font-medium text-[#64748B]">
             {data.windowTitle}
@@ -68,18 +68,18 @@ export function PreMappedTemplatesWindow({
                   aria-checked={isSelected}
                   aria-label={template.label}
                   onClick={() => setSelectedTemplateId(template.id)}
-                  className={`group relative flex cursor-pointer flex-col items-start rounded-2xl border-[1.5px] p-3.5 text-left transition-[border-color,background-color,box-shadow] duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446] sm:p-4 ${
+                  className={`group relative flex cursor-pointer flex-col items-start rounded-2xl border-[1.5px] p-3.5 text-left transition-[border-color,background-color,box-shadow] duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650] sm:p-4 ${
                     isSelected
-                      ? "border-[#28B446] bg-[#F2FBF4] shadow-[0_8px_20px_-8px_rgba(40,180,70,0.28)]"
-                      : "border-slate-200/85 bg-white hover:border-[#28B446]/45 hover:bg-[#FAFDFB]"
+                      ? "border-[#37C650] bg-[#F2FBF4] shadow-[0_8px_20px_-8px_rgba(55,198,80,0.28)]"
+                      : "border-slate-200/85 bg-white hover:border-[#37C650]/45 hover:bg-[#FAFDFB]"
                   }`}
                 >
                   {/* Template Icon Box */}
                   <span
                     className={`flex h-9 w-9 items-center justify-center rounded-xl transition-colors duration-300 ${
                       isSelected
-                        ? "bg-[#28B446] text-white"
-                        : "bg-[#E8F5EC] text-[#28B446] group-hover:bg-[#DCFCE7]"
+                        ? "bg-[#37C650] text-white"
+                        : "bg-[#E8F5EC] text-[#37C650] group-hover:bg-[#DCFCE7]"
                     }`}
                   >
                     <LuLayoutGrid aria-hidden="true" className="h-4.5 w-4.5" />
@@ -130,7 +130,7 @@ export function PreMappedTemplatesWindow({
               >
                 <span
                   aria-hidden="true"
-                  className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#28B446]"
+                  className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#37C650]"
                 />
                 <div className="flex-1">
                   <div

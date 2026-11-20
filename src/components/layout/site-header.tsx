@@ -22,7 +22,7 @@ export function SiteHeader() {
         {/* Brand Logo + Wordmark */}
         <Link
           href={navigationConfig.brand.href}
-          className="inline-flex items-center gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446]"
+          className="inline-flex items-center gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650]"
         >
           <StakfloBrandMark
             src={navigationConfig.brand.logoSrc}

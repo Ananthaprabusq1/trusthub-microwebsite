@@ -20,7 +20,7 @@ interface SecurityControlsWindowProps {
 }
 
 function ControlRowIcon({ type }: { type: SecurityControlIcon }) {
-  const iconClass = "h-4.5 w-4.5 text-[#28B446]";
+  const iconClass = "h-4.5 w-4.5 text-[#37C650]";
   if (type === "shield") {
     return <LuShieldCheck aria-hidden="true" className={iconClass} />;
   }
@@ -62,13 +62,13 @@ export function SecurityControlsWindow({ data }: SecurityControlsWindowProps) {
 
   return (
     <TiltCard maxTilt={1.6}>
-      <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-[#F8FAFC] shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#28B446]/35 hover:shadow-[0_32px_72px_-16px_rgba(40,180,70,0.18)] sm:rounded-3xl">
+      <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-[#F8FAFC] shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/35 hover:shadow-[0_32px_72px_-16px_rgba(55,198,80,0.18)] sm:rounded-3xl">
         {/* Top macOS Window Bar */}
         <div className="flex items-center gap-3 border-b border-slate-200/70 bg-[#F4F6F9] px-4 py-3 sm:px-6">
           <div className="flex items-center gap-1.5" aria-hidden="true">
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
           </div>
           <span className="text-xs font-medium text-[#64748B]">
             {data.windowTitle}
@@ -88,7 +88,7 @@ export function SecurityControlsWindow({ data }: SecurityControlsWindowProps) {
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
               placeholder={data.searchPlaceholder}
-              className="w-full rounded-xl border border-slate-200/90 bg-white px-4 py-2.5 text-xs text-[#111827] shadow-2xs transition-colors duration-200 placeholder:text-[#64748B] focus:border-[#28B446] focus:outline-none sm:py-3 sm:text-[13px]"
+              className="w-full rounded-xl border border-slate-200/90 bg-white px-4 py-2.5 text-xs text-[#111827] shadow-2xs transition-colors duration-200 placeholder:text-[#64748B] focus:border-[#37C650] focus:outline-none sm:py-3 sm:text-[13px]"
             />
           </div>
 
@@ -142,7 +142,7 @@ export function SecurityControlsWindow({ data }: SecurityControlsWindowProps) {
                     key={control.id}
                     whileHover={{ x: 3 }}
                     transition={{ type: "spring", stiffness: 260, damping: 24 }}
-                    className="flex items-center justify-between gap-3 rounded-xl border border-slate-200/80 bg-white px-3.5 py-3 shadow-2xs transition-[border-color,background-color] duration-300 hover:border-[#28B446]/35 hover:bg-[#F9FDFB] sm:px-4"
+                    className="flex items-center justify-between gap-3 rounded-xl border border-slate-200/80 bg-white px-3.5 py-3 shadow-2xs transition-[border-color,background-color] duration-300 hover:border-[#37C650]/35 hover:bg-[#F9FDFB] sm:px-4"
                   >
                     <div className="flex items-center gap-3">
                       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E8F5EC]">
@@ -173,8 +173,8 @@ export function SecurityControlsWindow({ data }: SecurityControlsWindowProps) {
                         aria-checked={isEnabled}
                         aria-label={`Toggle ${control.title} visibility`}
                         onClick={() => handleToggleControl(control.id)}
-                        className={`relative inline-flex h-5.5 w-10 shrink-0 cursor-pointer items-center rounded-full p-0.5 transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446] ${
-                          isEnabled ? "bg-[#28B446]" : "bg-slate-200"
+                        className={`relative inline-flex h-5.5 w-10 shrink-0 cursor-pointer items-center rounded-full p-0.5 transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650] ${
+                          isEnabled ? "bg-[#37C650]" : "bg-slate-200"
                         }`}
                       >
                         <motion.span

@@ -29,13 +29,13 @@ export function BrandingCustomizationWindow({
 
   return (
     <TiltCard maxTilt={1.6}>
-      <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-[#F8FAFC] shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#28B446]/35 hover:shadow-[0_32px_72px_-16px_rgba(40,180,70,0.18)] sm:rounded-3xl">
+      <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-[#F8FAFC] shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/35 hover:shadow-[0_32px_72px_-16px_rgba(55,198,80,0.18)] sm:rounded-3xl">
         {/* Top macOS Window Bar */}
         <div className="flex items-center gap-3 border-b border-slate-200/70 bg-[#F4F6F9] px-4 py-3 sm:px-6">
           <div className="flex items-center gap-1.5" aria-hidden="true">
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
           </div>
           <span className="text-xs font-medium text-[#64748B]">
             {data.windowTitle}
@@ -52,9 +52,9 @@ export function BrandingCustomizationWindow({
           <button
             type="button"
             onClick={() => setLogoConfigured((prev) => !prev)}
-            className="group mt-4 flex w-full cursor-pointer items-center gap-3.5 rounded-2xl border-[1.5px] border-dashed border-[#28B446]/75 bg-[#F2FBF4] p-4 text-left transition-colors duration-300 hover:border-[#28B446] hover:bg-[#EAF8EE] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446]"
+            className="group mt-4 flex w-full cursor-pointer items-center gap-3.5 rounded-2xl border-[1.5px] border-dashed border-[#37C650]/75 bg-[#F2FBF4] p-4 text-left transition-colors duration-300 hover:border-[#37C650] hover:bg-[#EAF8EE] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650]"
           >
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#DCFCE7] text-[#28B446] transition-transform duration-300 group-hover:scale-105">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#DCFCE7] text-[#37C650] transition-transform duration-300 group-hover:scale-105">
               {logoConfigured ? (
                 <LuCheck aria-hidden="true" className="h-5 w-5 stroke-[2.5]" />
               ) : (
@@ -98,11 +98,11 @@ export function BrandingCustomizationWindow({
                     whileTap={prefersReducedMotion ? undefined : { scale: 0.94 }}
                     onClick={() => setSelectedSwatchId(swatch.id)}
                     style={{ backgroundColor: swatch.hex }}
-                    className={`h-8 w-8 cursor-pointer rounded-full transition-shadow duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446] ${
+                    className={`h-8 w-8 cursor-pointer rounded-full transition-shadow duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650] ${
                       swatch.hasBorder ? "border border-slate-200" : ""
                     } ${
                       isSelected
-                        ? "ring-2 ring-[#28B446]/45 ring-offset-2"
+                        ? "ring-2 ring-[#37C650]/45 ring-offset-2"
                         : "hover:scale-105"
                     }`}
                   />
@@ -121,7 +121,7 @@ export function BrandingCustomizationWindow({
               type="button"
               onClick={handleCycleFont}
               aria-label={`Typography font: ${activeFont}. Click to preview another font`}
-              className="mt-2 flex w-full cursor-pointer items-center justify-between rounded-xl border border-slate-200/90 bg-white px-4 py-3 text-left text-xs font-medium text-[#111827] shadow-2xs transition-colors duration-200 hover:border-[#28B446]/45 sm:text-[13.5px]"
+              className="mt-2 flex w-full cursor-pointer items-center justify-between rounded-xl border border-slate-200/90 bg-white px-4 py-3 text-left text-xs font-medium text-[#111827] shadow-2xs transition-colors duration-200 hover:border-[#37C650]/45 sm:text-[13.5px]"
             >
               <span>{activeFont}</span>
               <span className="text-[11px] text-[#94A3B8]">Aa</span>
@@ -142,7 +142,7 @@ export function BrandingCustomizationWindow({
               <span className="inline-flex items-center gap-1.5 rounded-full bg-[#E8F5EC] px-2.5 py-0.5 text-[11px] font-semibold text-[#15803D]">
                 <span
                   aria-hidden="true"
-                  className="h-1.5 w-1.5 rounded-full bg-[#28B446]"
+                  className="h-1.5 w-1.5 rounded-full bg-[#37C650]"
                 />
                 {data.dnsStatusLabel}
               </span>

@@ -67,7 +67,7 @@ export function HomeHeroSection({ content }: HomeHeroSectionProps) {
           <div className="mx-auto max-w-3xl text-center">
             {/* Stage 2: Pill Badge + Two-Tone Main Headline */}
             <HeroStage stage={2} preset="rise">
-              <span className="inline-flex items-center rounded-full bg-[#28B446] px-4 py-1 text-[11px] font-bold tracking-wider text-white uppercase shadow-2xs">
+              <span className="inline-flex items-center rounded-full bg-[#37C650] px-4 py-1 text-[11px] font-bold tracking-wider text-white uppercase shadow-2xs">
                 {content.badge}
               </span>
 
@@ -76,7 +76,7 @@ export function HomeHeroSection({ content }: HomeHeroSectionProps) {
                 className="mt-5 text-3xl leading-[1.13] font-extrabold tracking-tight text-[#111827] sm:text-5xl lg:text-[56px]"
               >
                 <span>{content.headline.prefix}</span>
-                <span className="block text-[#28B446]">
+                <span className="block text-[#37C650]">
                   {content.headline.highlight}
                   <span className="text-[#111827]">
                     {content.headline.suffix}

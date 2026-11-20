@@ -24,7 +24,7 @@ export function CapabilityShowcaseShell({
     <section
       id={content.sectionId}
       aria-labelledby={headingId}
-      className={`scroll-mt-24 py-16 sm:py-20 lg:py-24 ${
+      className={`scroll-mt-24 py-20 sm:py-24 lg:py-28 ${
         isMediaLeft ? "bg-[#F8FAFC]" : "bg-white"
       }`}
     >
@@ -76,7 +76,7 @@ export function CapabilityShowcaseShell({
                     <div className="flex items-start gap-3">
                       <span
                         aria-hidden="true"
-                        className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#E8F5EC] text-[#28B446]"
+                        className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#E8F5EC] text-[#37C650]"
                       >
                         <LuCheck className="h-3.5 w-3.5 stroke-[2.5]" />
                       </span>
@@ -92,7 +92,7 @@ export function CapabilityShowcaseShell({
             {/* Business Value Callout Box */}
             <ScrollReveal preset="rise" delay={0.28}>
               <div
-                className={`mt-7 rounded-2xl border border-[#28B446]/25 p-5 sm:p-6 ${
+                className={`mt-7 rounded-2xl border border-[#37C650]/25 p-5 sm:p-6 ${
                   isMediaLeft ? "bg-white" : "bg-[#F2FBF4]"
                 }`}
               >

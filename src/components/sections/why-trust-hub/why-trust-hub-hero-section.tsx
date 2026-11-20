@@ -74,7 +74,7 @@ export function WhyTrustHubHeroSection({
             <div className="lg:col-span-6">
               {/* Stage 2: Pill Badge + Two-Tone Three-Line Headline */}
               <HeroStage stage={2} preset="rise">
-                <span className="inline-flex items-center rounded-full bg-[#28B446] px-3.5 py-1 text-[10px] font-bold tracking-wider text-white uppercase shadow-2xs sm:text-[11px]">
+                <span className="inline-flex items-center rounded-full bg-[#37C650] px-3.5 py-1 text-[10px] font-bold tracking-wider text-white uppercase shadow-2xs sm:text-[11px]">
                   {content.badge}
                 </span>
 
@@ -83,10 +83,10 @@ export function WhyTrustHubHeroSection({
                   className="mt-4 text-3xl leading-[1.11] font-extrabold tracking-[-0.025em] text-[#111827] sm:text-[44px] lg:text-[50px]"
                 >
                   <span className="block">{content.headline.lineOne}</span>
-                  <span className="block text-[#28B446]">
+                  <span className="block text-[#37C650]">
                     {content.headline.highlightLineOne}
                   </span>
-                  <span className="block text-[#28B446]">
+                  <span className="block text-[#37C650]">
                     {content.headline.highlightLineTwo}
                   </span>
                 </h1>

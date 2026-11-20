@@ -22,7 +22,7 @@ export function SiteFooter() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link
               href={footerConfig.brand.href}
-              className="inline-flex items-center gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446]"
+              className="inline-flex items-center gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650]"
             >
               <StakfloBrandMark
                 src={footerConfig.brand.logoSrc}
@@ -66,7 +66,7 @@ export function SiteFooter() {
                       href={link.href}
                       target={link.external ? "_blank" : undefined}
                       rel={link.external ? "noopener noreferrer" : undefined}
-                      className="inline-block rounded-md py-0.5 text-[15px] text-[#374151] transition-colors hover:text-[#111827] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446]"
+                      className="inline-block rounded-md py-0.5 text-[15px] text-[#374151] transition-colors hover:text-[#111827] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650]"
                     >
                       {link.label}
                     </Link>
@@ -95,7 +95,7 @@ export function SiteFooter() {
                         rel={
                           legal.external ? "noopener noreferrer" : undefined
                         }
-                        className="rounded-md py-1 text-xs text-[#64748B] transition-colors hover:text-[#111827] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446] sm:text-[13px]"
+                        className="rounded-md py-1 text-xs text-[#64748B] transition-colors hover:text-[#111827] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650] sm:text-[13px]"
                       >
                         {legal.label}
                       </Link>

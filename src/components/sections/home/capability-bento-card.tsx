@@ -19,7 +19,7 @@ interface CapabilityBentoCardProps {
 }
 
 function CapabilityIcon({ type }: { type: CapabilityIconType }) {
-  const iconClass = "h-4 w-4 text-[#28B446]";
+  const iconClass = "h-4 w-4 text-[#37C650]";
   if (type === "document") {
     return <LuFileText aria-hidden="true" className={iconClass} />;
   }
@@ -48,7 +48,7 @@ export function CapabilityBentoCard({
     <motion.article
       whileHover={{ y: -3 }}
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/85 bg-white shadow-[0_6px_24px_-10px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow] duration-300 ease-out hover:border-[#28B446]/45 hover:shadow-[0_18px_38px_-14px_rgba(40,180,70,0.16)] sm:rounded-3xl"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/85 bg-white shadow-[0_6px_24px_-10px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow] duration-300 ease-out hover:border-[#37C650]/45 hover:shadow-[0_18px_38px_-14px_rgba(55,198,80,0.16)] sm:rounded-3xl"
     >
       {/* Top 3D Illustration Visual Container (Static Crisp Framing, No Expansion) */}
       <div className="relative h-52 w-full shrink-0 overflow-hidden border-b border-slate-100 bg-[#F4F8FD] sm:h-60">

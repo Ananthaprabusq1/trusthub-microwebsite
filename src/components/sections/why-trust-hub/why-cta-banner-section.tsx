@@ -26,7 +26,7 @@ export function WhyCtaBannerSection({ content }: WhyCtaBannerSectionProps) {
             {/* Soft Ambient Emerald Spotlights */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute -top-20 right-4 h-80 w-80 rounded-full bg-[#28B446]/35 blur-3xl sm:right-16 sm:h-96 sm:w-96"
+              className="pointer-events-none absolute -top-20 right-4 h-80 w-80 rounded-full bg-[#37C650]/35 blur-3xl sm:right-16 sm:h-96 sm:w-96"
             />
             <div
               aria-hidden="true"
@@ -54,7 +54,7 @@ export function WhyCtaBannerSection({ content }: WhyCtaBannerSectionProps) {
                     variant="primary"
                     size="md"
                     showArrow={content.primaryCta.showArrow ?? true}
-                    className="w-full shadow-[0_10px_24px_-6px_rgba(40,180,70,0.5)] sm:w-auto"
+                    className="w-full shadow-[0_10px_24px_-6px_rgba(55,198,80,0.5)] sm:w-auto"
                   >
                     {content.primaryCta.label}
                   </Button>
@@ -89,7 +89,7 @@ export function WhyCtaBannerSection({ content }: WhyCtaBannerSectionProps) {
                         aria-hidden="true"
                         className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_50%_45%,#DCFCE7_0%,#F4F9F6_75%)]"
                       >
-                        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#28B446] text-white shadow-md">
+                        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#37C650] text-white shadow-md">
                           <LuShieldCheck className="h-8 w-8" />
                         </div>
                       </div>

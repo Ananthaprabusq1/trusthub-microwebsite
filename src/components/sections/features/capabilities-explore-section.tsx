@@ -78,10 +78,10 @@ export function CapabilitiesExploreSection({
                     type="button"
                     aria-pressed={isActive}
                     onClick={() => handleSelectCapability(item)}
-                    className={`relative inline-flex shrink-0 cursor-pointer items-center gap-2.5 rounded-full px-5 py-3 text-[13.5px] font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#28B446] sm:px-6 sm:py-3.5 sm:text-[14px] ${
+                    className={`relative inline-flex shrink-0 cursor-pointer items-center gap-2.5 rounded-full px-5 py-3 text-[13.5px] font-semibold transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650] sm:px-6 sm:py-3.5 sm:text-[14px] ${
                       isActive
                         ? "text-white"
-                        : "border border-slate-200/85 bg-white text-[#111827] shadow-[0_2px_10px_-4px_rgba(15,23,42,0.06)] hover:border-[#28B446]/45 hover:bg-[#F9FDFB]"
+                        : "border border-slate-200/85 bg-white text-[#111827] shadow-[0_2px_10px_-4px_rgba(15,23,42,0.06)] hover:border-[#37C650]/45 hover:bg-[#F9FDFB]"
                     }`}
                   >
                     {isActive && (
@@ -102,7 +102,7 @@ export function CapabilitiesExploreSection({
 
                     <span
                       className={`relative z-10 text-xs font-bold tabular-nums transition-colors duration-300 ${
-                        isActive ? "text-[#28B446]" : "text-[#64748B]"
+                        isActive ? "text-[#37C650]" : "text-[#64748B]"
                       }`}
                     >
                       {item.number}

@@ -25,7 +25,7 @@ interface HeroDashboardMockupProps {
 }
 
 function RowIcon({ type }: { type: DashboardRowIcon }) {
-  const iconClass = "h-4.5 w-4.5 text-[#28B446]";
+  const iconClass = "h-4.5 w-4.5 text-[#37C650]";
   if (type === "folder") return <LuFolder aria-hidden="true" className={iconClass} />;
   if (type === "certification") {
     return <LuBadgeCheck aria-hidden="true" className={iconClass} />;
@@ -53,13 +53,13 @@ export function HeroDashboardMockup({
       {/* Center Card (Stage 4): Anchored Management Dashboard with Silky 3D Tilt */}
       <HeroStage stage={4} preset="scale">
         <TiltCard maxTilt={1.8}>
-          <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-white shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#28B446]/35 hover:shadow-[0_32px_72px_-16px_rgba(40,180,70,0.18)] sm:rounded-3xl">
+          <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-white shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/35 hover:shadow-[0_32px_72px_-16px_rgba(55,198,80,0.18)] sm:rounded-3xl">
             {/* Top macOS Window Bar */}
             <div className="flex items-center gap-3 border-b border-slate-100 bg-[#FAFBFB] px-4 py-3 sm:px-6">
               <div className="flex items-center gap-1.5" aria-hidden="true">
-                <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
-                <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
-                <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
+                <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
+                <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
+                <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
               </div>
               <span className="text-xs font-medium text-[#64748B]">
                 {dashboard.windowTitle}
@@ -90,7 +90,7 @@ export function HeroDashboardMockup({
                         <span
                           aria-hidden="true"
                           className={`h-1.5 w-1.5 rounded-full ${
-                            item.active ? "bg-[#28B446]" : "bg-slate-300"
+                            item.active ? "bg-[#37C650]" : "bg-slate-300"
                           }`}
                         />
                         <span>{item.label}</span>
@@ -117,7 +117,7 @@ export function HeroDashboardMockup({
                         stiffness: 260,
                         damping: 24,
                       }}
-                      className="flex items-center justify-between gap-3 rounded-xl border border-slate-100 bg-white px-3.5 py-3 shadow-2xs transition-[border-color,background-color,box-shadow] duration-300 ease-out hover:border-[#28B446]/35 hover:bg-[#F9FDFB] hover:shadow-xs sm:px-4"
+                      className="flex items-center justify-between gap-3 rounded-xl border border-slate-100 bg-white px-3.5 py-3 shadow-2xs transition-[border-color,background-color,box-shadow] duration-300 ease-out hover:border-[#37C650]/35 hover:bg-[#F9FDFB] hover:shadow-xs sm:px-4"
                     >
                       <div className="flex items-center gap-3">
                         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E8F5EC]">
@@ -137,7 +137,7 @@ export function HeroDashboardMockup({
                         <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-[#E8F5EC] px-2.5 py-1 text-[11px] font-semibold text-[#15803D]">
                           <span
                             aria-hidden="true"
-                            className="h-1.5 w-1.5 rounded-full bg-[#28B446]"
+                            className="h-1.5 w-1.5 rounded-full bg-[#37C650]"
                           />
                           {row.statusLabel}
                         </span>
@@ -180,7 +180,7 @@ export function HeroDashboardMockup({
                         }}
                         className={`w-6 rounded-t-md transition-colors duration-300 sm:w-7 ${
                           bar.highlighted
-                            ? "bg-[#28B446] hover:bg-[#229A3C]"
+                            ? "bg-[#37C650] hover:bg-[#2EB045]"
                             : "bg-[#A7E3B5] hover:bg-[#7ED494]"
                         }`}
                       />
@@ -201,10 +201,10 @@ export function HeroDashboardMockup({
           className="hidden md:block md:absolute md:-top-10 md:-right-5 lg:-right-12"
         >
           <FloatingCard amplitude={7} duration={5.2} delay={1.35}>
-            <div className="relative overflow-hidden rounded-2xl border border-white/85 bg-[linear-gradient(155deg,#F3FBF5_0%,#DCF3E3_52%,#9CE0AF_100%)] p-3 shadow-[0_20px_44px_-12px_rgba(22,101,52,0.22)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#28B446]/45 hover:shadow-[0_28px_56px_-12px_rgba(22,101,52,0.3)] lg:p-3.5">
+            <div className="relative overflow-hidden rounded-2xl border border-white/85 bg-[linear-gradient(155deg,#F3FBF5_0%,#DCF3E3_52%,#9CE0AF_100%)] p-3 shadow-[0_20px_44px_-12px_rgba(22,101,52,0.22)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/45 hover:shadow-[0_28px_56px_-12px_rgba(22,101,52,0.3)] lg:p-3.5">
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute -bottom-8 -left-6 h-24 w-48 rounded-full bg-[#28B446]/25 blur-xl"
+                className="pointer-events-none absolute -bottom-8 -left-6 h-24 w-48 rounded-full bg-[#37C650]/25 blur-xl"
               />
               <Image
                 src={isometricCard.src}
@@ -240,8 +240,8 @@ export function HeroDashboardMockup({
                 duration={isLeft ? 4.6 : 5.4}
                 delay={1.55 + index * 0.2}
               >
-                <div className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-[0_14px_34px_-10px_rgba(15,23,42,0.14)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#28B446]/40 hover:shadow-[0_22px_44px_-10px_rgba(40,180,70,0.22)]">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#28B446]">
+                <div className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-[0_14px_34px_-10px_rgba(15,23,42,0.14)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/40 hover:shadow-[0_22px_44px_-10px_rgba(55,198,80,0.22)]">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#37C650]">
                     <BadgeIcon type={badge.icon} />
                   </div>
                   <div>

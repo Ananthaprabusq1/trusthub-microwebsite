@@ -1,6 +1,6 @@
 {
   "securityControls": {
-    "sectionId": "capability-security-controls",
+    "sectionId": "security-controls",
     "number": "01",
     "eyebrow": "SECURITY CONTROLS",
     "headline": {
@@ -66,7 +66,7 @@
     }
   },
   "documentManagement": {
-    "sectionId": "capability-document-management",
+    "sectionId": "document-management",
     "number": "02",
     "eyebrow": "DOCUMENT MANAGEMENT",
     "headline": {

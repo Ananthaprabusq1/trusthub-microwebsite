@@ -25,13 +25,13 @@ export function PreviewPublishingWindow({
   return (
     <div className="rounded-3xl bg-[#EFF8F1] p-4 sm:p-6">
       <TiltCard maxTilt={1.6}>
-        <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-[#F8FAFC] shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#28B446]/35 hover:shadow-[0_32px_72px_-16px_rgba(40,180,70,0.18)] sm:rounded-3xl">
+        <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-[#F8FAFC] shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/35 hover:shadow-[0_32px_72px_-16px_rgba(55,198,80,0.18)] sm:rounded-3xl">
           {/* Top macOS Window Bar */}
           <div className="flex items-center gap-3 border-b border-slate-200/70 bg-[#F4F6F9] px-4 py-3 sm:px-6">
             <div className="flex items-center gap-1.5" aria-hidden="true">
-              <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
-              <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
-              <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#28B446]/60" />
+              <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
+              <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
+              <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
             </div>
             <span className="text-xs font-medium text-[#64748B]">
               {data.windowTitle}
@@ -93,7 +93,7 @@ export function PreviewPublishingWindow({
                 <span
                   className={`inline-flex items-center rounded-full border px-3 py-1 text-[11px] font-medium transition-colors duration-300 ${
                     isPublished
-                      ? "border-[#28B446]/30 bg-[#E8F5EC] font-semibold text-[#15803D]"
+                      ? "border-[#37C650]/30 bg-[#E8F5EC] font-semibold text-[#15803D]"
                       : "border-slate-200/90 bg-white text-[#64748B]"
                   }`}
                 >
@@ -116,7 +116,7 @@ export function PreviewPublishingWindow({
                 <button
                   type="button"
                   onClick={() => setIsPublished(true)}
-                  className="cursor-pointer rounded-xl bg-[#28B446] px-4 py-2 text-xs font-semibold text-white shadow-2xs transition-colors duration-200 hover:bg-[#229A3C]"
+                  className="cursor-pointer rounded-xl bg-[#37C650] px-4 py-2 text-xs font-semibold text-white shadow-2xs transition-colors duration-200 hover:bg-[#2EB045]"
                 >
                   {data.publishLabel}
                 </button>
@@ -127,7 +127,7 @@ export function PreviewPublishingWindow({
             <div
               className={`mt-5 rounded-2xl border p-5 transition-colors duration-300 sm:p-6 ${
                 isPreview
-                  ? "border-[#28B446]/15 bg-[#EFF8F1]"
+                  ? "border-[#37C650]/15 bg-[#EFF8F1]"
                   : "border-dashed border-slate-300 bg-[#F8FAFC]"
               }`}
             >
@@ -141,7 +141,7 @@ export function PreviewPublishingWindow({
                 <span
                   aria-hidden="true"
                   className={`h-1.5 w-1.5 rounded-full ${
-                    isPreview ? "bg-[#28B446]" : "bg-slate-500"
+                    isPreview ? "bg-[#37C650]" : "bg-slate-500"
                   }`}
                 />
                 {isPreview ? data.canvasBadgeLabel : data.editBannerLabel}
@@ -160,7 +160,7 @@ export function PreviewPublishingWindow({
                   <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#E8F5EC]">
                     <LuBadgeCheck
                       aria-hidden="true"
-                      className="h-4 w-4 text-[#28B446]"
+                      className="h-4 w-4 text-[#37C650]"
                     />
                   </div>
                   <div aria-hidden="true" className="mt-3 space-y-1.5">
@@ -173,7 +173,7 @@ export function PreviewPublishingWindow({
                   <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#E8F5EC]">
                     <LuFileText
                       aria-hidden="true"
-                      className="h-4 w-4 text-[#28B446]"
+                      className="h-4 w-4 text-[#37C650]"
                     />
                   </div>
                   <div aria-hidden="true" className="mt-3 space-y-1.5">

@@ -34,7 +34,7 @@ export function TiltCard({
 
   const glowX = useTransform(smoothX, [-0.5, 0.5], [0, 100]);
   const glowY = useTransform(smoothY, [-0.5, 0.5], [0, 100]);
-  const spotlight = useMotionTemplate`radial-gradient(560px circle at ${glowX}% ${glowY}%, rgba(40, 180, 70, 0.08), transparent 70%)`;
+  const spotlight = useMotionTemplate`radial-gradient(560px circle at ${glowX}% ${glowY}%, rgba(55, 198, 80, 0.08), transparent 70%)`;
 
   if (prefersReducedMotion) {
     return <div className={className}>{children}</div>;

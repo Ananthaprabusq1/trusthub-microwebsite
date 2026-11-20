@@ -4,6 +4,7 @@ import part2Data from "./capabilities-part2.json";
 import part3Data from "./capabilities-part3.json";
 import part4Data from "./capabilities-part4.json";
 import part5Data from "./capabilities-part5.json";
+import connectedCapabilitiesData from "./connected-capabilities.json";
 import heroOverviewData from "./hero-overview.json";
 
 export const featuresContent = {
@@ -19,6 +20,7 @@ export const featuresContent = {
   faqsDisclosures: part4Data.faqsDisclosures,
   analyticsInsights: part5Data.analyticsInsights,
   workspaceAdministration: part5Data.workspaceAdministration,
+  connectedCapabilities: connectedCapabilitiesData.connectedCapabilities,
   ctaBanner: heroOverviewData.ctaBanner,
 } as unknown as FeaturesPageContent;
 

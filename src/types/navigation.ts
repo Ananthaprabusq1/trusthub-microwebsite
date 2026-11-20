@@ -1,9 +1,16 @@
+export interface NavigationBrand {
+  name: string;
+  product: string;
+  href: string;
+  logoSrc: string;
+  logoAlt: string;
+}
+
 export interface NavSubItem {
   id: string;
   label: string;
-  /** Must point to a hash section on /features, e.g. "/features#trust-center" */
-  href: `/features#${string}`;
   description?: string;
+  href: `/features#${string}`;
   order: number;
   visible: boolean;
 }
@@ -27,23 +34,14 @@ export interface HeaderActionItem {
   visible: boolean;
 }
 
-// export interface NavigationConfig {
-//   brand: {
-//     name: string;
-//     product: string;
-//     href: string;
-//   };
-//   items: NavItem[];
-//   actions: HeaderActionItem[];
-// }
 export interface NavigationConfig {
-  brand: {
-    name: string;
-    product: string;
-    href: string;
-    logoSrc: string;
-    logoAlt: string;
-  };
+  brand: NavigationBrand;
   items: NavItem[];
   actions: HeaderActionItem[];
 }
+
+export type BrandConfig = NavigationBrand;
+export type NavigationChildItem = NavSubItem;
+export type NavigationItem = NavItem;
+export type NavigationActionItem = HeaderActionItem;
+export type NavigationContent = NavigationConfig;

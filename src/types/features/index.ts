@@ -14,6 +14,7 @@ import type {
 } from "./capabilities-part2";
 import type {
   FeaturesCapabilitiesHeaderContent,
+  FeaturesConnectedCapabilitiesContent,
   FeaturesCtaBannerContent,
   FeaturesHeroContent,
 } from "./hero-overview";
@@ -35,5 +36,6 @@ export interface FeaturesPageContent {
   faqsDisclosures: FeaturesFaqsDisclosuresContent;
   analyticsInsights: FeaturesAnalyticsInsightsContent;
   workspaceAdministration: FeaturesWorkspaceAdministrationContent;
+  connectedCapabilities: FeaturesConnectedCapabilitiesContent;
   ctaBanner: FeaturesCtaBannerContent;
 }

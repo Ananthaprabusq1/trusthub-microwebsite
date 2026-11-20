@@ -10,7 +10,7 @@ import type {
 } from "@/types/home";
 
 function GlanceRowIcon({ type }: { type: DashboardRowIcon }) {
-  const iconClass = "h-4.5 w-4.5 text-[#28B446]";
+  const iconClass = "h-4.5 w-4.5 text-[#37C650]";
   if (type === "folder") {
     return <LuFolder aria-hidden="true" className={iconClass} />;
   }
@@ -40,7 +40,7 @@ function StatusPill({
       <span
         aria-hidden="true"
         className={`h-1.5 w-1.5 rounded-full ${
-          isPositive ? "bg-[#28B446]" : "bg-slate-400"
+          isPositive ? "bg-[#37C650]" : "bg-slate-400"
         }`}
       />
       {label}
@@ -55,7 +55,7 @@ export function GlanceManagementWindow({
 }) {
   return (
     <TiltCard maxTilt={1.6}>
-      <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-white shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#28B446]/35 hover:shadow-[0_32px_72px_-16px_rgba(40,180,70,0.18)] sm:rounded-3xl">
+      <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-white shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/35 hover:shadow-[0_32px_72px_-16px_rgba(55,198,80,0.18)] sm:rounded-3xl">
         {/* Top macOS Bar */}
         <div className="flex items-center gap-3 border-b border-slate-100 bg-[#FAFBFB] px-4 py-3 sm:px-6">
           <div className="flex items-center gap-1.5" aria-hidden="true">
@@ -92,7 +92,7 @@ export function GlanceManagementWindow({
                     <span
                       aria-hidden="true"
                       className={`h-1.5 w-1.5 rounded-full ${
-                        item.active ? "bg-[#28B446]" : "bg-slate-300"
+                        item.active ? "bg-[#37C650]" : "bg-slate-300"
                       }`}
                     />
                     <span>{item.label}</span>
@@ -120,7 +120,7 @@ export function GlanceManagementWindow({
                   key={row.id}
                   whileHover={{ x: 4 }}
                   transition={{ type: "spring", stiffness: 260, damping: 24 }}
-                  className="flex items-center justify-between gap-3 rounded-xl border border-slate-100 bg-white px-3.5 py-3 shadow-2xs transition-[border-color,background-color] duration-300 hover:border-[#28B446]/35 hover:bg-[#F9FDFB]"
+                  className="flex items-center justify-between gap-3 rounded-xl border border-slate-100 bg-white px-3.5 py-3 shadow-2xs transition-[border-color,background-color] duration-300 hover:border-[#37C650]/35 hover:bg-[#F9FDFB]"
                 >
                   <div className="flex items-center gap-3">
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E8F5EC]">
@@ -155,7 +155,7 @@ export function GlanceTrustCenterWindow({
   return (
     <div className="rounded-3xl bg-[#F3F5F8] p-3.5 sm:p-5">
       <TiltCard maxTilt={1.6}>
-        <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-white shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#28B446]/35 hover:shadow-[0_32px_72px_-16px_rgba(40,180,70,0.18)] sm:rounded-3xl">
+        <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-white shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/35 hover:shadow-[0_32px_72px_-16px_rgba(55,198,80,0.18)] sm:rounded-3xl">
           {/* Top macOS Bar */}
           <div className="flex items-center gap-3 border-b border-slate-100 bg-[#FAFBFB] px-4 py-3 sm:px-6">
             <div className="flex items-center gap-1.5" aria-hidden="true">
@@ -174,7 +174,7 @@ export function GlanceTrustCenterWindow({
               {data.organizationName}
             </span>
 
-            <span className="inline-flex items-center rounded-xl bg-[#28B446] px-3.5 py-1.5 text-xs font-semibold text-white shadow-2xs transition-colors duration-200 hover:bg-[#229A3C]">
+            <span className="inline-flex items-center rounded-xl bg-[#37C650] px-3.5 py-1.5 text-xs font-semibold text-white shadow-2xs transition-colors duration-200 hover:bg-[#2EB045]">
               {data.ctaLabel}
             </span>
           </div>
@@ -184,7 +184,7 @@ export function GlanceTrustCenterWindow({
             <span className="inline-flex items-center gap-1.5 rounded-full bg-[#D8F3E0] px-2.5 py-1 text-[11px] font-semibold text-[#15803D]">
               <span
                 aria-hidden="true"
-                className="h-1.5 w-1.5 rounded-full bg-[#28B446]"
+                className="h-1.5 w-1.5 rounded-full bg-[#37C650]"
               />
               {data.verifiedBadgeLabel}
             </span>
@@ -205,7 +205,7 @@ export function GlanceTrustCenterWindow({
                 key={row.id}
                 whileHover={{ x: 4 }}
                 transition={{ type: "spring", stiffness: 260, damping: 24 }}
-                className="flex items-center justify-between gap-3 rounded-xl border border-slate-100 bg-white px-3.5 py-3 shadow-2xs transition-[border-color,background-color] duration-300 hover:border-[#28B446]/35 hover:bg-[#F9FDFB]"
+                className="flex items-center justify-between gap-3 rounded-xl border border-slate-100 bg-white px-3.5 py-3 shadow-2xs transition-[border-color,background-color] duration-300 hover:border-[#37C650]/35 hover:bg-[#F9FDFB]"
               >
                 <div className="flex items-center gap-3">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E8F5EC]">

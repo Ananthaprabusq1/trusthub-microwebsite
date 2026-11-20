@@ -59,7 +59,7 @@ export function SecurityControlsSection({
                     <div className="flex items-start gap-3">
                       <span
                         aria-hidden="true"
-                        className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#E8F5EC] text-[#28B446]"
+                        className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#E8F5EC] text-[#37C650]"
                       >
                         <LuCheck className="h-3.5 w-3.5 stroke-[2.5]" />
                       </span>
@@ -74,7 +74,7 @@ export function SecurityControlsSection({
 
             {/* Business Value Callout Box */}
             <ScrollReveal preset="rise" delay={0.28}>
-              <div className="mt-7 rounded-2xl border border-[#28B446]/25 bg-[#F2FBF4] p-5 sm:p-6">
+              <div className="mt-7 rounded-2xl border border-[#37C650]/25 bg-[#F2FBF4] p-5 sm:p-6">
                 <p className="text-[11px] font-bold tracking-wider text-[#111827] uppercase">
                   {content.businessValue.label}
                 </p>
