@@ -17,7 +17,8 @@ export function AccessGovernanceSection({
       headingId="access-governance-heading"
       mediaPosition="left"
     >
-      <AccessGovernanceSectionWindow data={content.previewWindow} />
+      <div className="bg-white p-7 rounded-[30px]">
+      <AccessGovernanceSectionWindow data={content.previewWindow} /></div>
     </CapabilityShowcaseShell>
   );
 }

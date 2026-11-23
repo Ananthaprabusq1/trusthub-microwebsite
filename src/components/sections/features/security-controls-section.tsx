@@ -34,7 +34,7 @@ export function SecurityControlsSection({
 
               <h2
                 id="security-controls-heading"
-                className="mt-4 text-2xl leading-[1.15] font-extrabold tracking-tight text-[#111827] sm:text-4xl lg:text-[40px]"
+                className="mt-4  w-full  text-2xl leading-[1.25] font-extrabold tracking-tight text-[#111827] text-4xl lg:text-[38px]"
               >
                 <span className="block">{content.headline.lineOne}</span>
                 <span className="block">{content.headline.lineTwo}</span>
@@ -88,7 +88,8 @@ export function SecurityControlsSection({
           {/* Right Column: Interactive Security Controls Preview Window */}
           <div className="mx-auto w-full max-w-[520px] lg:col-span-6 lg:max-w-none">
             <ScrollReveal preset="scale" delay={0.12}>
-              <SecurityControlsWindow data={content.previewWindow} />
+              <div className="bg-[#F3FCF5] p-7 rounded-[30px] ">
+              <SecurityControlsWindow data={content.previewWindow} /></div>
             </ScrollReveal>
           </div>
         </div>

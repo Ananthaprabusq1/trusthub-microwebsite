@@ -17,7 +17,10 @@ export function PreMappedTemplatesSection({
       headingId="pre-mapped-templates-heading"
       mediaPosition="right"
     >
-      <PreMappedTemplatesWindow data={content.previewWindow} />
+      <div className="bg-[#F3FCF5] p-7 rounded-[30px]">
+        <PreMappedTemplatesWindow data={content.previewWindow} />
+      </div>
+      
     </CapabilityShowcaseShell>
   );
 }

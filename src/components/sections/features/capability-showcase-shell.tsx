@@ -48,7 +48,7 @@ export function CapabilityShowcaseShell({
 
               <h2
                 id={headingId}
-                className="mt-4 text-2xl leading-[1.15] font-extrabold tracking-tight text-[#111827] sm:text-4xl lg:text-[40px]"
+                className="mt-4 text-2xl leading-[1.25] font-extrabold tracking-tight text-[#111827] text-4xl lg:text-[36px]"
               >
                 <span className="block">{content.headline.lineOne}</span>
                 <span className="block">{content.headline.lineTwo}</span>

@@ -45,7 +45,7 @@ export function TrustHubValueSection({ content }: TrustHubValueSectionProps) {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Centered Header */}
-        <ScrollReveal preset="rise" className="mx-auto max-w-3xl text-center">
+        <ScrollReveal preset="rise" className="mx-auto max-w-5xl text-center">
           <span className="inline-flex items-center rounded-full bg-[#E6F7EB] px-4 py-1 text-[11px] font-bold tracking-wider text-[#166534] uppercase">
             {content.badge}
           </span>

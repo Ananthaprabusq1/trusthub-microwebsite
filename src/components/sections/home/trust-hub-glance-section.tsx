@@ -63,7 +63,7 @@ export function TrustHubGlanceSection({ content }: TrustHubGlanceSectionProps) {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Centered Header */}
-        <ScrollReveal preset="rise" className="mx-auto max-w-3xl text-center">
+        <ScrollReveal preset="rise" className="mx-auto max-w-5xl text-center">
           <span className="inline-flex items-center rounded-full bg-[#E6F7EB] px-4 py-1 text-[11px] font-bold tracking-wider text-[#166534] uppercase">
             {content.badge}
           </span>
@@ -75,7 +75,7 @@ export function TrustHubGlanceSection({ content }: TrustHubGlanceSectionProps) {
             {content.headline}
           </h2>
 
-          <p className="mx-auto mt-3.5 max-w-2xl text-[15px] leading-relaxed text-[#4B5563] sm:text-base">
+          <p className="mx-auto mt-3.5 max-w-5xl text-[15px] leading-relaxed text-[#4B5563] sm:text-base">
             {content.description}
           </p>
         </ScrollReveal>

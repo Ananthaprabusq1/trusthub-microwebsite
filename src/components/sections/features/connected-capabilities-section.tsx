@@ -56,8 +56,9 @@ export function ConnectedCapabilitiesSection({
 
   return (
     <section
+      id="connected-capabilities"
       aria-labelledby="connected-capabilities-heading"
-      className="border-t border-slate-200/70 bg-[#F8FAFC] py-20 sm:py-24 lg:py-28"
+      className="scroll-mt-24 border-t border-slate-200/70 bg-[#F8FAFC] py-20 sm:py-24 lg:py-28"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Centered Section Header */}

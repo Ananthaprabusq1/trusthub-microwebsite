@@ -20,7 +20,7 @@ export function WhyTrustHubHeroSection({
   return (
     <section
       aria-labelledby="why-trust-hub-hero-heading"
-      className="relative overflow-hidden bg-[#F7FBF8] py-12 sm:py-16 lg:py-20"
+      className="relative overflow-hidden bg-[#F7FBF8] py-12 sm:py-16 lg:py-40"
     >
       <HeroReveal>
         {/* Stage 1: Uncropped Dual-Layer Wavy Background */}

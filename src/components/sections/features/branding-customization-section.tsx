@@ -17,7 +17,8 @@ export function BrandingCustomizationSection({
       headingId="branding-customization-heading"
       mediaPosition="left"
     >
-      <BrandingCustomizationWindow data={content.previewWindow} />
+      <div className="bg-white p-7 rounded-[30px]">
+      <BrandingCustomizationWindow data={content.previewWindow} /></div>
     </CapabilityShowcaseShell>
   );
 }

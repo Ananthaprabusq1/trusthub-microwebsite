@@ -19,8 +19,9 @@ export function FeaturesCtaBannerSection({
 
   return (
     <section
+      id="features-cta"
       aria-labelledby="features-cta-banner-heading"
-      className="bg-white py-20 sm:py-24 lg:py-28"
+      className="scroll-mt-24 bg-white py-20 sm:py-24 lg:py-28"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal preset="scale">

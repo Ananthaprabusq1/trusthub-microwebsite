@@ -44,7 +44,7 @@ export function PlatformOverviewSection({
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Centered Header */}
-        <ScrollReveal className="mx-auto max-w-3xl text-center">
+        <ScrollReveal className="mx-auto max-w-5xl text-center">
           <span className="inline-flex items-center rounded-full bg-[#E8F5EC] px-3.5 py-1 text-[11px] font-bold tracking-wider text-[#15803D] uppercase">
             {content.badge}
           </span>

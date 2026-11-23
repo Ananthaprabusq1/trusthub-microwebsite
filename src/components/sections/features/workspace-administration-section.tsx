@@ -17,7 +17,9 @@ export function WorkspaceAdministrationSection({
       headingId="workspace-administration-heading"
       mediaPosition="left"
     >
+      <div className="bg-white p-7 rounded-[30px]">
       <WorkspaceAdministrationWindow data={content.previewWindow} />
+      </div>
     </CapabilityShowcaseShell>
   );
 }

@@ -2,11 +2,11 @@
   "hero": {
     "badge": "FEATURES",
     "headline": {
-      "lineOne": "Everything You Need to",
-      "lineTwoPrefix": "Run a ",
-      "lineTwoHighlight": "Modern Trust Center."
+      "lineOne": "All Your Trust Center",
+      "lineTwoPrefix": "Operations. ",
+      "lineTwoHighlight": "One Platform."
     },
-    "description": "Manage your organization's security information, compliance credentials, supporting documents and customer access through one centralized platform.",
+    "description": "Manage your organization's security information, compliance credentials, supporting documents and customer access through one centralized, branded Trust Center.",
     "primaryCta": {
       "label": "Get Started",
       "href": "#get-started",
@@ -42,27 +42,21 @@
           "subtitle": "Approval required",
           "icon": "folder",
           "defaultMode": "restricted"
-        },
-        {
-          "id": "hero-doc-certs",
-          "title": "Certifications",
-          "subtitle": "Published credentials",
-          "icon": "certification",
-          "defaultMode": "public"
         }
+       
       ],
       "requestsSectionTitle": "Access Requests",
       "requestCard": {
-        "title": "SOC 2 Type II Report",
-        "subtitle": "Customer request · NDA required",
+        "title": "Request for Audit Reports",
+        "subtitle": "Business email verified",
         "rejectLabel": "Reject",
         "approveLabel": "Approve"
       },
       "trustedDomainsLabel": "Trusted Domains",
       "trustedDomainTags": [
-        { "id": "domain-acme", "label": "acme.io", "highlighted": true },
-        { "id": "domain-enterprise", "label": "enterprise.com" },
-        { "id": "domain-auto", "label": "Auto-approved" }
+        { "id": "domain-acme", "label": "example.com", "highlighted": true },
+        { "id": "domain-enterprise", "label": "Bypass approval" },
+        { "id": "domain-auto", "label": "Time-limited link" }
       ]
     },
     "documentsPanel": {

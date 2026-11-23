@@ -13,7 +13,7 @@ export function CapabilitiesSection({ content }: CapabilitiesSectionProps) {
   return (
     <section
       aria-labelledby="capabilities-section-heading"
-      className="bg-[#FAFBFD] py-20 sm:py-24 lg:py-28"
+      className="bg-[#F8FAFC] py-20 sm:py-24 lg:py-28"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Centered Header */}
@@ -29,7 +29,7 @@ export function CapabilitiesSection({ content }: CapabilitiesSectionProps) {
             {content.headline}
           </h2>
 
-          <p className="mx-auto mt-3.5 max-w-2xl text-[15px] leading-relaxed text-[#4B5563] sm:text-base">
+          <p className="mx-auto mt-3.5 max-w-3xl text-[15px] leading-relaxed text-[#4B5563] sm:text-base">
             {content.description}
           </p>
         </ScrollReveal>

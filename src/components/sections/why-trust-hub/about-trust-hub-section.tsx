@@ -59,7 +59,7 @@ export function AboutTrustHubSection({ content }: AboutTrustHubSectionProps) {
 
               <h2
                 id="about-trust-hub-heading"
-                className="mt-4 text-2xl leading-[1.16] font-extrabold tracking-tight text-[#111827] sm:text-4xl lg:text-[40px]"
+                className="mt-4 text-2xl leading-[1.26] font-extrabold tracking-tight text-[#111827] text-4xl lg:text-[38px]"
               >
                 <span className="block">{content.headline.lineOne}</span>
                 <span className="block">{content.headline.lineTwo}</span>

@@ -17,6 +17,7 @@ export function PreviewPublishingSection({
       headingId="preview-publishing-heading"
       mediaPosition="right"
     >
+      
       <PreviewPublishingWindow data={content.previewWindow} />
     </CapabilityShowcaseShell>
   );

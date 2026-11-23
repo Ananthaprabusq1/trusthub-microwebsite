@@ -28,18 +28,12 @@
           "order": 2,
           "visible": true
         },
-        {
-          "id": "footer-how-it-works",
-          "label": "How It Works",
-          "href": "/#how-it-works",
-          "order": 3,
-          "visible": true
-        },
+       
         {
           "id": "footer-why-trust-hub",
           "label": "Why Trust Hub",
           "href": "/why-trust-hub",
-          "order": 4,
+          "order": 3,
           "visible": true
         }
       ]
