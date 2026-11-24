@@ -1,28 +1,29 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
-import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { type MouseEvent, useState } from "react";
 import {
   LuArrowRight,
   LuChevronDown,
-  LuShieldCheck,
+  LuLayoutGrid,
   LuX,
 } from "react-icons/lu";
+import { StakfloBrandMark } from "@/components/ui/stakflo-brand-mark";
+import { useGetStartedTransition } from "@/context/get-started-transition-context";
+import { isNavItemActive } from "@/lib/navigation";
 import type { HeaderActionItem, NavItem } from "@/types/navigation";
 
 interface MobileNavDrawerProps {
   isOpen: boolean;
-  onClose: () => void;
+  onClose: (restoreFocus?: boolean) => void;
   pathname: string;
   items: NavItem[];
   actions: HeaderActionItem[];
-  brandName?: string;
-  brandProduct?: string;
-  logoSrc?: string;
-  logoAlt?: string;
-  onNavigateHref?: (href: string) => void;
+  brandName: string;
+  brandProduct: string;
+  logoSrc: string;
+  logoAlt: string;
 }
 
 export function MobileNavDrawer({
@@ -31,32 +32,51 @@ export function MobileNavDrawer({
   pathname,
   items,
   actions,
-  brandName = "Stakflo",
-  brandProduct = "Trust Hub",
-  logoSrc = "/images/stakflo-logo.png",
-  logoAlt = "Stakflo Trust Hub logo",
-  onNavigateHref,
+  brandName,
+  brandProduct,
+  logoSrc,
+  logoAlt,
 }: MobileNavDrawerProps) {
+  const { triggerTransition } = useGetStartedTransition();
   const [expandedId, setExpandedId] = useState<string | null>("features");
-  const [logoError, setLogoError] = useState(false);
 
-  const handleLinkClick = (href: string) => {
-    onNavigateHref?.(href);
+  const handleNavLinkClick = (href: string) => {
+    onClose(false);
     const [targetPath, hash] = href.split("#");
-    if (hash && (targetPath || pathname) === pathname) {
-      const targetEl = document.getElementById(hash);
-      if (targetEl) {
-        window.history.pushState(null, "", href);
-        targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+    const normalizedTarget = targetPath || pathname;
+
+    if (normalizedTarget !== pathname) return;
+
+    if (!hash) {
+      window.history.pushState(null, "", normalizedTarget);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
     }
-    onClose();
+
+    const targetEl = document.getElementById(hash);
+    if (targetEl) {
+      window.history.pushState(null, "", href);
+      targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const handleActionClick = (
+    event: MouseEvent<HTMLAnchorElement>,
+    action: HeaderActionItem
+  ) => {
+    onClose(false);
+    if (action.variant === "primary") {
+      triggerTransition(event, action.href);
+      return;
+    }
+    handleNavLinkClick(action.href);
   };
 
   return (
     <AnimatePresence>
       {isOpen && (
         <div
+          id="mobile-navigation-drawer"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation"
@@ -68,7 +88,7 @@ export function MobileNavDrawer({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            onClick={onClose}
+            onClick={() => onClose(true)}
             className="fixed inset-0 bg-slate-950/35 backdrop-blur-xs"
           />
 
@@ -80,40 +100,32 @@ export function MobileNavDrawer({
             transition={{ type: "spring", stiffness: 320, damping: 32 }}
             className="fixed inset-y-0 right-0 z-10 flex w-full max-w-sm flex-col bg-white shadow-2xl"
           >
-            {/* Drawer Header */}
-            <div className="flex items-center justify-between border-b border-slate-200/80 px-5 py-4">
+            {/* Header */}
+            <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4">
               <Link
                 href="/"
-                onClick={onClose}
-                className="flex items-center gap-2"
+                onClick={() => handleNavLinkClick("/")}
+                className="inline-flex items-center gap-2.5"
               >
-                {!logoError ? (
-                  <Image
-                    src={logoSrc}
-                    alt={logoAlt}
-                    width={126}
-                    height={30}
-                    onError={() => setLogoError(true)}
-                    className="h-7 w-auto object-contain"
-                  />
-                ) : (
-                  <span className="flex items-center gap-2">
-                    <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#37C650] text-white">
-                      <LuShieldCheck className="h-4 w-4" />
-                    </span>
-                    <span className="text-sm font-extrabold text-[#111827]">
-                      {brandName}{" "}
-                      <span className="text-[#37C650]">{brandProduct}</span>
-                    </span>
-                  </span>
-                )}
+                <StakfloBrandMark
+                  src={logoSrc}
+                  alt={logoAlt}
+                  width={30}
+                  height={30}
+                  className="h-7.5 w-7.5 shrink-0 object-contain"
+                />
+                <span className="text-base font-semibold text-[#111827]">
+                  {brandName}{" "}
+                  <span className="font-normal text-slate-300">|</span>{" "}
+                  {brandProduct}
+                </span>
               </Link>
 
               <button
                 type="button"
-                onClick={onClose}
+                onClick={() => onClose(true)}
                 aria-label="Close navigation menu"
-                className="inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-xl border border-slate-200 text-[#4B5563] hover:bg-slate-50 hover:text-[#111827]"
+                className="inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-xl border border-slate-200 text-[#4B5563] hover:bg-slate-50"
               >
                 <LuX className="h-4.5 w-4.5" />
               </button>
@@ -125,14 +137,14 @@ export function MobileNavDrawer({
                 const subItems = item.children ?? [];
                 const hasChildren = subItems.length > 0;
                 const isExpanded = expandedId === item.id;
-                const isActive = pathname === item.href;
+                const isActive = isNavItemActive(pathname, item.href);
 
                 if (!hasChildren) {
                   return (
                     <Link
                       key={item.id}
                       href={item.href}
-                      onClick={() => handleLinkClick(item.href)}
+                      onClick={() => handleNavLinkClick(item.href)}
                       className={`block rounded-xl px-3.5 py-2.5 text-sm font-semibold transition-colors ${
                         isActive
                           ? "bg-[#E8F5EC] text-[#15803D]"
@@ -152,24 +164,21 @@ export function MobileNavDrawer({
                     <div className="flex items-center justify-between px-3.5 py-2.5">
                       <Link
                         href={item.href}
-                        onClick={() => handleLinkClick(item.href)}
+                        onClick={() => handleNavLinkClick(item.href)}
                         className={`text-sm font-semibold ${
-                          isActive ? "text-[#37C650]" : "text-[#111827]"
+                          isActive ? "text-[#15803D]" : "text-[#111827]"
                         }`}
                       >
                         {item.label}
                       </Link>
-
                       <button
                         type="button"
                         aria-expanded={isExpanded}
                         aria-label={`Toggle ${item.label} submenu`}
                         onClick={() =>
-                          setExpandedId((prev) =>
-                            prev === item.id ? null : item.id
-                          )
+                          setExpandedId(isExpanded ? null : item.id)
                         }
-                        className="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg text-[#4B5563] hover:bg-slate-200/60"
+                        className="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg text-[#4B5563]"
                       >
                         <LuChevronDown
                           className={`h-4 w-4 transition-transform duration-200 ${
@@ -181,26 +190,26 @@ export function MobileNavDrawer({
 
                     {isExpanded && (
                       <div className="space-y-1 border-t border-slate-200/70 px-2.5 py-2.5">
+                        <Link
+                          href={item.href}
+                          onClick={() => handleNavLinkClick(item.href)}
+                          className="flex items-center gap-2 rounded-lg bg-white px-2.5 py-2 text-xs font-bold text-[#15803D]"
+                        >
+                          <LuLayoutGrid className="h-3.5 w-3.5 text-[#37C650]" />
+                          <span>Features Overview</span>
+                        </Link>
+
                         {subItems.map((subItem, idx) => (
                           <Link
                             key={subItem.id}
                             href={subItem.href}
-                            onClick={() => handleLinkClick(subItem.href)}
-                            className="flex items-start gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium text-[#334155] transition-colors hover:bg-[#E8F5EC] hover:text-[#15803D]"
+                            onClick={() => handleNavLinkClick(subItem.href)}
+                            className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs font-medium text-[#334155] hover:bg-[#E8F5EC] hover:text-[#15803D]"
                           >
-                            <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-[#E8F5EC] text-[10px] font-bold text-[#15803D]">
+                            <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-[#E8F5EC] text-[10px] font-bold text-[#15803D]">
                               {String(idx + 1).padStart(2, "0")}
                             </span>
-                            <span className="flex flex-col">
-                              <span className="font-semibold">
-                                {subItem.label}
-                              </span>
-                              {subItem.description && (
-                                <span className="mt-0.5 text-[11px] text-slate-500">
-                                  {subItem.description}
-                                </span>
-                              )}
-                            </span>
+                            <span>{subItem.label}</span>
                           </Link>
                         ))}
                       </div>
@@ -210,13 +219,13 @@ export function MobileNavDrawer({
               })}
             </div>
 
-            {/* Bottom Action Buttons */}
-            <div className="space-y-2.5 border-t border-slate-200/80 p-4">
+            {/* Bottom Actions (Log in + Get Started Transition) */}
+            <div className="space-y-2.5 border-t border-slate-100 p-4">
               {actions.map((action) => (
                 <Link
                   key={action.id}
                   href={action.href}
-                  onClick={() => handleLinkClick(action.href)}
+                  onClick={(e) => handleActionClick(e, action)}
                   className={`inline-flex w-full items-center justify-center gap-1.5 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors ${
                     action.variant === "primary"
                       ? "bg-[#37C650] text-white shadow-[0_8px_20px_-6px_rgba(55,198,80,0.45)] hover:bg-[#2EB045]"

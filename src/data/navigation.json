@@ -105,7 +105,7 @@
     {
       "id": "login",
       "label": "Log in",
-      "href": "#login",
+      "href": "https://trusthub.stakflo.io/login",
       "variant": "ghost",
       "order": 1,
       "visible": true
@@ -113,11 +113,10 @@
     {
       "id": "get-started",
       "label": "Get Started",
-      "href": "#get-started",
+      "href": "https://trusthub.stakflo.io/register",
       "variant": "primary",
       "order": 2,
       "visible": true
     }
   ]
-  
 }

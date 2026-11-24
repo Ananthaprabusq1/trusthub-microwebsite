@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { LuArrowUp } from "react-icons/lu";
 import { StakfloBrandMark } from "@/components/ui/stakflo-brand-mark";
 import rawFooterConfig from "@/data/footer.json";
 import {
@@ -16,10 +15,6 @@ const footerConfig = rawFooterConfig as FooterConfig;
 export function SiteFooter() {
   const columns = getVisibleFooterColumns(footerConfig);
   const legalLinks = getVisibleLegalLinks(footerConfig);
-
-  const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   return (
     <footer className="border-t border-slate-100 bg-white text-[#111827]">
@@ -58,7 +53,7 @@ export function SiteFooter() {
             </p>
           </div>
 
-          {/* Dynamic Spotlight Link Columns (PRODUCT, FEATURES, RESOURCES) */}
+          {/* Dynamic Spotlight Link Columns */}
           {columns.map((column) => (
             <FooterSpotlightColumn
               key={column.id}
@@ -69,49 +64,37 @@ export function SiteFooter() {
           ))}
         </div>
 
-        {/* Bottom Divider + Copyright, Animated Legal Links & Back to Top */}
+        {/* Bottom Divider + Copyright & Legal Bar */}
         <div className="mt-14 border-t border-slate-200/70 pt-7">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <p className="text-xs text-[#64748B] sm:text-[13px]">
               {footerConfig.copyright}
             </p>
 
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-              {legalLinks.length > 0 && (
-                <nav aria-label="Legal">
-                  <ul className="flex flex-wrap items-center gap-x-6 gap-y-2">
-                    {legalLinks.map((legal) => (
-                      <li key={legal.id}>
-                        <Link
-                          href={legal.href}
-                          target={legal.external ? "_blank" : undefined}
-                          rel={
-                            legal.external ? "noopener noreferrer" : undefined
-                          }
-                          className="group relative inline-block rounded-md py-1 text-xs text-[#64748B] transition-colors hover:text-[#111827] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650] sm:text-[13px]"
-                        >
-                          <span>{legal.label}</span>
-                          <span
-                            aria-hidden="true"
-                            className="absolute inset-x-0 bottom-0.5 h-[1.5px] origin-left scale-x-0 rounded-full bg-[#37C650] transition-transform duration-250 group-hover:scale-x-100"
-                          />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-              )}
-
-              <button
-                type="button"
-                onClick={handleScrollToTop}
-                aria-label="Scroll back to top"
-                className="group inline-flex cursor-pointer items-center gap-1.5 rounded-full border border-slate-200/90 bg-[#FAFBFD] px-3 py-1 text-xs font-semibold text-[#334155] transition-all duration-200 hover:border-[#37C650]/55 hover:bg-[#F2FBF4] hover:text-[#15803D]"
-              >
-                <span>Back to top</span>
-                <LuArrowUp className="h-3.5 w-3.5 text-[#37C650] transition-transform duration-200 group-hover:-translate-y-0.5" />
-              </button>
-            </div>
+            {legalLinks.length > 0 && (
+              <nav aria-label="Legal">
+                <ul className="flex flex-wrap items-center gap-x-6 gap-y-2">
+                  {legalLinks.map((legal) => (
+                    <li key={legal.id}>
+                      <Link
+                        href={legal.href}
+                        target={legal.external ? "_blank" : undefined}
+                        rel={
+                          legal.external ? "noopener noreferrer" : undefined
+                        }
+                        className="group relative inline-block rounded-md py-1 text-xs text-[#64748B] transition-colors hover:text-[#111827] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650] sm:text-[13px]"
+                      >
+                        <span>{legal.label}</span>
+                        <span
+                          aria-hidden="true"
+                          className="absolute inset-x-0 bottom-0.5 h-[1.5px] origin-left scale-x-0 rounded-full bg-[#37C650] transition-transform duration-250 group-hover:scale-x-100"
+                        />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
           </div>
         </div>
       </div>

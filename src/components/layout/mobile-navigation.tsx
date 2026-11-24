@@ -7,7 +7,6 @@ import { createPortal } from "react-dom";
 import { LuMenu } from "react-icons/lu";
 import type { HeaderActionItem, NavItem } from "@/types/navigation";
 import { MobileNavDrawer } from "./mobile-nav-drawer";
-// import { MobileNavDrawer } from "./mobile-nav-drawer";
 
 interface MobileNavigationProps {
   items: NavItem[];
@@ -60,7 +59,7 @@ export function MobileNavigation({
         aria-controls="mobile-navigation-drawer"
         aria-label="Open navigation menu"
         onClick={() => setIsOpen(true)}
-        className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-[#111827] transition-colors duration-200 hover:bg-slate-100 focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:outline-none"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-[#111827] transition-colors duration-200 hover:bg-slate-100 focus-visible:ring-2 focus-visible:ring-[#37C650] focus-visible:outline-none"
       >
         <LuMenu aria-hidden="true" className="h-6 w-6" />
       </motion.button>

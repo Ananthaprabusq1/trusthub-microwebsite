@@ -9,10 +9,10 @@ import {
   LuArrowUpRight,
   LuChevronDown,
 } from "react-icons/lu";
-import { Button } from "@/components/ui/button";
 import { MagneticWrap } from "@/components/ui/magnetic-wrap";
 import { isNavItemActive } from "@/lib/navigation";
 import type { HeaderActionItem, NavItem } from "@/types/navigation";
+import { useGetStartedTransition } from "@/context/get-started-transition-context";
 
 interface DesktopNavigationProps {
   items: NavItem[];
@@ -25,6 +25,7 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
   const [hoveredItemId, setHoveredItemId] = useState<string | null>(null);
   const [hoveredSubId, setHoveredSubId] = useState<string | null>(null);
   const navContainerRef = useRef<HTMLDivElement | null>(null);
+  const { mode, triggerTransition } = useGetStartedTransition();
 
   useEffect(() => {
     const handleOutside = (event: MouseEvent) => {
@@ -245,13 +246,21 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
           if (action.variant === "primary") {
             return (
               <MagneticWrap key={action.id} strength={0.22}>
-                <Button
-                  href={action.href}
-                  size="sm"
-                  showArrow={action.showArrow ?? true}
+                <motion.button
+                  type="button"
+                  layoutId={
+                    mode === "layout-morph" && pathname !== action.href
+                      ? "get-started-morph"
+                      : undefined
+                  }
+                  onClick={(e) => triggerTransition(e, action.href)}
+                  className="group inline-flex cursor-pointer items-center gap-1.5 rounded-full bg-[#37C650] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_-6px_rgba(55,198,80,0.48)] transition-colors hover:bg-[#2EB045] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650]"
                 >
-                  {action.label}
-                </Button>
+                  <span>{action.label}</span>
+                  {(action.showArrow ?? true) && (
+                    <LuArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                  )}
+                </motion.button>
               </MagneticWrap>
             );
           }

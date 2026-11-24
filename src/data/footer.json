@@ -151,21 +151,21 @@
     {
       "id": "legal-privacy-policy",
       "label": "Privacy Policy",
-      "href": "/privacy-policy",
+      "href": "https://sq1.security/privacy-policy",
       "order": 1,
       "visible": true
     },
     {
       "id": "legal-terms-of-use",
       "label": "Terms of Use",
-      "href": "/terms-of-use",
+      "href": "https://sq1.security/terms-of-use",
       "order": 2,
       "visible": true
     },
     {
       "id": "legal-cookie-policy",
       "label": "Cookie Policy",
-      "href": "/cookie-policy",
+      "href": "https://sq1.security/cookie-policy",
       "order": 3,
       "visible": true
     }

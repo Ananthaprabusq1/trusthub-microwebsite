@@ -30,6 +30,7 @@ import {
 // } from "@/components/ui/audit-xray-mode";
 import { InteractiveTrustSimulator } from "@/components/ui/interactive-trust-simulator";
 import { LiveSecurityBeamFlow } from "@/components/ui/live-security-beam-flow";
+import { UiTestTransitionShell } from "@/components/transitions/ui-test-transition-shell";
 
 const MORPH_CARDS: MorphingDetailItem[] = [
   {
@@ -94,6 +95,7 @@ export default function UiTestPlaygroundPage() {
   const currentMetrics = METRIC_SETS[metricSetIndex] ?? METRIC_SETS[0];
 
   return (
+    <UiTestTransitionShell>
     <main className="min-h-screen bg-[#FAFBFD] py-16 text-[#111827] sm:py-24">
       {grainEnabled && <FilmGrainOverlay />}
 
@@ -287,5 +289,6 @@ export default function UiTestPlaygroundPage() {
       />
       
     </main>
+    </UiTestTransitionShell>
   );
 }

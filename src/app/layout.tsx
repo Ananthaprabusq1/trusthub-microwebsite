@@ -5,6 +5,8 @@ import { MotionProvider } from "@/components/providers/motion-provider";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import { inter, roboto } from "@/lib/fonts";
 import "./globals.css";
+import { GetStartedTransitionProvider } from "@/context/get-started-transition-context";
+import ScrollToTopButton from "@/components/ui/scroll-to-top-button";
 
 export const metadata: Metadata = {
   title: "Stakflo | Trust Hub",
@@ -24,9 +26,14 @@ export default function RootLayout({
       >
         <MotionProvider>
           <SmoothScrollProvider>
+<GetStartedTransitionProvider>
+
+
             <SiteHeader />
             <main className="flex-1">{children}</main>
             <SiteFooter />
+            <ScrollToTopButton />
+</GetStartedTransitionProvider>
           </SmoothScrollProvider>
         </MotionProvider>
       </body>
