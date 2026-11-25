@@ -85,10 +85,6 @@ export interface HomeHeroContent {
     src: string;
     alt: string;
   };
-  accentBackgroundImage?: {
-    src: string;
-    alt: string;
-  };
   isometricCard: {
     src: string;
     alt: string;

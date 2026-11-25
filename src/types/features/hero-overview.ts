@@ -53,10 +53,6 @@ export interface FeaturesHeroContent {
     src: string;
     alt: string;
   };
-  accentBackgroundImage?: {
-    src: string;
-    alt: string;
-  };
   accessGovernance: {
     windowTitle: string;
     accessSectionTitle: string;

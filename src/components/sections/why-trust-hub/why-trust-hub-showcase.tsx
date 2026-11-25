@@ -13,7 +13,7 @@ import type {
 
 interface WhyTrustHubShowcaseProps {
   showcaseImage: WhyTrustHubHeroContent["showcaseImage"];
-  accentWaveImage?: WhyTrustHubHeroContent["accentBackgroundImage"];
+  accentWaveImage?: WhyTrustHubHeroContent["showcaseAccentImage"];
   floatingBadges: WhyTrustHubHeroContent["floatingBadges"];
 }
 

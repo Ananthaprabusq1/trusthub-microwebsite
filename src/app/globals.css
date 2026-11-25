@@ -260,3 +260,13 @@ body {
   --color-palette-ffff00: var(--color-gray-palette-ffff00);
   --color-surface-base: var(--color-gray-surface-base);
  }
+
+/* Global pointer cursor on all interactive elements */
+button,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+a {
+  cursor: pointer;
+}

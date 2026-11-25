@@ -15,7 +15,6 @@ export function WhyTrustHubHeroSection({
   content,
 }: WhyTrustHubHeroSectionProps) {
   const [bgImgError, setBgImgError] = useState(false);
-  const [accentImgError, setAccentImgError] = useState(false);
 
   return (
     <section
@@ -23,7 +22,7 @@ export function WhyTrustHubHeroSection({
       className="relative overflow-hidden bg-[var(--color-palette-f7fbf8)] py-12 sm:py-16 lg:py-40"
     >
       <HeroReveal>
-        {/* Stage 1: Uncropped Dual-Layer Wavy Background */}
+        {/* Stage 1: Single Combined Green Wave Background */}
         <HeroStage
           stage={1}
           preset="fade"
@@ -32,9 +31,8 @@ export function WhyTrustHubHeroSection({
         >
           <div
             aria-hidden="true"
-            className="relative h-full w-full bg-[linear-gradient(135deg,#F9FCFA_0%,#F1F9F3_55%,#E3F4E8_100%)]"
+            className="relative h-full w-full bg-[var(--color-brand-tint-soft)]"
           >
-            {/* Base Soft Pastel Mint Wave (heroback.png) */}
             {!bgImgError && (
               <Image
                 src={content.backgroundImage.src}
@@ -50,20 +48,6 @@ export function WhyTrustHubHeroSection({
             {/* Left Top Soft Wash so Headline Contrast Stays Crisp */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_32%,rgba(249,252,250,0.88)_0%,rgba(249,252,250,0.45)_48%,transparent_78%)]" />
 
-            {/* Bottom Sweeping Emerald Wave (Natural Uncropped Curve, Zero Straight Seam) */}
-            {content.accentBackgroundImage && !accentImgError && (
-              <div className="absolute inset-x-0 bottom-0 flex items-end justify-start">
-                <Image
-                  src={content.accentBackgroundImage.src}
-                  alt={content.accentBackgroundImage.alt}
-                  width={1600}
-                  height={520}
-                  priority
-                  onError={() => setAccentImgError(true)}
-                  className="h-auto max-h-[250px] w-full object-cover object-top sm:max-h-[300px] lg:max-h-[330px]"
-                />
-              </div>
-            )}
           </div>
         </HeroStage>
 
@@ -126,7 +110,7 @@ export function WhyTrustHubHeroSection({
             <div className="lg:col-span-6">
               <WhyTrustHubShowcase
                 showcaseImage={content.showcaseImage}
-                accentWaveImage={content.accentBackgroundImage}
+                accentWaveImage={content.showcaseAccentImage}
                 floatingBadges={content.floatingBadges}
               />
             </div>

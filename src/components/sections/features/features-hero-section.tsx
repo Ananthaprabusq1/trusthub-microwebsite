@@ -14,7 +14,6 @@ interface FeaturesHeroSectionProps {
 
 export function FeaturesHeroSection({ content }: FeaturesHeroSectionProps) {
   const [bgImgError, setBgImgError] = useState(false);
-  const [accentImgError, setAccentImgError] = useState(false);
 
   return (
     <section
@@ -22,7 +21,7 @@ export function FeaturesHeroSection({ content }: FeaturesHeroSectionProps) {
       className="relative overflow-hidden bg-white pt-10 pb-16 sm:pt-14 sm:pb-24"
     >
       <HeroReveal>
-        {/* Stage 1: Dual-Layer Green Wavy Background (Top ~80%, pure white below) */}
+        {/* Stage 1: Single Combined Green Wave Background */}
         <HeroStage
           stage={1}
           preset="fade"
@@ -31,7 +30,7 @@ export function FeaturesHeroSection({ content }: FeaturesHeroSectionProps) {
         >
           <div
             aria-hidden="true"
-            className="relative h-full w-full bg-[linear-gradient(180deg,#F5FBF7_0%,#E4F6EA_65%,#D3F0DC_100%)]"
+            className="relative h-full w-full bg-[var(--color-brand-tint-soft)]"
           >
             {!bgImgError && (
               <Image
@@ -45,19 +44,6 @@ export function FeaturesHeroSection({ content }: FeaturesHeroSectionProps) {
               />
             )}
 
-            {content.accentBackgroundImage && !accentImgError && (
-              <div className="absolute bottom-0 left-0 w-[72%] max-w-3xl sm:w-[58%] lg:w-[50%]">
-                <Image
-                  src={content.accentBackgroundImage.src}
-                  alt={content.accentBackgroundImage.alt}
-                  width={900}
-                  height={360}
-                  priority
-                  onError={() => setAccentImgError(true)}
-                  className="h-auto w-full object-contain object-bottom-left opacity-90"
-                />
-              </div>
-            )}
           </div>
         </HeroStage>
 

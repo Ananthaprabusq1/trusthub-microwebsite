@@ -59,7 +59,7 @@ export interface WhyTrustHubHeroContent {
     src: string;
     alt: string;
   };
-  accentBackgroundImage?: {
+  showcaseAccentImage?: {
     src: string;
     alt: string;
   };

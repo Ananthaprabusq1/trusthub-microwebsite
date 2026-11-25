@@ -18,12 +18,8 @@
       "showArrow": false
     },
     "backgroundImage": {
-      "src": "/images/heroback.png",
-      "alt": "Soft pastel green abstract flowing background"
-    },
-    "accentBackgroundImage": {
-      "src": "/images/green-bg-1.png",
-      "alt": "Vibrant emerald green wave accent"
+      "src": "/images/herotwolayer.png",
+      "alt": "Stakflo Trust Hub flowing green wave background"
     },
     "accessGovernance": {
       "windowTitle": "Access Governance",

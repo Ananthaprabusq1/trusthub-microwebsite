@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { HeroReveal, HeroStage } from "@/components/ui/hero-reveal";
+import { VideoModal } from "@/components/ui/video-modal";
 import type { HomeHeroContent } from "@/types/home";
 import { HeroDashboardMockup } from "./hero-dashboard-mockup";
 
@@ -13,7 +14,7 @@ interface HomeHeroSectionProps {
 
 export function HomeHeroSection({ content }: HomeHeroSectionProps) {
   const [bgImgError, setBgImgError] = useState(false);
-  const [accentImgError, setAccentImgError] = useState(false);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <section
@@ -21,7 +22,7 @@ export function HomeHeroSection({ content }: HomeHeroSectionProps) {
       className="relative overflow-hidden bg-white pt-10 pb-16 sm:pt-14 sm:pb-24"
     >
       <HeroReveal>
-        {/* Stage 1: Dual-Layer Green Wavy Background */}
+        {/* Stage 1: Single Combined Green Wave Background */}
         <HeroStage
           stage={1}
           preset="fade"
@@ -30,9 +31,8 @@ export function HomeHeroSection({ content }: HomeHeroSectionProps) {
         >
           <div
             aria-hidden="true"
-            className="relative h-full w-full bg-[linear-gradient(180deg,#F5FBF7_0%,#E4F6EA_65%,#D3F0DC_100%)]"
+            className="relative h-full w-full bg-[var(--color-brand-tint-soft)]"
           >
-            {/* Base Layer: Full Pastel Mint Wave (heroback.png) */}
             {!bgImgError && (
               <Image
                 src={content.backgroundImage.src}
@@ -45,20 +45,6 @@ export function HomeHeroSection({ content }: HomeHeroSectionProps) {
               />
             )}
 
-            {/* Bottom-Left Accent Layer: Rich Emerald Wave (green-bg-1.png) */}
-            {content.accentBackgroundImage && !accentImgError && (
-              <div className="absolute bottom-0 left-0 w-[72%] max-w-3xl sm:w-[58%] lg:w-[50%]">
-                <Image
-                  src={content.accentBackgroundImage.src}
-                  alt={content.accentBackgroundImage.alt}
-                  width={900}
-                  height={360}
-                  priority
-                  onError={() => setAccentImgError(true)}
-                  className="h-auto w-full object-contain object-bottom-left opacity-90"
-                />
-              </div>
-            )}
           </div>
         </HeroStage>
 
@@ -103,10 +89,11 @@ export function HomeHeroSection({ content }: HomeHeroSectionProps) {
                 </Button>
 
                 <Button
-                  href={content.secondaryCta.href}
+                  type="button"
                   variant="custom"
                   size="md"
                   showArrow={content.secondaryCta.showArrow ?? false}
+                  onClick={() => setIsVideoOpen(true)}
                   className="w-full border border-[var(--color-surface-dark)]/65 bg-white/40 text-[var(--color-surface-dark)] hover:bg-white/80 sm:w-auto"
                 >
                   {content.secondaryCta.label}
@@ -123,6 +110,11 @@ export function HomeHeroSection({ content }: HomeHeroSectionProps) {
           />
         </div>
       </HeroReveal>
+      <VideoModal
+        open={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        src="/videos/trusthubvideo.mp4"
+      />
     </section>
   );
 }
