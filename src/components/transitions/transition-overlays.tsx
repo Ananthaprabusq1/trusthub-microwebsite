@@ -56,9 +56,9 @@ export function TransitionOverlays({
             <p className="text-sm font-bold tracking-wider uppercase">
               Connecting to Stakflo Trust Hub...
             </p>
-            <span className="rounded-full bg-white/15 px-3 py-0.5 font-mono text-xs">
+            {/* <span className="rounded-full bg-white/15 px-3 py-0.5 font-mono text-xs">
               Design by BABU
-            </span>
+            </span> */}
           </motion.div>
         </motion.div>
       )}
