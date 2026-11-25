@@ -22,15 +22,15 @@ export function CtaBannerSection({ content }: CtaBannerSectionProps) {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal preset="scale">
-          <div className="relative overflow-hidden rounded-3xl bg-[#134E2B] px-6 py-10 shadow-[0_24px_60px_-15px_rgba(19,78,43,0.32)] sm:rounded-[32px] sm:px-12 sm:py-14 lg:px-16 lg:py-16">
+          <div className="relative overflow-hidden rounded-3xl bg-[var(--color-palette-134e2b)] px-6 py-10 shadow-[0_24px_60px_-15px_rgba(19,78,43,0.32)] sm:rounded-[32px] sm:px-12 sm:py-14 lg:px-16 lg:py-16">
             {/* Soft Ambient Emerald Spotlight Behind Right Card */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute -top-20 right-4 h-80 w-80 rounded-full bg-[#37C650]/35 blur-3xl sm:right-16 sm:h-96 sm:w-96"
+              className="pointer-events-none absolute -top-20 right-4 h-80 w-80 rounded-full bg-[var(--color-brand-primary)]/35 blur-3xl sm:right-16 sm:h-96 sm:w-96"
             />
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute -bottom-24 left-1/3 h-64 w-72 rounded-full bg-[#1E6F3E]/50 blur-3xl"
+              className="pointer-events-none absolute -bottom-24 left-1/3 h-64 w-72 rounded-full bg-[var(--color-palette-1e6f3e)]/50 blur-3xl"
             />
 
             <div className="relative z-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
@@ -44,7 +44,7 @@ export function CtaBannerSection({ content }: CtaBannerSectionProps) {
                   <span className="block">{content.headline.lineTwo}</span>
                 </h2>
 
-                <p className="mt-4 max-w-md text-[15px] leading-relaxed text-[#D1E7D8] sm:text-base">
+                <p className="mt-4 max-w-md text-[15px] leading-relaxed text-[var(--color-palette-d1e7d8)] sm:text-base">
                   {content.description}
                 </p>
 
@@ -79,7 +79,7 @@ export function CtaBannerSection({ content }: CtaBannerSectionProps) {
                         aria-hidden="true"
                         className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_50%_45%,#DCFCE7_0%,#F4F9F6_75%)]"
                       >
-                        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#37C650] text-white shadow-md">
+                        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--color-brand-primary)] text-white shadow-md">
                           <LuShieldCheck className="h-8 w-8" />
                         </div>
                       </div>

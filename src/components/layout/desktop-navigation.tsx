@@ -92,12 +92,12 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
                 onMouseEnter={() => setHoveredItemId(item.id)}
                 className={`relative rounded-full px-4 py-2 text-[15px] font-medium transition-colors ${
                   isActive
-                    ? "font-semibold text-[#15803D]"
-                    : "text-[#4B5563] hover:text-[#111827]"
+                    ? "font-semibold text-[var(--color-brand-primary-dark)]"
+                    : "text-[var(--color-text-secondary)] hover:text-[var(--color-surface-dark)]"
                 }`}
               >
                 {isActive && (
-                  <span className="absolute inset-0 rounded-full bg-[#E8F5EC]" />
+                  <span className="absolute inset-0 rounded-full bg-[var(--color-brand-tint)]" />
                 )}
                 {!isActive && isHovered && (
                   <motion.span
@@ -126,12 +126,12 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
                 onClick={() => setOpenDropdownId(null)}
                 className={`relative inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[15px] font-medium transition-colors ${
                   isActive || isDropdownOpen
-                    ? "font-semibold text-[#15803D]"
-                    : "text-[#4B5563] hover:text-[#111827]"
+                    ? "font-semibold text-[var(--color-brand-primary-dark)]"
+                    : "text-[var(--color-text-secondary)] hover:text-[var(--color-surface-dark)]"
                 }`}
               >
                 {(isActive || isDropdownOpen) && (
-                  <span className="absolute inset-0 rounded-full bg-[#E8F5EC]" />
+                  <span className="absolute inset-0 rounded-full bg-[var(--color-brand-tint)]" />
                 )}
                 {!isActive && !isDropdownOpen && isHovered && (
                   <motion.span
@@ -154,7 +154,7 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
                 >
                   <LuChevronDown
                     className={`h-4 w-4 transition-transform duration-200 ${
-                      isDropdownOpen ? "rotate-180 text-[#37C650]" : ""
+                      isDropdownOpen ? "rotate-180 text-[var(--color-brand-primary)]" : ""
                     }`}
                   />
                 </button>
@@ -185,7 +185,7 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
                               onClick={() =>
                                 handleSamePageHashScroll(subItem.href)
                               }
-                              className="relative flex items-center justify-between gap-2 rounded-xl px-3 py-2.5 text-xs font-semibold text-[#1E293B] transition-colors hover:text-[#15803D]"
+                              className="relative flex items-center justify-between gap-2 rounded-xl px-3 py-2.5 text-xs font-semibold text-[var(--color-palette-1e293b)] transition-colors hover:text-[var(--color-brand-primary-dark)]"
                             >
                               {isSubHovered && (
                                 <motion.span
@@ -195,7 +195,7 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
                                     stiffness: 420,
                                     damping: 34,
                                   }}
-                                  className="absolute inset-0 rounded-xl bg-[#F2FBF4]"
+                                  className="absolute inset-0 rounded-xl bg-[var(--color-brand-tint-soft)]"
                                 />
                               )}
 
@@ -203,8 +203,8 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
                                 <span
                                   className={`inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-[10.5px] font-bold transition-colors duration-200 ${
                                     isSubHovered
-                                      ? "bg-[#37C650] text-white shadow-[0_4px_12px_-2px_rgba(55,198,80,0.45)]"
-                                      : "bg-[#E8F5EC] text-[#15803D]"
+                                      ? "bg-[var(--color-brand-primary)] text-white shadow-[0_4px_12px_-2px_rgba(55,198,80,0.45)]"
+                                      : "bg-[var(--color-brand-tint)] text-[var(--color-brand-primary-dark)]"
                                   }`}
                                 >
                                   {String(idx + 1).padStart(2, "0")}
@@ -221,7 +221,7 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
 
                               <LuArrowUpRight
                                 aria-hidden="true"
-                                className={`relative z-10 h-3.5 w-3.5 shrink-0 text-[#37C650] transition-all duration-200 ${
+                                className={`relative z-10 h-3.5 w-3.5 shrink-0 text-[var(--color-brand-primary)] transition-all duration-200 ${
                                   isSubHovered
                                     ? "translate-x-0 translate-y-0 opacity-100"
                                     : "-translate-x-1 translate-y-1 opacity-0"
@@ -254,7 +254,7 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
                       : undefined
                   }
                   onClick={(e) => triggerTransition(e, action.href)}
-                  className="group inline-flex cursor-pointer items-center gap-1.5 rounded-full bg-[#37C650] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_-6px_rgba(55,198,80,0.48)] transition-colors hover:bg-[#2EB045] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650]"
+                  className="group inline-flex min-h-11 cursor-pointer items-center gap-1.5 rounded-full bg-[var(--color-brand-primary)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_-6px_rgba(55,198,80,0.48)] transition-colors hover:bg-[var(--color-brand-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand-primary)]"
                 >
                   <span>{action.label}</span>
                   {(action.showArrow ?? true) && (
@@ -269,10 +269,16 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
             <Link
               key={action.id}
               href={action.href}
-              className="group inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-[15px] font-medium text-[#4B5563] transition-colors duration-200 hover:text-[#111827]"
+              onClick={
+                action.href.endsWith("/login")
+                  ? (event) =>
+                      triggerTransition(event, action.href, "login-slider")
+                  : undefined
+              }
+              className="group inline-flex min-h-11 items-center gap-1 rounded-lg px-2.5 py-1.5 text-[15px] font-medium text-[var(--color-text-secondary)] transition-colors duration-200 hover:text-[var(--color-surface-dark)]"
             >
               <span>{action.label}</span>
-              <LuArrowRight className="h-3.5 w-3.5 -translate-x-1 text-[#37C650] opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
+              <LuArrowRight className="h-3.5 w-3.5 -translate-x-1 text-[var(--color-brand-primary)] opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
             </Link>
           );
         })}

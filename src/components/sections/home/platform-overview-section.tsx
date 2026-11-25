@@ -14,7 +14,7 @@ const SMOOTH_EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 const STEP_INTERVAL = 0.95;
 
 function OverviewStepIcon({ icon }: { icon: string }) {
-  const iconClass = "h-5 w-5 text-[#37C650]";
+  const iconClass = "h-5 w-5 text-[var(--color-brand-primary)]";
   if (icon === "publish" || icon === "globe") {
     return <LuGlobe aria-hidden="true" className={iconClass} />;
   }
@@ -45,18 +45,18 @@ export function PlatformOverviewSection({
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Centered Header */}
         <ScrollReveal className="mx-auto max-w-5xl text-center">
-          <span className="inline-flex items-center rounded-full bg-[#E8F5EC] px-3.5 py-1 text-[11px] font-bold tracking-wider text-[#15803D] uppercase">
+          <span className="inline-flex items-center rounded-full bg-[var(--color-brand-tint)] px-3.5 py-1 text-[11px] font-bold tracking-wider text-[var(--color-brand-primary-dark)] uppercase">
             {content.badge}
           </span>
 
           <h2
             id="platform-overview-heading"
-            className="mt-4 text-3xl leading-[1.15] font-extrabold tracking-tight text-[#111827] sm:text-4xl lg:text-[42px]"
+            className="mt-4 text-3xl leading-[1.15] font-extrabold tracking-tight text-[var(--color-surface-dark)] sm:text-4xl lg:text-[42px]"
           >
             {content.headline}
           </h2>
 
-          <p className="mt-3.5 text-[15px] leading-relaxed text-[#4B5563] sm:text-base">
+          <p className="mt-3.5 text-[15px] leading-relaxed text-[var(--color-text-secondary)] sm:text-base">
             {content.description}
           </p>
         </ScrollReveal>
@@ -80,8 +80,8 @@ export function PlatformOverviewSection({
                 className="flex flex-col"
               >
                 {/* Step Circle + Forward-Only Green Connector Line */}
-                <div className="flex items-center gap-3">
-                  <div className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#8CE09E]/65">
+                <div className="hidden items-center gap-3 lg:flex">
+                  <div className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand-mint)]/65">
                     <motion.span
                       aria-hidden="true"
                       initial={
@@ -99,7 +99,7 @@ export function PlatformOverviewSection({
                         delay: stepDelay,
                         ease: SMOOTH_EASE,
                       }}
-                      className="absolute inset-0 rounded-full bg-[#37C650] shadow-[0_6px_16px_-4px_rgba(55,198,80,0.45)]"
+                      className="absolute inset-0 rounded-full bg-[var(--color-brand-primary)] shadow-[0_6px_16px_-4px_rgba(55,198,80,0.45)]"
                     />
 
                     <span className="relative z-10 text-sm font-bold text-white">
@@ -110,7 +110,7 @@ export function PlatformOverviewSection({
                   {!isLastStep && (
                     <div
                       aria-hidden="true"
-                      className="hidden h-[2px] flex-1 overflow-hidden rounded-full bg-[#DCFCE7] lg:block"
+                      className="hidden h-[2px] flex-1 overflow-hidden rounded-full bg-[var(--color-palette-dcfce7)] lg:block"
                     >
                       <motion.div
                         initial={
@@ -124,7 +124,7 @@ export function PlatformOverviewSection({
                           delay: lineDelay,
                           ease: SMOOTH_EASE,
                         }}
-                        className="h-full w-full origin-left rounded-full bg-[#37C650]"
+                        className="h-full w-full origin-left rounded-full bg-[var(--color-brand-primary)]"
                       />
                     </div>
                   )}
@@ -146,21 +146,21 @@ export function PlatformOverviewSection({
                     opacity: { duration: 0.55, delay: stepDelay + 0.08 },
                     y: { duration: 0.28, ease: SMOOTH_EASE },
                   }}
-                  className={`mt-4 flex-1 rounded-2xl border bg-white p-5 transition-[border-color,box-shadow] duration-300 sm:p-6 ${
+                  className={`mt-0 flex-1 rounded-2xl border bg-white p-5 transition-[border-color,box-shadow] duration-300 sm:p-6 lg:mt-4 ${
                     isCardHovered
-                      ? "border-[#37C650] shadow-[0_18px_40px_-14px_rgba(55,198,80,0.2)]"
+                      ? "border-[var(--color-brand-primary)] shadow-[0_18px_40px_-14px_rgba(55,198,80,0.2)]"
                       : "border-slate-200/85 shadow-[0_10px_30px_-15px_rgba(15,23,42,0.08)]"
                   }`}
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#E8F5EC]">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-brand-tint)]">
                     <OverviewStepIcon icon={step.icon} />
                   </div>
 
-                  <h3 className="mt-5 text-lg font-bold tracking-tight text-[#111827]">
+                  <h3 className="mt-5 text-lg font-bold tracking-tight text-[var(--color-surface-dark)]">
                     {step.title}
                   </h3>
 
-                  <p className="mt-1.5 text-[13px] leading-relaxed text-[#4B5563]">
+                  <p className="mt-1.5 text-[13px] leading-relaxed text-[var(--color-text-secondary)]">
                     {step.description}
                   </p>
                 </motion.div>

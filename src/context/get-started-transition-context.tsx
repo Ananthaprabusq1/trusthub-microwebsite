@@ -22,6 +22,7 @@ export type TransitionMode =
   | "pass-flip";
 
 export type TransitionPhase = "idle" | "entering" | "revealing";
+export type TransitionVariant = "vault-ripple" | "login-slider";
 
 interface ClickOrigin {
   x: number;
@@ -31,12 +32,13 @@ interface ClickOrigin {
 interface GetStartedTransitionContextValue {
   mode: TransitionMode;
   setMode: (mode: TransitionMode) => void;
-  activeOverlayMode: TransitionMode;
+  activeOverlayMode: TransitionMode | TransitionVariant;
   phase: TransitionPhase;
   origin: ClickOrigin;
   triggerTransition: (
     event?: MouseEvent<HTMLElement>,
-    targetHref?: string
+    targetHref?: string,
+    variant?: TransitionVariant
   ) => void;
 }
 
@@ -55,7 +57,7 @@ export function GetStartedTransitionProvider({
   const pathname = usePathname();
   const [mode, setModeState] = useState<TransitionMode>("vault-ripple");
   const [activeOverlayMode, setActiveOverlayMode] =
-    useState<TransitionMode>("vault-ripple");
+    useState<TransitionMode | TransitionVariant>("vault-ripple");
   const [phase, setPhase] = useState<TransitionPhase>("idle");
   const [origin, setOrigin] = useState<ClickOrigin>({ x: 0, y: 0 });
   const timersRef = useRef<number[]>([]);
@@ -98,7 +100,8 @@ export function GetStartedTransitionProvider({
   const triggerTransition = useCallback(
     (
       event?: MouseEvent<HTMLElement>,
-      targetHref = DEFAULT_REGISTER_URL
+      targetHref = DEFAULT_REGISTER_URL,
+      variant?: TransitionVariant
     ) => {
       if (event) {
         event.preventDefault();
@@ -116,10 +119,9 @@ export function GetStartedTransitionProvider({
 
       // External domain hand-off (https://trusthub.stakflo.io/register)
       if (isExternal) {
-        const externalCoverMode: TransitionMode =
-          mode === "layout-morph" || mode === "glass-sheet"
-            ? "vault-ripple"
-            : mode;
+        const externalCoverMode =
+          variant ??
+          (targetHref.endsWith("/login") ? "login-slider" : "vault-ripple");
 
         setActiveOverlayMode(externalCoverMode);
         setPhase("entering");

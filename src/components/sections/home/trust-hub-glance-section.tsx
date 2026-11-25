@@ -24,11 +24,11 @@ function ChecklistBlock({
   return (
     <div>
       <ScrollReveal preset="rise">
-        <span className="inline-flex items-center rounded-full bg-[#E6F7EB] px-3.5 py-1 text-[10px] font-bold tracking-wider text-[#166534] uppercase sm:text-[11px]">
+        <span className="inline-flex items-center rounded-full bg-[var(--color-palette-e6f7eb)] px-3.5 py-1 text-[10px] font-bold tracking-wider text-[var(--color-palette-166534)] uppercase sm:text-[11px]">
           {badge}
         </span>
 
-        <h3 className="mt-4 text-xl font-extrabold tracking-tight text-[#111827] sm:text-2xl lg:text-[26px]">
+        <h3 className="mt-4 text-xl font-extrabold tracking-tight text-[var(--color-surface-dark)] sm:text-2xl lg:text-[26px]">
           {title}
         </h3>
       </ScrollReveal>
@@ -38,10 +38,10 @@ function ChecklistBlock({
           <li key={bullet}>
             <ScrollReveal preset="rise" delay={0.08 + index * 0.07}>
               <div className="flex items-center gap-3">
-                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#DCFCE7] text-[#16A34A]">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-palette-dcfce7)] text-[var(--color-palette-16a34a)]">
                   <LuCheck aria-hidden="true" className="h-3.5 w-3.5 stroke-[2.5]" />
                 </span>
-                <span className="text-[14px] leading-relaxed text-[#4B5563] sm:text-[15px]">
+                <span className="text-[14px] leading-relaxed text-[var(--color-text-secondary)] sm:text-[15px]">
                   {bullet}
                 </span>
               </div>
@@ -64,18 +64,18 @@ export function TrustHubGlanceSection({ content }: TrustHubGlanceSectionProps) {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Centered Header */}
         <ScrollReveal preset="rise" className="mx-auto max-w-5xl text-center">
-          <span className="inline-flex items-center rounded-full bg-[#E6F7EB] px-4 py-1 text-[11px] font-bold tracking-wider text-[#166534] uppercase">
+          <span className="inline-flex items-center rounded-full bg-[var(--color-palette-e6f7eb)] px-4 py-1 text-[11px] font-bold tracking-wider text-[var(--color-palette-166534)] uppercase">
             {content.badge}
           </span>
 
           <h2
             id="glance-section-heading"
-            className="mt-4 text-2xl leading-[1.16] font-extrabold tracking-tight text-[#111827] sm:text-4xl lg:text-[42px]"
+            className="mt-4 text-2xl leading-[1.16] font-extrabold tracking-tight text-[var(--color-surface-dark)] sm:text-4xl lg:text-[42px]"
           >
             {content.headline}
           </h2>
 
-          <p className="mx-auto mt-3.5 max-w-5xl text-[15px] leading-relaxed text-[#4B5563] sm:text-base">
+          <p className="mx-auto mt-3.5 max-w-5xl text-[15px] leading-relaxed text-[var(--color-text-secondary)] sm:text-base">
             {content.description}
           </p>
         </ScrollReveal>

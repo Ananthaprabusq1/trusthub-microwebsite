@@ -39,18 +39,18 @@ export function FooterSpotlightColumn({
 
   return (
     <nav aria-labelledby={`footer-heading-${id}`} className="flex flex-col">
-      {/* Column Heading with Animated #37C650 Accent Bar */}
+      {/* Column Heading with Animated var(--color-brand-primary) Accent Bar */}
       <div className="flex items-center gap-2">
         <span
           aria-hidden="true"
-          className={`h-[2px] rounded-full bg-[#37C650] transition-all duration-300 ${
+          className={`h-[2px] rounded-full bg-[var(--color-brand-primary)] transition-all duration-300 ${
             isColumnActive ? "w-3.5 opacity-100" : "w-0 opacity-0"
           }`}
         />
         <h2
           id={`footer-heading-${id}`}
           className={`text-xs font-semibold tracking-wider uppercase transition-colors duration-200 ${
-            isColumnActive ? "text-[#111827]" : "text-[#64748B]"
+            isColumnActive ? "text-[var(--color-surface-dark)]" : "text-[var(--color-palette-64748b)]"
           }`}
         >
           {heading}
@@ -74,12 +74,12 @@ export function FooterSpotlightColumn({
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
                 onClick={() => handleHashScroll(link.href, link.external)}
-                className={`inline-flex items-center gap-1.5 rounded-md py-0.5 text-[15px] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650] ${
+                className={`inline-flex items-center gap-1.5 rounded-md py-0.5 text-[15px] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand-primary)] ${
                   isHovered
-                    ? "translate-x-1.5 font-medium text-[#111827]"
+                    ? "translate-x-1.5 font-medium text-[var(--color-surface-dark)]"
                     : isDimmed
-                      ? "text-[#374151]/45"
-                      : "text-[#374151]"
+                      ? "text-[var(--color-palette-374151)]/45"
+                      : "text-[var(--color-palette-374151)]"
                 }`}
               >
                 <motion.span
@@ -89,12 +89,12 @@ export function FooterSpotlightColumn({
                     opacity: isHovered ? 1 : 0,
                   }}
                   transition={{ duration: 0.16 }}
-                  className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#37C650]"
+                  className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-brand-primary)]"
                 />
                 <span>{link.label}</span>
                 <LuArrowUpRight
                   aria-hidden="true"
-                  className={`h-3.5 w-3.5 shrink-0 text-[#37C650] transition-all duration-200 ${
+                  className={`h-3.5 w-3.5 shrink-0 text-[var(--color-brand-primary)] transition-all duration-200 ${
                     isHovered
                       ? "translate-x-0 translate-y-0 opacity-100"
                       : "-translate-x-1 translate-y-1 opacity-0"

@@ -7,11 +7,11 @@ import type { ButtonProps, ButtonSize, ButtonVariant } from "@/types/ui";
 
 const VARIANT_CLASSES: Record<ButtonVariant, string> = {
   primary:
-    "bg-[#37C650] text-white shadow-sm shadow-[#37C650]/20 hover:bg-[#2EB045]",
+    "bg-[var(--color-brand-primary)] text-white shadow-sm shadow-[var(--color-brand-primary)]/20 hover:bg-[var(--color-brand-primary-hover)]",
   secondary:
-    "border border-slate-200 bg-white text-[#111827] shadow-2xs hover:bg-slate-50",
-  dark: "bg-[#111827] text-white shadow-sm hover:bg-[#1F2937]",
-  ghost: "bg-transparent text-[#4B5563] hover:bg-slate-50 hover:text-[#111827]",
+    "border border-slate-200 bg-white text-[var(--color-surface-dark)] shadow-2xs hover:bg-slate-50",
+  dark: "bg-[var(--color-surface-dark)] text-white shadow-sm hover:bg-[var(--color-palette-1f2937)]",
+  ghost: "bg-transparent text-[var(--color-text-secondary)] hover:bg-slate-50 hover:text-[var(--color-surface-dark)]",
   custom: "",
 };
 
@@ -93,7 +93,7 @@ export function Button(props: ButtonProps) {
         target={target}
         rel={rel}
         onClick={onClick}
-        className={`${widthClass} rounded-2xl focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 focus-visible:outline-none`}
+        className={`${widthClass} rounded-2xl focus-visible:ring-2 focus-visible:ring-[var(--color-palette-2563eb)] focus-visible:ring-offset-2 focus-visible:outline-none`}
       >
         {content}
       </Link>
@@ -119,7 +119,7 @@ export function Button(props: ButtonProps) {
       disabled={disabled}
       onClick={onClick}
       aria-label={ariaLabel}
-      className={`${widthClass} rounded-2xl disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 focus-visible:outline-none`}
+      className={`${widthClass} rounded-2xl disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-[var(--color-palette-2563eb)] focus-visible:ring-offset-2 focus-visible:outline-none`}
     >
       {content}
     </button>

@@ -17,7 +17,7 @@ export function PreMappedTemplatesSection({
       headingId="pre-mapped-templates-heading"
       mediaPosition="right"
     >
-      <div className="bg-[#F3FCF5] p-7 rounded-[30px]">
+      <div className="bg-[var(--color-palette-f3fcf5)] md:p-7 rounded-[30px]">
         <PreMappedTemplatesWindow data={content.previewWindow} />
       </div>
       

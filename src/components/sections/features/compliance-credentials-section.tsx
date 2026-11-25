@@ -17,7 +17,7 @@ export function ComplianceCredentialsSection({
       headingId="compliance-credentials-heading"
       mediaPosition="right"
     >
-      <div className="bg-[#F3FCF5] p-7 rounded-[30px]">
+      <div className="bg-[var(--color-palette-f3fcf5)] md:p-7 rounded-[30px]">
       <ComplianceCredentialsWindow data={content.previewWindow} /></div>
     </CapabilityShowcaseShell>
   );

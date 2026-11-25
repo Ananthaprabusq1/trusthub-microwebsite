@@ -25,7 +25,7 @@ export function CapabilityShowcaseShell({
       id={content.sectionId}
       aria-labelledby={headingId}
       className={`scroll-mt-24 py-20 sm:py-24 lg:py-28 ${
-        isMediaLeft ? "bg-[#F8FAFC]" : "bg-white"
+        isMediaLeft ? "bg-[var(--color-palette-f8fafc)]" : "bg-white"
       }`}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -38,17 +38,17 @@ export function CapabilityShowcaseShell({
           >
             <ScrollReveal preset="rise">
               <div className="flex items-center gap-2.5">
-                <span className="inline-flex items-center justify-center rounded-full bg-[#18181B] px-2.5 py-0.5 text-[11px] font-bold tabular-nums text-white">
+                <span className="inline-flex items-center justify-center rounded-full bg-[var(--color-palette-18181b)] px-2.5 py-0.5 text-[11px] font-bold tabular-nums text-white">
                   {content.number}
                 </span>
-                <span className="text-[11px] font-bold tracking-wider text-[#64748B] uppercase">
+                <span className="text-[11px] font-bold tracking-wider text-[var(--color-palette-64748b)] uppercase">
                   {content.eyebrow}
                 </span>
               </div>
 
               <h2
                 id={headingId}
-                className="mt-4 text-2xl leading-[1.25] font-extrabold tracking-tight text-[#111827] text-4xl lg:text-[36px]"
+                className="mt-4 text-2xl leading-[1.25] font-extrabold tracking-tight text-[var(--color-surface-dark)] text-4xl lg:text-[36px]"
               >
                 <span className="block">{content.headline.lineOne}</span>
                 <span className="block">{content.headline.lineTwo}</span>
@@ -57,14 +57,14 @@ export function CapabilityShowcaseShell({
                 )}
               </h2>
 
-              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[#4B5563] sm:text-base">
+              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[var(--color-text-secondary)] sm:text-base">
                 {content.description}
               </p>
             </ScrollReveal>
 
             {/* What You Can Do Checklist */}
             <ScrollReveal preset="rise" delay={0.08}>
-              <h3 className="mt-7 text-[15px] font-bold text-[#111827] sm:text-base">
+              <h3 className="mt-7 text-[15px] font-bold text-[var(--color-surface-dark)] sm:text-base">
                 {content.checklistHeading}
               </h3>
             </ScrollReveal>
@@ -76,11 +76,11 @@ export function CapabilityShowcaseShell({
                     <div className="flex items-start gap-3">
                       <span
                         aria-hidden="true"
-                        className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#E8F5EC] text-[#37C650]"
+                        className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand-tint)] text-[var(--color-brand-primary)]"
                       >
                         <LuCheck className="h-3.5 w-3.5 stroke-[2.5]" />
                       </span>
-                      <span className="text-[14px] leading-relaxed text-[#4B5563] sm:text-[14.5px]">
+                      <span className="text-[14px] leading-relaxed text-[var(--color-text-secondary)] sm:text-[14.5px]">
                         {item}
                       </span>
                     </div>
@@ -92,14 +92,14 @@ export function CapabilityShowcaseShell({
             {/* Business Value Callout Box */}
             <ScrollReveal preset="rise" delay={0.28}>
               <div
-                className={`mt-7 rounded-2xl border border-[#37C650]/25 p-5 sm:p-6 ${
-                  isMediaLeft ? "bg-white" : "bg-[#F2FBF4]"
+                className={`mt-7 rounded-2xl border border-[var(--color-brand-primary)]/25 p-5 sm:p-6 ${
+                  isMediaLeft ? "bg-white" : "bg-[var(--color-brand-tint-soft)]"
                 }`}
               >
-                <p className="text-[11px] font-bold tracking-wider text-[#111827] uppercase">
+                <p className="text-[11px] font-bold tracking-wider text-[var(--color-surface-dark)] uppercase">
                   {content.businessValue.label}
                 </p>
-                <p className="mt-2 text-[13.5px] leading-relaxed text-[#4B5563] sm:text-sm">
+                <p className="mt-2 text-[13.5px] leading-relaxed text-[var(--color-text-secondary)] sm:text-sm">
                   {content.businessValue.description}
                 </p>
               </div>

@@ -21,15 +21,15 @@ export function AnalyticsInsightsWindow({ data }: AnalyticsInsightsWindowProps) 
 
   return (
     <TiltCard maxTilt={1.6}>
-      <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-[#F8FAFC] shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/35 hover:shadow-[0_32px_72px_-16px_rgba(55,198,80,0.18)] sm:rounded-3xl">
+      <div className="overflow-hidden rounded-2xl border border-slate-200/85 bg-[var(--color-palette-f8fafc)] shadow-[0_24px_60px_-15px_rgba(15,23,42,0.12)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[var(--color-brand-primary)]/35 hover:shadow-[0_32px_72px_-16px_rgba(55,198,80,0.18)] sm:rounded-3xl">
         {/* Top macOS Window Bar */}
-        <div className="flex items-center gap-3 border-b border-slate-200/70 bg-[#F4F6F9] px-4 py-3 sm:px-6">
+        <div className="flex items-center gap-3 border-b border-slate-200/70 bg-[var(--color-palette-f4f6f9)] px-4 py-3 sm:px-6">
           <div className="flex items-center gap-1.5" aria-hidden="true">
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[#37C650]/60" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[var(--color-brand-primary)]/60" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[var(--color-brand-primary)]/60" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 transition-colors duration-300 hover:bg-[var(--color-brand-primary)]/60" />
           </div>
-          <span className="text-xs font-medium text-[#64748B]">
+          <span className="text-xs font-medium text-[var(--color-palette-64748b)]">
             {data.windowTitle}
           </span>
         </div>
@@ -38,11 +38,11 @@ export function AnalyticsInsightsWindow({ data }: AnalyticsInsightsWindowProps) 
         <div className="bg-white p-5 sm:p-7">
           {/* Header Row */}
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h3 className="text-[15px] font-bold tracking-tight text-[#111827] sm:text-base">
+            <h3 className="text-[15px] font-bold tracking-tight text-[var(--color-surface-dark)] sm:text-base">
               {data.panelHeading}
             </h3>
 
-            <span className="rounded-full border border-slate-200/90 bg-white px-3 py-1 text-[11px] font-medium text-[#64748B]">
+            <span className="rounded-full border border-slate-200/90 bg-white px-3 py-1 text-[11px] font-medium text-[var(--color-palette-64748b)]">
               {data.headerPillLabel}
             </span>
           </div>
@@ -52,9 +52,9 @@ export function AnalyticsInsightsWindow({ data }: AnalyticsInsightsWindowProps) 
             {data.metrics.map((metric, metricIndex) => (
               <div
                 key={metric.id}
-                className="rounded-2xl border border-slate-100 bg-[#F8FAFC] p-4 transition-colors duration-300 hover:border-[#37C650]/30 hover:bg-[#F5FBF7]"
+                className="rounded-2xl border border-slate-100 bg-[var(--color-palette-f8fafc)] p-4 transition-colors duration-300 hover:border-[var(--color-brand-primary)]/30 hover:bg-[var(--color-palette-f5fbf7)]"
               >
-                <p className="text-xs font-bold text-[#111827] sm:text-[13px]">
+                <p className="text-xs font-bold text-[var(--color-surface-dark)] sm:text-[13px]">
                   {metric.title}
                 </p>
 
@@ -79,7 +79,7 @@ export function AnalyticsInsightsWindow({ data }: AnalyticsInsightsWindowProps) 
                       }}
                       style={{ height: `${bar.heightPercent}%` }}
                       className={`flex-1 origin-bottom rounded-[5px] ${
-                        bar.highlighted ? "bg-[#37C650]" : "bg-[#A7E3B6]"
+                        bar.highlighted ? "bg-[var(--color-brand-primary)]" : "bg-[var(--color-palette-a7e3b6)]"
                       }`}
                     />
                   ))}
@@ -90,7 +90,7 @@ export function AnalyticsInsightsWindow({ data }: AnalyticsInsightsWindowProps) 
 
           {/* Access Request Status Bar & Pills */}
           <div className="mt-6">
-            <p className="text-xs font-bold tracking-tight text-[#111827] sm:text-[13px]">
+            <p className="text-xs font-bold tracking-tight text-[var(--color-surface-dark)] sm:text-[13px]">
               {data.statusHeading}
             </p>
 
@@ -101,11 +101,11 @@ export function AnalyticsInsightsWindow({ data }: AnalyticsInsightsWindowProps) 
             >
               {data.segments.map((segment) => {
                 const isSelected = selectedStatus === segment.id;
-                let bgClass = "bg-[#E2E8F0]";
+                let bgClass = "bg-[var(--color-palette-e2e8f0)]";
                 if (segment.id === "approved") {
-                  bgClass = "bg-[#37C650]";
+                  bgClass = "bg-[var(--color-brand-primary)]";
                 } else if (segment.id === "pending") {
-                  bgClass = "bg-[#A7E3B6]";
+                  bgClass = "bg-[var(--color-palette-a7e3b6)]";
                 }
 
                 return (
@@ -136,17 +136,17 @@ export function AnalyticsInsightsWindow({ data }: AnalyticsInsightsWindowProps) 
                     role="radio"
                     aria-checked={isSelected}
                     onClick={() => setSelectedStatus(segment.id)}
-                    className={`inline-flex cursor-pointer items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-semibold transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650] ${
+                    className={`inline-flex cursor-pointer items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-semibold transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand-primary)] ${
                       isSelected
-                        ? "bg-[#E8F5EC] text-[#15803D]"
-                        : "border border-slate-200/90 bg-white font-medium text-[#64748B] hover:border-slate-300 hover:text-[#111827]"
+                        ? "bg-[var(--color-brand-tint)] text-[var(--color-brand-primary-dark)]"
+                        : "border border-slate-200/90 bg-white font-medium text-[var(--color-palette-64748b)] hover:border-slate-300 hover:text-[var(--color-surface-dark)]"
                     }`}
                   >
                     {segment.showDot && (
                       <span
                         aria-hidden="true"
                         className={`h-1.5 w-1.5 rounded-full ${
-                          isSelected ? "bg-[#37C650]" : "bg-[#64748B]"
+                          isSelected ? "bg-[var(--color-brand-primary)]" : "bg-[var(--color-palette-64748b)]"
                         }`}
                       />
                     )}

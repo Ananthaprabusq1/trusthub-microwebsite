@@ -17,7 +17,7 @@ export function DocumentManagementSection({
       headingId="document-management-heading"
       mediaPosition="left"
     >
-      <div className="bg-white p-7 rounded-[30px]">
+      <div className="bg-white md:p-7 rounded-[30px]">
 <DocumentsWindow data={content.previewWindow} />
 </div>
     </CapabilityShowcaseShell>

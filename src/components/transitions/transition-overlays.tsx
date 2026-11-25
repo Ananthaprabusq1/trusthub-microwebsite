@@ -5,10 +5,11 @@ import { LuLock, LuShieldCheck } from "react-icons/lu";
 import type {
   TransitionMode,
   TransitionPhase,
+  TransitionVariant,
 } from "@/context/get-started-transition-context";
 
 interface TransitionOverlaysProps {
-  mode: TransitionMode;
+  mode: TransitionMode | TransitionVariant;
   phase: TransitionPhase;
   origin: { x: number; y: number };
 }
@@ -24,7 +25,7 @@ export function TransitionOverlays({
 
   return (
     <AnimatePresence>
-      {/* 1. Click-Origin #37C650 Vault Ripple */}
+      {/* 1. Click-Origin var(--color-brand-primary) Vault Ripple */}
       {isActive && mode === "vault-ripple" && (
         <motion.div
           key="vault-ripple-overlay"
@@ -41,7 +42,7 @@ export function TransitionOverlays({
             clipPath: { duration: 0.48, ease: [0.22, 1, 0.36, 1] },
             opacity: { duration: 0.42, ease: "easeOut" },
           }}
-          className="pointer-events-none fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#37C650] text-white"
+          className="pointer-events-none fixed inset-0 z-50 flex flex-col items-center justify-center bg-[var(--color-brand-primary)] text-white"
         >
           <motion.div
             initial={{ scale: 0.75, opacity: 0 }}
@@ -62,6 +63,49 @@ export function TransitionOverlays({
         </motion.div>
       )}
 
+      {isActive && mode === "login-slider" && (
+        <div
+          key="login-slider-overlay"
+          className="pointer-events-none fixed inset-0 z-[60] overflow-hidden"
+          role="status"
+          aria-live="polite"
+          aria-label="Authenticating with Trust Hub"
+        >
+          <motion.div
+            initial={{ x: "-100%" }}
+            animate={{ x: phase === "entering" ? "0%" : "-100%" }}
+            transition={{ duration: 0.52, ease: [0.76, 0, 0.24, 1] }}
+            className="absolute inset-y-0 left-0 w-1/2 bg-[var(--color-surface-dark)]"
+          />
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: phase === "entering" ? "0%" : "100%" }}
+            transition={{ duration: 0.52, ease: [0.76, 0, 0.24, 1] }}
+            className="absolute inset-y-0 right-0 w-1/2 bg-[var(--color-surface-dark)]"
+          />
+          <motion.div
+            initial={{ opacity: 0, y: 12, scale: 0.96 }}
+            animate={{
+              opacity: phase === "entering" ? 1 : 0,
+              y: phase === "entering" ? 0 : -8,
+              scale: phase === "entering" ? 1 : 0.98,
+            }}
+            transition={{ delay: 0.2, duration: 0.24, ease: "easeOut" }}
+            className="absolute inset-0 flex items-center justify-center px-4 text-center"
+          >
+            <div className="flex max-w-full items-center gap-2 rounded-full border border-[var(--color-brand-primary)]/40 bg-[var(--color-surface-dark)] px-4 py-3 text-[var(--color-surface-base)] shadow-[0_12px_40px_-12px_rgba(55,198,80,0.5)] sm:px-6">
+              <LuShieldCheck
+                aria-hidden="true"
+                className="h-5 w-5 shrink-0 text-[var(--color-brand-primary)]"
+              />
+              <span className="text-xs font-semibold tracking-wide sm:text-sm">
+                Authenticating · trusthub.stakflo.io/login
+              </span>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
       {/* 4. Staggered Security Shutters */}
       {isActive && mode === "security-shutters" && (
         <div
@@ -78,11 +122,11 @@ export function TransitionOverlays({
                 delay: col * 0.045,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="relative h-full border-r border-white/10 bg-[#111827]"
+              className="relative h-full border-r border-white/10 bg-[var(--color-surface-dark)]"
             >
               {col === 1 && phase === "entering" && (
                 <div className="absolute right-0 bottom-8 left-0 flex justify-center">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#37C650] px-3 py-1 text-[11px] font-bold text-white">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-brand-primary)] px-3 py-1 text-[11px] font-bold text-white">
                     <LuLock className="h-3 w-3" />
                     <span>trusthub.stakflo.io</span>
                   </span>
@@ -111,12 +155,12 @@ export function TransitionOverlays({
               scale: phase === "entering" ? 1 : 0.92,
             }}
             transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
-            className="flex w-80 flex-col items-center rounded-3xl border-2 border-[#37C650] bg-[#111827] p-7 text-center text-white shadow-[0_24px_60px_-12px_rgba(55,198,80,0.5)]"
+            className="flex w-80 flex-col items-center rounded-3xl border-2 border-[var(--color-brand-primary)] bg-[var(--color-surface-dark)] p-7 text-center text-white shadow-[0_24px_60px_-12px_rgba(55,198,80,0.5)]"
           >
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#37C650] text-white">
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--color-brand-primary)] text-white">
               <LuShieldCheck className="h-8 w-8" />
             </div>
-            <span className="mt-4 rounded-full bg-[#37C650]/20 px-3 py-0.5 text-[10.5px] font-bold tracking-wider text-[#8CE09E] uppercase">
+            <span className="mt-4 rounded-full bg-[var(--color-brand-primary)]/20 px-3 py-0.5 text-[10.5px] font-bold tracking-wider text-[var(--color-brand-mint)] uppercase">
               Product Workspace
             </span>
             <h3 className="mt-2 text-lg font-extrabold">Stakflo Trust Hub</h3>

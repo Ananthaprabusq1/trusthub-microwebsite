@@ -51,7 +51,7 @@ export function SiteHeader() {
         {/* Brand Logo + Wordmark with Kinetic Hover */}
         <Link
           href={navigationConfig.brand.href}
-          className="group inline-flex items-center gap-3 rounded-lg transition-transform duration-200 hover:scale-[1.015] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650]"
+          className="group inline-flex min-h-11 items-center gap-3 rounded-lg transition-transform duration-200 hover:scale-[1.015] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand-primary)]"
         >
           <StakfloBrandMark
             src={navigationConfig.brand.logoSrc}
@@ -61,15 +61,15 @@ export function SiteHeader() {
             className="h-9 w-9 shrink-0 object-contain transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105"
             priority
           />
-          <span className="flex items-center gap-2 text-lg font-semibold tracking-tight text-[#111827] sm:text-[19px]">
+          <span className="flex items-center gap-2 text-lg font-semibold tracking-tight text-[var(--color-surface-dark)] sm:text-[19px]">
             <span>{navigationConfig.brand.name}</span>
             <span
               aria-hidden="true"
-              className="font-normal text-slate-300 transition-colors duration-300 group-hover:text-[#37C650]"
+              className="font-normal text-slate-300 transition-colors duration-300 group-hover:text-[var(--color-brand-primary)]"
             >
               |
             </span>
-            <span className="transition-colors duration-200 group-hover:text-[#15803D]">
+            <span className="transition-colors duration-200 group-hover:text-[var(--color-brand-primary-dark)]">
               {navigationConfig.brand.product}
             </span>
           </span>
@@ -89,12 +89,12 @@ export function SiteHeader() {
         />
       </div>
 
-      {/* Razor-Thin #37C650 Scroll Progress Indicator */}
+      {/* Razor-Thin var(--color-brand-primary) Scroll Progress Indicator */}
       {!prefersReducedMotion && (
         <motion.div
           aria-hidden="true"
           style={{ scaleX: smoothProgress }}
-          className="h-[2px] w-full origin-left bg-[#37C650]"
+          className="h-[2px] w-full origin-left bg-[var(--color-brand-primary)]"
         />
       )}
     </header>

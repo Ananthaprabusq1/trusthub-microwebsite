@@ -20,7 +20,7 @@ export function WhyTrustHubHeroSection({
   return (
     <section
       aria-labelledby="why-trust-hub-hero-heading"
-      className="relative overflow-hidden bg-[#F7FBF8] py-12 sm:py-16 lg:py-40"
+      className="relative overflow-hidden bg-[var(--color-palette-f7fbf8)] py-12 sm:py-16 lg:py-40"
     >
       <HeroReveal>
         {/* Stage 1: Uncropped Dual-Layer Wavy Background */}
@@ -74,19 +74,19 @@ export function WhyTrustHubHeroSection({
             <div className="lg:col-span-6">
               {/* Stage 2: Pill Badge + Two-Tone Three-Line Headline */}
               <HeroStage stage={2} preset="rise">
-                <span className="inline-flex items-center rounded-full bg-[#37C650] px-3.5 py-1 text-[10px] font-bold tracking-wider text-white uppercase shadow-2xs sm:text-[11px]">
+                <span className="inline-flex items-center rounded-full bg-[var(--color-brand-primary)] px-3.5 py-1 text-[10px] font-bold tracking-wider text-white uppercase shadow-2xs sm:text-[11px]">
                   {content.badge}
                 </span>
 
                 <h1
                   id="why-trust-hub-hero-heading"
-                  className="mt-4 text-3xl leading-[1.11] font-extrabold tracking-[-0.025em] text-[#111827] sm:text-[44px] lg:text-[50px]"
+                  className="mt-4 text-3xl leading-[1.11] font-extrabold tracking-[-0.025em] text-[var(--color-surface-dark)] sm:text-[44px] lg:text-[50px]"
                 >
                   <span className="block">{content.headline.lineOne}</span>
-                  <span className="block text-[#37C650]">
+                  <span className="block text-[var(--color-brand-primary)]">
                     {content.headline.highlightLineOne}
                   </span>
-                  <span className="block text-[#37C650]">
+                  <span className="block text-[var(--color-brand-primary)]">
                     {content.headline.highlightLineTwo}
                   </span>
                 </h1>
@@ -94,7 +94,7 @@ export function WhyTrustHubHeroSection({
 
               {/* Stage 3: Description + CTA Buttons */}
               <HeroStage stage={3} preset="rise">
-                <p className="mt-4 max-w-[470px] text-[15px] leading-[1.6] text-[#4B5563] sm:text-base">
+                <p className="mt-4 max-w-[470px] text-[15px] leading-[1.6] text-[var(--color-text-secondary)] sm:text-base">
                   {content.description}
                 </p>
 
@@ -114,7 +114,7 @@ export function WhyTrustHubHeroSection({
                     variant="custom"
                     size="md"
                     showArrow={content.secondaryCta.showArrow ?? false}
-                    className="w-full border border-[#111827]/65 bg-white/30 text-[#111827] backdrop-blur-[2px] hover:bg-white/80 sm:w-auto"
+                    className="w-full border border-[var(--color-surface-dark)]/65 bg-white/30 text-[var(--color-surface-dark)] backdrop-blur-[2px] hover:bg-white/80 sm:w-auto"
                   >
                     {content.secondaryCta.label}
                   </Button>

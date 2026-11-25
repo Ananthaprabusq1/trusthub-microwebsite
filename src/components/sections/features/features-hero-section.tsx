@@ -66,18 +66,18 @@ export function FeaturesHeroSection({ content }: FeaturesHeroSectionProps) {
           <div className="mx-auto max-w-3xl text-center">
             {/* Stage 2: FEATURES Badge + Two-Tone Main Headline */}
             <HeroStage stage={2} preset="rise">
-              <span className="inline-flex items-center rounded-full bg-[#37C650] px-4 py-1 text-[11px] font-bold tracking-wider text-white uppercase shadow-2xs">
+              <span className="inline-flex items-center rounded-full bg-[var(--color-brand-primary)] px-4 py-1 text-[11px] font-bold tracking-wider text-white uppercase shadow-2xs">
                 {content.badge}
               </span>
 
               <h1
                 id="features-hero-heading"
-                className="mt-5 text-3xl leading-[1.13] font-extrabold tracking-tight text-[#111827] sm:text-5xl lg:text-[56px]"
+                className="mt-5 text-3xl leading-[1.13] font-extrabold tracking-tight text-[var(--color-surface-dark)] sm:text-5xl lg:text-[56px]"
               >
                 <span className="block">{content.headline.lineOne}</span>
                 <span className="block">
                   <span>{content.headline.lineTwoPrefix}</span>
-                  <span className="text-[#37C650]">
+                  <span className="text-[var(--color-brand-primary)]">
                     {content.headline.lineTwoHighlight}
                   </span>
                 </span>
@@ -86,7 +86,7 @@ export function FeaturesHeroSection({ content }: FeaturesHeroSectionProps) {
 
             {/* Stage 3: Subtitle + CTA Buttons */}
             <HeroStage stage={3} preset="rise">
-              <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-[#4B5563] sm:text-lg">
+              <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-[var(--color-text-secondary)] sm:text-lg">
                 {content.description}
               </p>
 
@@ -106,7 +106,7 @@ export function FeaturesHeroSection({ content }: FeaturesHeroSectionProps) {
                   variant="custom"
                   size="md"
                   showArrow={content.secondaryCta.showArrow ?? false}
-                  className="w-full border border-[#111827]/65 bg-white/35 text-[#111827] hover:bg-white/80 sm:w-auto"
+                  className="w-full border border-[var(--color-surface-dark)]/65 bg-white/35 text-[var(--color-surface-dark)] hover:bg-white/80 sm:w-auto"
                 >
                   {content.secondaryCta.label}
                 </Button>

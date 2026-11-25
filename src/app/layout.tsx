@@ -22,8 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${roboto.variable}`}>
       <body
+        id="site-shell"
         suppressHydrationWarning
-        className="flex min-h-screen flex-col bg-white font-sans text-[#111827] antialiased"
+        className="flex min-h-screen flex-col bg-[var(--color-surface-base)] font-sans text-[var(--color-text-primary)] antialiased"
       >
         <MotionProvider>
           <SmoothScrollProvider>

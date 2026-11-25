@@ -73,17 +73,17 @@ export function ScrollToTopButton() {
   if (!isClient) return null;
 
   const buttonClass = accessibilityMode.contrast
-    ? "border border-[#ffff00] bg-[#111111] text-[#ffff00] shadow-none"
+    ? "border border-[var(--color-accessibility-contrast-fg)] bg-[var(--color-accessibility-contrast-tint)] text-[var(--color-accessibility-contrast-fg)] shadow-none"
     : accessibilityMode.grayscale
       ? "border border-black bg-white text-black shadow-lg"
-      : "border border-transparent bg-[#37C650] text-white shadow-[0_10px_25px_-5px_rgba(55,198,80,0.48)] hover:bg-[#2EB045] hover:shadow-[0_14px_30px_-5px_rgba(55,198,80,0.6)]";
+      : "border border-transparent bg-[var(--color-brand-primary)] text-white shadow-[0_10px_25px_-5px_rgba(55,198,80,0.48)] hover:bg-[var(--color-brand-primary-hover)] hover:shadow-[0_14px_30px_-5px_rgba(55,198,80,0.6)]";
 
   return createPortal(
     <button
       type="button"
       aria-label="Scroll to top"
       onClick={scrollToTop}
-      className={`group fixed right-5 bottom-5 z-[9998] flex h-12 w-12 cursor-pointer items-center justify-center rounded-full transition-all duration-300 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#37C650] ${buttonClass} ${
+      className={`group fixed right-4 bottom-4 z-[9998] flex h-12 w-12 cursor-pointer items-center justify-center rounded-full transition-all duration-300 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand-primary)] ${buttonClass} ${
         visible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-6 opacity-0"

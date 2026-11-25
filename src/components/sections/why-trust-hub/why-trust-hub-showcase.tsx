@@ -100,15 +100,15 @@ export function WhyTrustHubShowcase({
                 duration={isLeft ? 4.7 : 5.3}
                 delay={1.35 + index * 0.2}
               >
-                <div className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-[0_14px_34px_-10px_rgba(15,23,42,0.14)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[#37C650]/40 hover:shadow-[0_22px_44px_-10px_rgba(55,198,80,0.22)]">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#37C650]">
+                <div className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-[0_14px_34px_-10px_rgba(15,23,42,0.14)] transition-[border-color,box-shadow] duration-500 ease-out hover:border-[var(--color-brand-primary)]/40 hover:shadow-[0_22px_44px_-10px_rgba(55,198,80,0.22)]">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[var(--color-brand-primary)]">
                     <ToastIcon type={badge.icon} />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-[#111827] sm:text-[13px]">
+                    <p className="text-xs font-semibold text-[var(--color-surface-dark)] sm:text-[13px]">
                       {badge.title}
                     </p>
-                    <p className="text-[11px] text-[#64748B]">
+                    <p className="text-[11px] text-[var(--color-palette-64748b)]">
                       {badge.subtitle}
                     </p>
                   </div>

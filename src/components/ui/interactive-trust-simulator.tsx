@@ -11,14 +11,14 @@ import {
 } from "react-icons/lu";
 
 const ACCENT_OPTIONS = [
-  { id: "emerald", label: "Emerald", hex: "#37C650" },
-  { id: "obsidian", label: "Obsidian", hex: "#18181B" },
-  { id: "forest", label: "Forest", hex: "#134E2B" },
+  { id: "emerald", label: "Emerald", hex: "var(--color-brand-primary)" },
+  { id: "obsidian", label: "Obsidian", hex: "var(--color-palette-18181b)" },
+  { id: "forest", label: "Forest", hex: "var(--color-palette-134e2b)" },
 ] as const;
 
 export function InteractiveTrustSimulator() {
   const [domainInput, setDomainInput] = useState("acme.io");
-  const [accentHex, setAccentHex] = useState<string>("#37C650");
+  const [accentHex, setAccentHex] = useState<string>("var(--color-brand-primary)");
   const [ndaApproved, setNdaApproved] = useState(false);
 
   const cleanDomain =
@@ -36,13 +36,13 @@ export function InteractiveTrustSimulator() {
       <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
         {/* Left Controls */}
         <div className="space-y-4 lg:col-span-5">
-          <span className="inline-flex rounded-full bg-[#E8F5EC] px-3 py-1 text-[11px] font-bold text-[#15803D]">
+          <span className="inline-flex rounded-full bg-[var(--color-brand-tint)] px-3 py-1 text-[11px] font-bold text-[var(--color-brand-primary-dark)]">
             LIVE BRAND SANDBOX
           </span>
-          <h3 className="text-xl font-extrabold text-[#111827]">
+          <h3 className="text-xl font-extrabold text-[var(--color-surface-dark)]">
             Preview Your Custom Trust Center
           </h3>
-          <p className="text-xs leading-relaxed text-[#4B5563]">
+          <p className="text-xs leading-relaxed text-[var(--color-text-secondary)]">
             Enter any company domain and test how enterprise buyers experience
             your branded, NDA-gated Trust Hub.
           </p>
@@ -50,7 +50,7 @@ export function InteractiveTrustSimulator() {
           <div>
             <label
               htmlFor="sim-domain-input"
-              className="block text-xs font-semibold text-[#111827]"
+              className="block text-xs font-semibold text-[var(--color-surface-dark)]"
             >
               Company Domain
             </label>
@@ -63,12 +63,12 @@ export function InteractiveTrustSimulator() {
                 setNdaApproved(false);
               }}
               placeholder="acme.io"
-              className="mt-1.5 w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-3.5 py-2.5 text-sm font-medium text-[#111827] focus:border-[#37C650] focus:bg-white focus:outline-none"
+              className="mt-1.5 w-full rounded-xl border border-slate-200 bg-[var(--color-palette-f8fafc)] px-3.5 py-2.5 text-sm font-medium text-[var(--color-surface-dark)] focus:border-[var(--color-brand-primary)] focus:bg-white focus:outline-none"
             />
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="text-xs font-semibold text-[#64748B]">
+            <span className="text-xs font-semibold text-[var(--color-palette-64748b)]">
               Brand Accent:
             </span>
             {ACCENT_OPTIONS.map((opt) => (
@@ -80,7 +80,7 @@ export function InteractiveTrustSimulator() {
                 style={{ backgroundColor: opt.hex }}
                 className={`h-6 w-6 cursor-pointer rounded-full transition-transform ${
                   accentHex === opt.hex
-                    ? "scale-110 ring-2 ring-[#37C650]/50 ring-offset-2"
+                    ? "scale-110 ring-2 ring-[var(--color-brand-primary)]/50 ring-offset-2"
                     : "opacity-80 hover:opacity-100"
                 }`}
               />
@@ -90,14 +90,14 @@ export function InteractiveTrustSimulator() {
 
         {/* Right Live Mini Trust Center */}
         <div className="lg:col-span-7">
-          <div className="overflow-hidden rounded-2xl border border-slate-200/90 bg-[#F8FAFC] shadow-md">
+          <div className="overflow-hidden rounded-2xl border border-slate-200/90 bg-[var(--color-palette-f8fafc)] shadow-md">
             {/* Browser Bar */}
             <div className="flex items-center justify-between border-b border-slate-200/80 bg-white px-4 py-2.5">
-              <div className="flex items-center gap-1.5 text-xs font-medium text-[#475569]">
-                <LuGlobe className="h-3.5 w-3.5 text-[#37C650]" />
+              <div className="flex items-center gap-1.5 text-xs font-medium text-[var(--color-palette-475569)]">
+                <LuGlobe className="h-3.5 w-3.5 text-[var(--color-brand-primary)]" />
                 <span>trust.{cleanDomain}</span>
               </div>
-              <span className="rounded-full bg-[#E8F5EC] px-2.5 py-0.5 text-[10.5px] font-semibold text-[#15803D]">
+              <span className="rounded-full bg-[var(--color-brand-tint)] px-2.5 py-0.5 text-[10.5px] font-semibold text-[var(--color-brand-primary-dark)]">
                 SSL Active
               </span>
             </div>
@@ -113,17 +113,17 @@ export function InteractiveTrustSimulator() {
                     {companyInitial}
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-[#111827]">
+                    <p className="text-sm font-bold text-[var(--color-surface-dark)]">
                       {cleanDomain} Security Portal
                     </p>
-                    <p className="text-[11px] text-[#64748B]">
+                    <p className="text-[11px] text-[var(--color-palette-64748b)]">
                       Verified compliance &amp; security posture
                     </p>
                   </div>
                 </div>
 
-                <span className="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-[11px] font-semibold text-[#111827] shadow-2xs">
-                  <LuBadgeCheck className="h-3.5 w-3.5 text-[#37C650]" />
+                <span className="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-[11px] font-semibold text-[var(--color-surface-dark)] shadow-2xs">
+                  <LuBadgeCheck className="h-3.5 w-3.5 text-[var(--color-brand-primary)]" />
                   SOC 2 Type II
                 </span>
               </div>
@@ -134,7 +134,7 @@ export function InteractiveTrustSimulator() {
                 className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200/90 bg-white p-4"
               >
                 <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#E8F5EC] text-[#37C650]">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-brand-tint)] text-[var(--color-brand-primary)]">
                     {ndaApproved ? (
                       <LuLockOpen className="h-4.5 w-4.5" />
                     ) : (
@@ -142,10 +142,10 @@ export function InteractiveTrustSimulator() {
                     )}
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-[#111827]">
+                    <p className="text-xs font-bold text-[var(--color-surface-dark)]">
                       2026 SOC 2 Type II Audit Report.pdf
                     </p>
-                    <p className="text-[11px] text-[#64748B]">
+                    <p className="text-[11px] text-[var(--color-palette-64748b)]">
                       {ndaApproved
                         ? `Unlocked for buyer@${cleanDomain}`
                         : "NDA clickwrap required for access"}
@@ -157,8 +157,8 @@ export function InteractiveTrustSimulator() {
                   type="button"
                   onClick={() => setNdaApproved((prev) => !prev)}
                   style={{
-                    backgroundColor: ndaApproved ? "#E8F5EC" : accentHex,
-                    color: ndaApproved ? "#15803D" : "#FFFFFF",
+                    backgroundColor: ndaApproved ? "var(--color-brand-tint)" : accentHex,
+                    color: ndaApproved ? "var(--color-brand-primary-dark)" : "var(--color-surface-base)",
                   }}
                   className="inline-flex cursor-pointer items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-semibold transition-all"
                 >
