@@ -132,7 +132,7 @@ export function GetStartedTransitionProvider({
         return;
       }
 
-      // Internal route fallback (if testing /ui-test)
+      // Internal route fallback for callers that provide an application path.
       setActiveOverlayMode(mode);
 
       if (mode === "layout-morph") {
@@ -183,7 +183,6 @@ export function GetStartedTransitionProvider({
           phase={phase}
           origin={origin}
         />
-        {/* TransitionModeDock */}
       </LayoutGroup>
     </GetStartedTransitionContext.Provider>
   );
