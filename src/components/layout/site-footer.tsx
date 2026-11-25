@@ -68,7 +68,7 @@ export function SiteFooter() {
         <div className="mt-14 border-t border-slate-200/70 pt-7">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <p className="text-xs text-[#64748B] sm:text-[13px]">
-              {footerConfig.copyright}
+              © {new Date().getFullYear()} {footerConfig.copyright}
             </p>
 
             {legalLinks.length > 0 && (

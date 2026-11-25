@@ -56,7 +56,7 @@ export function TransitionOverlays({
               Connecting to Stakflo Trust Hub...
             </p>
             <span className="rounded-full bg-white/15 px-3 py-0.5 font-mono text-xs">
-              trusthub.stakflo.io
+              Design by BABU
             </span>
           </motion.div>
         </motion.div>

@@ -7,6 +7,7 @@ import { inter, roboto } from "@/lib/fonts";
 import "./globals.css";
 import { GetStartedTransitionProvider } from "@/context/get-started-transition-context";
 import ScrollToTopButton from "@/components/ui/scroll-to-top-button";
+import ZycatoSDK from "@/components/integrations/zycato-sdk";
 
 export const metadata: Metadata = {
   title: "Stakflo | Trust Hub",
@@ -26,6 +27,7 @@ export default function RootLayout({
       >
         <MotionProvider>
           <SmoothScrollProvider>
+            <ZycatoSDK />
 <GetStartedTransitionProvider>
 
 
