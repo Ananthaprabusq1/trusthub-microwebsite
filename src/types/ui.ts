@@ -5,6 +5,8 @@ export type ButtonVariant =
   | "secondary"
   | "dark"
   | "ghost"
+  | "brand"
+  | "inverse"
   | "custom";
 
 export type ButtonSize = "sm" | "md" | "lg";

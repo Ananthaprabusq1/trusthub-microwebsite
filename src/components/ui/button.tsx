@@ -15,6 +15,8 @@ const VARIANT_CLASSES: Record<ButtonVariant, string> = {
     "border border-slate-200 bg-white text-[var(--color-surface-dark)] shadow-2xs hover:bg-slate-50",
   dark: "bg-[var(--color-surface-dark)] text-white shadow-sm hover:bg-[var(--color-palette-1f2937)]",
   ghost: "bg-transparent text-[var(--color-text-secondary)] hover:bg-slate-50 hover:text-[var(--color-surface-dark)]",
+  brand: "bg-[var(--color-brand-primary)] text-white shadow-sm hover:bg-[var(--color-brand-primary-hover)]",
+  inverse: "border border-white/35 bg-white/10 text-white hover:bg-white/20",
   custom: "",
 };
 

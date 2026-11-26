@@ -35,6 +35,13 @@
           "href": "/why-trust-hub",
           "order": 3,
           "visible": true
+        },
+        {
+          "id": "footer-documentation",
+          "label": "Documentation",
+          "href": "/documentation",
+          "order": 4,
+          "visible": true
         }
       ]
     },

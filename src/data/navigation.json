@@ -99,6 +99,13 @@
       "href": "/why-trust-hub",
       "order": 3,
       "visible": true
+    },
+    {
+      "id": "documentation",
+      "label": "Documentation",
+      "href": "/documentation",
+      "order": 4,
+      "visible": true
     }
   ],
   "actions": [

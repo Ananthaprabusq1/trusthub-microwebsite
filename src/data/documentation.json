@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "badge": "Knowledge Base",
+    "title": "Documentation",
+    "subtitle": "Everything you need to set up and manage Trust Hub: guides, API references, and best practices.",
+    "cta": { "label": "Know more", "href": "https://trusthub.stakflo.io/docs", "showArrow": true },
+    "backgroundImage": { "src": "/images/herotwolayer.png", "alt": "Stakflo Trust Hub flowing green wave background" }
+  },
+  "browse": {
+    "id": "browse-documentation",
+    "heading": "Browse documentation",
+    "meta": "8 topics / 32 guides",
+    "topics": [
+      { "number": "01", "title": "Getting Started", "guideCountLabel": "4 guides", "featured": true, "guides": ["Quick start guide", "Setting up your workspace", "Inviting your team", "First trust center"] },
+      { "number": "02", "title": "Document Management", "guideCountLabel": "4 guides", "guides": ["Uploading documents", "Organizing documents", "Version control", "Bulk operations"] },
+      { "number": "03", "title": "Access Control", "guideCountLabel": "4 guides", "guides": ["Roles & permissions", "Sharing with viewers", "SSO configuration", "Audit logs"] },
+      { "number": "04", "title": "Access Requests", "guideCountLabel": "4 guides", "guides": ["Approval workflows", "NDA automation", "Token expiration", "Bulk approvals"] },
+      { "number": "05", "title": "Branding", "guideCountLabel": "4 guides", "guides": ["Custom colors & logo", "Custom domain", "Email templates", "Landing page editor"] },
+      { "number": "06", "title": "Analytics", "guideCountLabel": "4 guides", "guides": ["Dashboard overview", "Engagement metrics", "Custom reports", "Data exports"] },
+      { "number": "07", "title": "API & Integrations", "guideCountLabel": "4 guides", "guides": ["API reference", "Webhooks", "Slack integration", "Salesforce connector"] },
+      { "number": "08", "title": "Security & Compliance", "guideCountLabel": "4 guides", "guides": ["SOC 2 framework", "ISO 27001 mapping", "GDPR compliance", "Encryption standards"] }
+    ]
+  },
+  "ctaBanner": {
+    "heading": "Still Have Questions?",
+    "subtitle": "Our support team and product specialists are ready to help, fast.",
+    "primaryCta": { "label": "Contact Support", "href": "/#contact", "showArrow": true },
+    "secondaryCta": { "label": "Get in Touch", "href": "/#contact", "showArrow": false },
+    "illustration": { "src": "/images/docs-support-illustration.png", "alt": "Verified compliance and security documentation workflow" }
+  }
+}
