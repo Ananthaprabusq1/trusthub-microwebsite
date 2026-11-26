@@ -69,13 +69,13 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
   return (
     <div
       ref={navContainerRef}
-      className="hidden items-center gap-8 lg:flex"
+      className="hidden items-center gap-8 xl:flex"
     >
       {/* Center Links */}
       <nav
         aria-label="Primary"
         onMouseLeave={() => setHoveredItemId(null)}
-        className="flex items-center gap-1.5"
+        className="flex items-center gap-2 lg:gap-3"
       >
         {items.map((item) => {
           const subItems = item.children ?? [];
@@ -90,20 +90,24 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
                 key={item.id}
                 href={item.href}
                 onMouseEnter={() => setHoveredItemId(item.id)}
-                className={`relative rounded-full px-4 py-2 text-[15px] font-medium transition-colors ${
+                className={`group relative rounded-full px-4 py-2 text-[15px] transition-colors duration-200 ${
                   isActive
-                    ? "font-semibold text-[var(--color-brand-primary-dark)]"
-                    : "text-[var(--color-text-secondary)] hover:text-[var(--color-surface-dark)]"
+                    ? "font-semibold text-[var(--color-text-primary)]"
+                    : "font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]"
                 }`}
               >
-                {isActive && (
-                  <span className="absolute inset-0 rounded-full bg-[var(--color-brand-tint)]" />
-                )}
                 {!isActive && isHovered && (
                   <motion.span
                     layoutId="desktop-nav-pill"
                     transition={{ type: "spring", stiffness: 420, damping: 32 }}
                     className="absolute inset-0 rounded-full bg-slate-100/90"
+                  />
+                )}
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-active-indicator"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    className="pointer-events-none absolute inset-x-4 bottom-0 h-[3px] rounded-full bg-[var(--color-brand-primary)]"
                   />
                 )}
                 <span className="relative z-10">{item.label}</span>
@@ -124,20 +128,24 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
               <Link
                 href={item.href}
                 onClick={() => setOpenDropdownId(null)}
-                className={`relative inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[15px] font-medium transition-colors ${
-                  isActive || isDropdownOpen
-                    ? "font-semibold text-[var(--color-brand-primary-dark)]"
-                    : "text-[var(--color-text-secondary)] hover:text-[var(--color-surface-dark)]"
+                className={`group relative inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[15px] transition-colors duration-200 ${
+                  isActive
+                    ? "font-semibold text-[var(--color-text-primary)]"
+                    : "font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]"
                 }`}
               >
-                {(isActive || isDropdownOpen) && (
-                  <span className="absolute inset-0 rounded-full bg-[var(--color-brand-tint)]" />
-                )}
-                {!isActive && !isDropdownOpen && isHovered && (
+                {!isActive && isHovered && (
                   <motion.span
                     layoutId="desktop-nav-pill"
                     transition={{ type: "spring", stiffness: 420, damping: 32 }}
                     className="absolute inset-0 rounded-full bg-slate-100/90"
+                  />
+                )}
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-active-indicator"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    className="pointer-events-none absolute inset-x-4 bottom-0 h-[3px] rounded-full bg-[var(--color-brand-primary)]"
                   />
                 )}
                 <span className="relative z-10">{item.label}</span>
@@ -154,7 +162,9 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
                 >
                   <LuChevronDown
                     className={`h-4 w-4 transition-transform duration-200 ${
-                      isDropdownOpen ? "rotate-180 text-[var(--color-brand-primary)]" : ""
+                      isDropdownOpen
+                        ? "rotate-180 text-[var(--color-brand-primary)]"
+                        : ""
                     }`}
                   />
                 </button>
@@ -275,10 +285,10 @@ export function DesktopNavigation({ items, actions }: DesktopNavigationProps) {
                       triggerTransition(event, action.href, "login-slider")
                   : undefined
               }
-              className="group inline-flex min-h-11 items-center gap-1 rounded-lg px-2.5 py-1.5 text-[15px] font-medium text-[var(--color-text-secondary)] transition-colors duration-200 hover:text-[var(--color-surface-dark)]"
+              className="group inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[var(--color-text-primary)]/[0.05] px-5 text-sm font-semibold text-[var(--color-text-primary)] transition-all duration-200  hover:bg-[var(--color-text-primary)] hover:text-white hover:shadow-md active:translate-y-0 active:bg-[var(--color-surface-dark)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand-primary)]"
             >
               <span>{action.label}</span>
-              <LuArrowRight className="h-3.5 w-3.5 -translate-x-1 text-[var(--color-brand-primary)] opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
+              <LuArrowRight className="h-4 w-4 text-[var(--color-brand-primary-dark)] transition-all duration-200 group-hover:translate-x-1 group-hover:text-[var(--color-brand-primary)]" />
             </Link>
           );
         })}

@@ -51,17 +51,17 @@ export function SiteHeader() {
         {/* Brand Logo + Wordmark with Kinetic Hover */}
         <Link
           href={navigationConfig.brand.href}
-          className="group inline-flex min-h-11 items-center gap-3 rounded-lg transition-transform duration-200 hover:scale-[1.015] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand-primary)]"
+          className="group inline-flex min-h-11 items-center gap-2 rounded-lg transition-transform duration-200 hover:scale-[1.015] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand-primary)] sm:gap-3"
         >
           <StakfloBrandMark
             src={navigationConfig.brand.logoSrc}
             alt={navigationConfig.brand.logoAlt}
             width={36}
             height={36}
-            className="h-9 w-9 shrink-0 object-contain transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105"
+            className="h-8 w-8 shrink-0 object-contain transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105 sm:h-9 sm:w-9"
             priority
           />
-          <span className="flex items-center gap-2 text-lg font-semibold tracking-tight text-[var(--color-surface-dark)] sm:text-[19px]">
+          <span className="flex items-center gap-1.5 text-base font-semibold tracking-tight text-[var(--color-surface-dark)] sm:gap-2 sm:text-[19px]">
             <span>{navigationConfig.brand.name}</span>
             <span
               aria-hidden="true"

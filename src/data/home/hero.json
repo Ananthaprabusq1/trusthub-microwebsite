@@ -13,8 +13,8 @@
   },
   "secondaryCta": {
     "label": "See How It Works",
-    "href": "/#how-it-works",
-    "showArrow": false
+    "href": "https://trusthub.stakflo.io/docs/how-it-works",
+    "showArrow": true
   },
   "backgroundImage": {
     "src": "/images/herotwolayer.png",

@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { HeroReveal, HeroStage } from "@/components/ui/hero-reveal";
-import { VideoModal } from "@/components/ui/video-modal";
 import type { HomeHeroContent } from "@/types/home";
 import { HeroDashboardMockup } from "./hero-dashboard-mockup";
 
@@ -14,7 +13,6 @@ interface HomeHeroSectionProps {
 
 export function HomeHeroSection({ content }: HomeHeroSectionProps) {
   const [bgImgError, setBgImgError] = useState(false);
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <section
@@ -89,11 +87,10 @@ export function HomeHeroSection({ content }: HomeHeroSectionProps) {
                 </Button>
 
                 <Button
-                  type="button"
+                  href={content.secondaryCta.href}
                   variant="custom"
                   size="md"
                   showArrow={content.secondaryCta.showArrow ?? false}
-                  onClick={() => setIsVideoOpen(true)}
                   className="w-full border border-[var(--color-surface-dark)]/65 bg-white/40 text-[var(--color-surface-dark)] hover:bg-white/80 sm:w-auto"
                 >
                   {content.secondaryCta.label}
@@ -110,11 +107,6 @@ export function HomeHeroSection({ content }: HomeHeroSectionProps) {
           />
         </div>
       </HeroReveal>
-      <VideoModal
-        open={isVideoOpen}
-        onClose={() => setIsVideoOpen(false)}
-        src="/videos/trusthubvideo.mp4"
-      />
     </section>
   );
 }

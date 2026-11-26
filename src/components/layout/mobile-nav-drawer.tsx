@@ -230,10 +230,10 @@ export function MobileNavDrawer({
                   key={action.id}
                   href={action.href}
                   onClick={(e) => handleActionClick(e, action)}
-                  className={`inline-flex min-h-11 w-full items-center justify-center gap-1.5 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors ${
+                    className={`group inline-flex w-full items-center justify-center gap-2 px-5 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand-primary)] ${
                     action.variant === "primary"
-                      ? "bg-[var(--color-brand-primary)] text-white shadow-[0_8px_20px_-6px_rgba(55,198,80,0.45)] hover:bg-[var(--color-brand-primary-hover)]"
-                      : "border border-slate-200 bg-white text-[var(--color-surface-dark)] hover:bg-slate-50"
+                      ? "min-h-11 rounded-full bg-[var(--color-brand-primary)] py-2.5 text-white shadow-[0_8px_20px_-6px_rgba(55,198,80,0.45)] hover:bg-[var(--color-brand-primary-hover)]"
+                      : "h-11 rounded-full bg-[var(--color-text-primary)]/[0.05] text-[var(--color-text-primary)] hover:-translate-y-0.5 hover:bg-[var(--color-text-primary)] hover:text-white hover:shadow-md active:translate-y-0 active:bg-[var(--color-surface-dark)]"
                   }`}
                 >
                   <span>{action.label}</span>
@@ -241,6 +241,9 @@ export function MobileNavDrawer({
                     (action.showArrow ?? true) && (
                       <LuArrowRight className="h-4 w-4" />
                     )}
+                  {action.variant !== "primary" && (
+                    <LuArrowRight className="h-4 w-4 text-[var(--color-brand-primary-dark)] transition-all duration-200 group-hover:translate-x-1 group-hover:text-[var(--color-brand-primary)]" />
+                  )}
                 </Link>
               ))}
             </div>

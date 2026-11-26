@@ -50,7 +50,7 @@ export function MobileNavigation({
   }, []);
 
   return (
-    <div className="flex items-center lg:hidden">
+    <div className="flex items-center xl:hidden">
       <motion.button
         ref={openButtonRef}
         type="button"
