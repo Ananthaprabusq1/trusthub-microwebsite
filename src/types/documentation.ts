@@ -29,6 +29,7 @@ export interface DocumentationContent {
     id: string;
     heading: string;
     meta: string;
+    searchPlaceholder?: string;
     topics: DocumentationTopic[];
   };
   ctaBanner: {
